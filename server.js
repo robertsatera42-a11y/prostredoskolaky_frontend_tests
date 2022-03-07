@@ -37,7 +37,7 @@ app.get("/", function (req, res) {
   res.render(path.join(__dirname + "/index.html"));
 });
 
-// comment aboved
+// comment above
 // app.get(
 //   "/.well-known/acme-challenge/Vytv7IVPHj6rLP-_q6Fz0Pb_QM3DMgEnSAeQwA7tnng",
 //   function (req, res) {
