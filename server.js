@@ -12,21 +12,21 @@ const staticFileMiddleware = serveStatic(path.join(__dirname, "dist"));
 
 app.use("*", function (req, res, next) {
   const host = req.headers.host;
-  let www = "";
-  if (!host.match(/^www\..*/i)) {
-    www = "www.";
-  }
+  // let www = "";
+  // if (!host.match(/^www\..*/i)) {
+  //   www = "www.";
+  // }
 
-  if (req.headers["x-forwarded-proto"] !== "https") {
-    const secureUrl = "https://" + www + req.headers.host + req.url;
-    res.writeHead(301, { Location: secureUrl });
-    res.end();
-  } else if (www) {
-    res.writeHead(301, {
-      Location: "https://" + www + req.headers.host + req.url,
-    });
-    res.end();
-  }
+  // if (req.headers["x-forwarded-proto"] !== "https") {
+  //   const secureUrl = "https://" + www + req.headers.host + req.url;
+  //   res.writeHead(301, { Location: secureUrl });
+  //   res.end();
+  // } else if (www) {
+  //   res.writeHead(301, {
+  //     Location: "https://" + www + req.headers.host + req.url,
+  //   });
+  //   res.end();
+  // }
   next();
 });
 
@@ -54,3 +54,5 @@ app.use(serveStatic(path.join(__dirname, "dist")));
 const port = process.env.PORT || portNum;
 
 app.listen(port);
+
+console.log(`app listening on port ${process.env.PORT}`);
