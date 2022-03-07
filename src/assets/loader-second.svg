@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="1440px" height="35px" viewBox="0 0 1440 35" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 52.6 (67491) - http://www.bohemiancoding.com/sketch -->
+    <title>Group 9</title>
+    <desc>Created with Sketch.</desc>
+    <g id="Page-1-Copy-4" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Druhy-krok" transform="translate(0.000000, -305.000000)" fill="#E94B4B">
+            <g id="Group-9" transform="translate(0.000000, 301.000000)">
+                <text id="druhý-krok---aktivit" fill-opacity="0.84" font-family="EuclidCircularB" font-size="18" font-weight="400">
+                    <tspan x="682.495" y="20">druhý krok - aktivity</tspan>
+                </text>
+                <text id="třetí-krok---kontrol" font-family="EuclidCircularB" font-size="18" font-weight="400" fill-opacity="0.34">
+                    <tspan x="1172.298" y="20">třetí krok - kontrola</tspan>
+                </text>
+                <text id="První-krok---základn" fill-opacity="0.84" font-family="EuclidCircularB" font-size="18" font-weight="400">
+                    <tspan x="146.175" y="18">první krok - základní údaje</tspan>
+                </text>
+                <path d="M530.573444,25 L1012.08143,25 C1013.186,25 1014.08143,25.8954305 1014.08143,27 C1014.08143,27.9014417 1013.47839,28.6914772 1012.60886,28.9292011 L978.362176,38.2920114 C976.643461,38.7618966 974.869661,39 973.087871,39 L497.346146,39 C496.241577,39 495.346146,38.1045695 495.346146,37 C495.346146,36.1174331 495.924646,35.3391987 496.769768,35.0848528 L529.997067,25.0848528 C530.184021,25.0285875 530.378207,25 530.573444,25 Z" id="Rectangle" fill-opacity="0.84"></path>
+                <path d="M2,24 L482.085201,24 C483.18977,24 484.085201,24.8954305 484.085201,26 C484.085201,26.9015524 483.482017,27.6916562 482.612344,27.9292797 L448.342997,37.2927974 C446.625174,37.7621633 444.852359,38 443.071567,38 L2,38 C0.8954305,38 -2.62380273e-16,37.1045695 -8.8817842e-16,36 L-3.55271368e-15,26 C-3.68798443e-15,24.8954305 0.8954305,24 2,24 Z" id="Rectangle" fill-opacity="0.84295"></path>
+                <path d="M1060.57344,25 L1542.08143,25 C1543.186,25 1544.08143,25.8954305 1544.08143,27 C1544.08143,27.9014417 1543.47839,28.6914772 1542.60886,28.9292011 L1508.36218,38.2920114 C1506.64346,38.7618966 1504.86966,39 1503.08787,39 L1027.34615,39 C1026.24158,39 1025.34615,38.1045695 1025.34615,37 C1025.34615,36.1174331 1025.92465,35.3391987 1026.76977,35.0848528 L1059.99707,25.0848528 C1060.18402,25.0285875 1060.37821,25 1060.57344,25 Z" id="Rectangle" fill-opacity="0.34"></path>
+            </g>
+        </g>
+    </g>
+</svg>
