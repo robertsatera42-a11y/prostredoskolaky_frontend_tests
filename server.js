@@ -1,41 +1,41 @@
-const express = require('express')
-const serveStatic = require('serve-static')
-const path = require('path')
-const history = require('connect-history-api-fallback')
+const express = require("express");
+const serveStatic = require("serve-static");
+const path = require("path");
+const history = require("connect-history-api-fallback");
 
-const portNum = 3000
+const portNum = 3000;
 
-let app = express()
-const staticFileMiddleware = serveStatic(path.join(__dirname, 'dist'))
+let app = express();
+const staticFileMiddleware = serveStatic(path.join(__dirname, "dist"));
 
 // comment following
 
-app.use('*', function (req, res, next) {
-  const host = req.headers.host
-  let www = ''
+app.use("*", function (req, res, next) {
+  const host = req.headers.host;
+  let www = "";
   if (!host.match(/^www\..*/i)) {
-    www = 'www.'
+    www = "www.";
   }
 
-  if (req.headers['x-forwarded-proto'] !== 'https') {
-    const secureUrl = 'https://' + www + req.headers.host + req.url
-    res.writeHead(301, { Location: secureUrl })
-    res.end()
+  if (req.headers["x-forwarded-proto"] !== "https") {
+    const secureUrl = "https://" + www + req.headers.host + req.url;
+    res.writeHead(301, { Location: secureUrl });
+    res.end();
   } else if (www) {
     res.writeHead(301, {
-      Location: 'https://' + www + req.headers.host + req.url
-    })
-    res.end()
+      Location: "https://" + www + req.headers.host + req.url,
+    });
+    res.end();
   }
-  next()
-})
+  next();
+});
 
-app.use(staticFileMiddleware)
-app.use(history())
+app.use(staticFileMiddleware);
+app.use(history());
 
-app.get('/', function (req, res) {
-  res.render(path.join(__dirname + '/index.html'))
-})
+app.get("/", function (req, res) {
+  res.render(path.join(__dirname + "/index.html"));
+});
 
 // comment above
 // app.get(
@@ -51,6 +51,6 @@ app.use(serveStatic(path.join(__dirname, "dist")));
 
 // end of comment
 
-const port = process.env.PORT || portNum
+const port = process.env.PORT || portNum;
 
-app.listen(port)
+app.listen(port);
