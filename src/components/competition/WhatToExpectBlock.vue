@@ -2,7 +2,7 @@
   <section class="what-to-expect-section" id="what-to-expect">
     <div class="content">
       <h2>
-        Ukaž nám, co děláš, když nejsi ve škole.</h2>
+        Připravili jsme novou webovou stránku <a href="https://stredoskolakroku.cz" target="_blank">StredoskolakRoku.cz</a>, kde nalezneš všechny informace ohledně letošního ročníku.</h2>
         <h4><b>Účastníš se soutěží? Děláš vědu? Sportuješ? Podnikáš? Dobrovolničíš?</b> Zkrátka děláš něco nad rámec povinné školní výuky? Pak je soutěž Středoškolák roku přímo pro tebe. Takové jako ty hledáme, chceme je propojit, ocenit a ukázat veřejnosti, že vzdělávání „za“ školou je velmi důležité pro osobní růst a budoucí profesi.</h4>
         <h4>Přihlašování probíhá přes náš online formulář a za úkol v něm máš jedinou věc – popsat, co děláš nad rámec školní výuky. <b>Žádné známky. Jediné, na čem záleží, jsou tvoje aktivity a úspěchy.</b></h4>
         <h4>Pokud tě vybere porota do 25 nejaktivnějších, pozveme tě na společné <b>víkendové setkání</b>, kde se potkáš se svou krevní skupinou, a o dva týdny později pozveme prvních 65 na <b>dvoudenní vzdělávací akademii</b> do Prahy. Celou akci zakončíme <b>galavečerem</b> otevřeným pro veřejnost, kde slavnostně vyhlásíme finalisty letošního ročníku.</h4>

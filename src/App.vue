@@ -22,7 +22,8 @@
             <span class="link-underline"/>
           </div>
           <div class="menu-bottom-link">
-            <router-link @click.native="closeMenu" to="/soutez">Středoškolák roku</router-link>
+            <a href="https://stredoskolakroku.cz">Středoškolák roku</a>
+            <!-- <router-link @click.native="closeMenu" to="/soutez">Středoškolák roku</router-link> -->
             <span class="link-underline"/>
           </div>
           <div class="menu-bottom-link">

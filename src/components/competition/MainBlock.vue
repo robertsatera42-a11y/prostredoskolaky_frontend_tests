@@ -2,9 +2,9 @@
   <section class="main-section">
     <div class="content">
       <div class="half">
-        <h1>Soutěž<span/>Středoškolák roku 2021</h1>
+        <h1>Soutěž<span/>Středoškolák roku 2022</h1>
         <p>
-          Už posedmé pořádáme největší soutěž v mimoškolních aktivitách v České republice.<br/>
+          Všechny informace k soutěži naleznete na nových webových stránkách<br/>
         </p>
         <!-- <button
         class="button is-active is-primary"
@@ -12,8 +12,8 @@
         >Přihlásit se</button> -->
         <button
         class="button is-active is-primary"
-        @click="goToFinalists"
-        >Finalisté z minulých let</button>
+        @click="goToStredoskolakWebsite"
+        >StredoskolakRoku.cz</button>
         <!-- <button
         class="button is-active is-primary"
         disabled
@@ -42,6 +42,10 @@ export default {
 
     goToFinalists () {
       router.push('/finaliste')
+    },
+
+    goToStredoskolakWebsite () {
+      window.open('https://stredoskolakroku.cz')
     }
   }
 }
