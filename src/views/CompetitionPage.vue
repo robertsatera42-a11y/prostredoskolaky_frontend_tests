@@ -30,7 +30,7 @@ import FooterBlock from '../components/common/Footer'
 export default {
   name: 'competition-page',
   metaInfo: {
-    title: 'Středoškolák roku 2021',
+    title: 'Středoškolák roku 2022',
     titleTemplate: null,
     meta: [
       { name: 'description', content: 'Soutěž pro všechny aktivní středoškoláky, kteří dělají něco nad rámec povinné školní výuky.' }

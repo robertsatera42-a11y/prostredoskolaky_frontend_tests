@@ -94,7 +94,7 @@
               <div class="step-title">Přihlas se do Středoškoláka roku</div>
               <p class="step-description">
                 Máš už aktivity, které tě baví a něčeho jsi v nich dosáhl? Je ten pravý čas přihlásit se do soutěže Středoškolák roku. Ty nejaktivnější středoškoláky propojíme mezi sebou, pozveme je na seznamovací víkend a také něco naučíme ve vzdělávací akademii.
-                <a class="step-link" @click="goToAndTrack('/soutez', 'link', 'competition')">Soutěž Středoškolák roku 2021</a>
+                <a class="step-link" @click="goToAndTrack('/soutez', 'link', 'competition')">Soutěž Středoškolák roku 2022</a>
               </p>
             </div>
           </div>
