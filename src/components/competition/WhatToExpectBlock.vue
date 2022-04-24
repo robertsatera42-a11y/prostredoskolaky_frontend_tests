@@ -10,21 +10,21 @@
       <div class="what-to-expect">
         <div class="row row-first">
           <div>
-            <div class="date">4. 4. - <span style="text-decoration:line-through">10. 5. </span><span style="font-size:11px">&nbsp;(PRODLOUŽENO DO </span> <b>17. 5.</b><span style="font-size:11px">)</span></div>
+            <div class="date">28. 3. - <span style="text-decoration:line-through">12. 5. </span><span style="font-size:11px">&nbsp;(PRODLOUŽENO DO </span> <b>12. 5.</b><span style="font-size:11px">)</span></div>
             <div class="expect-title">Přihlašování do soutěže</div>
             <div class="description">Přihlašovat se můžeš až do května pomocí online formuláře.</div>
             <div class="overlay-image first"></div>
             <div class="overlay"></div>
           </div>
           <div>
-            <div class="date">18. 5. - 30. 6.</div>
+            <div class="date">13. 5. - 30. 5.</div>
             <div class="expect-title">Zasedání poroty</div>
             <div class="description">Naše porota složená z členů týmu a bývalých finalistů pečlivě vybere finalisty.</div>
             <div class="overlay-image second"></div>
             <div class="overlay"></div>
           </div>
           <div @click="goToWeekend" style="cursor:pointer">
-            <div class="date">3. 9. - 5. 9.</div>
+            <div class="date">17. 6. - 19. 6.</div>
             <div class="expect-title">Víkendové setkání</div>
             <div class="description">Nejlepších 25 finalistů pozveme na víkendové setkání.</div>
             <div class="overlay-image third"></div>
@@ -33,14 +33,14 @@
         </div>
         <div class="row row-second">
           <div @click="goToAcademy" style="cursor:pointer">
-            <div class="date">17. 9.</div>
-            <div class="expect-title">Akademie 2021</div>
+            <div class="date">23. 6. - 24. 6.</div>
+            <div class="expect-title">Akademie 2022</div>
             <div class="description">Nejlepších 65 finalistů pozveme na sérii vzdělávacích workshopů a přednášek v oblasti soft skills.</div>
             <div class="overlay-image fourth"></div>
             <div class="overlay"></div>
           </div>
           <div @click="goToAcademy" style="cursor:pointer">
-            <div class="date">17. 9.</div>
+            <div class="date">24. 6.</div>
             <div class="expect-title">Slavnostní vyhlášení</div>
             <div class="description">Během večera představíme nejaktivnější středoškoláky a vzácní hosté jim předají hodnotné ceny.</div>
             <div class="overlay-image fifth"></div>
