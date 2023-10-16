@@ -374,6 +374,7 @@
             </div>
           </div>
 
+
           <div class="flex-1 amigo">
             <img loading="lazy" class="amigo-img" src="~@/assets/amigo/svidrnochova.jpg">
             <span class="amigo-name">Lenka Švidrnochová</span>
