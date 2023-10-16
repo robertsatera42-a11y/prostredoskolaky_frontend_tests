@@ -29,7 +29,7 @@ export default {
   name: 'main-block',
   methods: {
     goToForm () {
-      window.open('https://docs.google.com/forms/d/e/1FAIpQLScEvWh6HLAXPPE4e5f86EuYG1KmiU49pFY3noB1aHhACtd8Jg/viewform', '_blank')
+      window.open('https://forms.gle/zKf6hP2R4xNZVvAR7', '_blank')
     }
   }
 }

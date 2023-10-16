@@ -121,7 +121,7 @@ export default {
         this.submitStatus = 'ERROR'
       } else {
         this.submitStatus = ''
-        status = await fb.updateUser(this.currentUser.email, {
+        const status = await fb.updateUser(this.currentUser.email, {
           occupation: this.user.occupation,
           firstName: this.user.firstName,
           lastName: this.user.lastName,

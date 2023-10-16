@@ -115,7 +115,8 @@ export default {
         const status = await fb.changePassword(this.user.email, this.oldPasswd, this.passwd)
         if (status !== 'OK') {
           this.messageType = 'error'
-          return this.message = status
+          this.message = status
+          return
         }
         this.messageType = 'success'
         this.message = 'Heslo bylo uloženo'

@@ -78,7 +78,8 @@ export default {
         const status = await fb.reauthenticate(this.user.email, this.password)
         if (status !== 'OK') {
           this.messageType = 'error'
-          return this.message = status
+          this.message = status
+          return
         }
         this.messageType = 'success'
         this.message = 'Účet byl vymazán'
