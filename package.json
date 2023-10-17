@@ -1,10 +1,10 @@
 {
   "name": "frontend-new",
   "version": "1.2.7",
-  "engines": {
-    "node": "16.x.x"
-  },
   "private": true,
+  "engines": {
+    "node": "14.x"
+  },
   "scripts": {
     "postinstall": "npm run build",
     "start": "node server.js",
