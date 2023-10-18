@@ -458,7 +458,7 @@ export default {
   margin: 40px auto;
   padding: 40px 40px 0;
 
-  @media (max-width: 1200px) {
+  @media (max-width: 800px) {
     width: 90%;
     padding: 20px;
   }
