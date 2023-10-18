@@ -604,7 +604,7 @@ section.info-section {
       }
 
       &.active {
-        max-height: 800px;
+        max-height: 1200px;
       }
     }
     &-info {
