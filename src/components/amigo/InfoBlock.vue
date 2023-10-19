@@ -85,7 +85,7 @@
             <span class="orange amigo-hashtags">#chemie #studiumvzahraničí #vzdělávání</span>
             <div v-bind:class="['amigo-more-info', ({active: activeAmigo === 'heger'}) ]">
               <ul>
-                <li>JAhoj, jsem Tomáš a studuji druhý ročník předmětu Natural Sciences na University of Cambridge. Z vědních oborů mám nejblíže k výpočetní chemii, ale baví mě získávat vědomosti ve všech přírodních vědách a propojovat je dohromady. Intelektuálně mě hodně zajímá, jak se tohle propojení oborů dá využít např. při řešení klimatických problémů, kterým čelíme. Taky bych chtěl pochopit, jak tato řešení nejlépe prosazovat do praxe. Mám za sebou dvě stáže na ústavech Akademie věd, zaměřené právě na výpočetní chemii a na biochemii enzymů.</li>
+                <li>Ahoj, jsem Tomáš a studuji druhý ročník předmětu Natural Sciences na University of Cambridge. Z vědních oborů mám nejblíže k výpočetní chemii, ale baví mě získávat vědomosti ve všech přírodních vědách a propojovat je dohromady. Intelektuálně mě hodně zajímá, jak se tohle propojení oborů dá využít např. při řešení klimatických problémů, kterým čelíme. Taky bych chtěl pochopit, jak tato řešení nejlépe prosazovat do praxe. Mám za sebou dvě stáže na ústavech Akademie věd, zaměřené právě na výpočetní chemii a na biochemii enzymů.</li>
                 <li>Kromě toho pomáhám organizovat různé vzdělávací akce a semináře - pokud jste někdy slyšeli o semináři KSICHT, letním odborném soustředění Běstvinka nebo programu Výlety za Vědou, tak tam všude se se mnou můžete setkat (nebo spíš o mě slyšet, protože zahraniční studium mi mnohdy znemožňuje věci organizovat osobně, ač bych moc rád).</li>
                 <li>Ve volném čase rád cestuju do přírody pěšky nebo na kole, třeba v rámci skautské družiny, ve které jsem již od dětství. Kromě toho věřím, že dobrá kniha a vášnivý tanec poskytnou odpovědi na většinu palčivých životních otázek.</li>
               </ul>
@@ -190,7 +190,10 @@
             <span class="orange amigo-hashtags">#uměláinteligence #samostudium #informatika #kyberbezpečnost</span>
             <div v-bind:class="['amigo-more-info', ({active: activeAmigo === 'vacal'}) ]">
               <ul>
-                <li>Ahoj tady Patrik! Dělám, co mě zrovna baví, což většinou skončí u IT. - Na střední jsem dva roky pracoval pro britský startup, založil startup vlastní a zkusil si třeba i vývoj vodíkového autíčka. Také jsem se probojoval do národního kybertýmu, který reprezentovat Česko na European Cyber Security Challenge ve Vídni. Posledních pár let se věnuji hlavně AI. Například jsem jí během stáže na Akademii věd zkoušel využít k chemickým simulacím. Momentálně AI studuji na Matfyzu v Praze. - Rád zkouším nové věci i mimo IT. Minulý rok jsem běžel půlmaraton, byl jsem na dvouměsíční cestě po Asii či doučoval středoškolskou matiku. Jednoduše, co mi přijde zajímavé to prostě zkusím. - Chceš-li se naplno ponořit do technologií, vytvořit báječnou apku, zjistit jak se hackuje nebo se ponořit do výzkumu AI, rád ti pomůžu najít ten správný směr.</li>
+                <li>Ahoj tady Patrik! Dělám, co mě zrovna baví, což většinou skončí u IT.</li>
+                <li>Na střední jsem dva roky pracoval pro britský startup, založil startup vlastní a zkusil si třeba i vývoj vodíkového autíčka. Také jsem se probojoval do národního kybertýmu, který reprezentovat Česko na European Cyber Security Challenge ve Vídni. Posledních pár let se věnuji hlavně AI. Například jsem jí během stáže na Akademii věd zkoušel využít k chemickým simulacím. Momentálně AI studuji na Matfyzu v Praze.</li>
+                <li>Rád zkouším nové věci i mimo IT. Minulý rok jsem běžel půlmaraton, byl jsem na dvouměsíční cestě po Asii či doučoval středoškolskou matiku. Jednoduše, co mi přijde zajímavé to prostě zkusím.</li>
+                <li>Chceš-li se naplno ponořit do technologií, vytvořit báječnou apku, zjistit jak se hackuje nebo se ponořit do výzkumu AI, rád ti pomůžu najít ten správný směr.</li>
               </ul>
               <div class="amigo-more-info-overlay"></div>
             </div>
