@@ -82,7 +82,7 @@
               <p
                 class="step-description"
               >Přijď se inspirovat od těch nejzajímavějších středoškoláků v České republice. Několikrát do roka pořádáme setkání, kde se s tebou o své zkušenosti a názory podělí mladí aktivní lidé, kteří už mají něco za sebou.</p>
-              <a class="step-link" @click="goToAndTrack('https://www.facebook.com/events/466453060623948/', 'link', 'free_spirit', true)">Konference Free Spirit</a>
+              <a class="step-link" @click="goToAndTrack('https://www.facebook.com/events/681821840504671/', 'link', 'free_spirit', true)">Konference Free Spirit</a>
             </div>
           </div>
         </div>
@@ -94,7 +94,7 @@
               <div class="step-title">Přihlas se do Středoškoláka roku</div>
               <p class="step-description">
                 Máš už aktivity, které tě baví a něčeho jsi v nich dosáhl? Je ten pravý čas přihlásit se do soutěže Středoškolák roku. Ty nejaktivnější středoškoláky propojíme mezi sebou, pozveme je na seznamovací víkend a také něco naučíme ve vzdělávací akademii.
-                <a class="step-link" @click="goToAndTrack('/soutez', 'link', 'competition')">Soutěž Středoškolák roku 2022</a>
+                <a class="step-link" @click="goToAndTrack('https://stredoskolakroku.cz/', 'link', 'competition', true)">Soutěž Středoškolák roku</a>
               </p>
             </div>
           </div>
