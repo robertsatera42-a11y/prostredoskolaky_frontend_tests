@@ -3,7 +3,7 @@
     <div class="content">
       <div class="about-wrapper">
         <div class="max-width-80">
-          <h2>Individuální vzdělávací plán - vše co potřebuješ vědět</h2>
+          <h2>Individuální vzdělávací plán – vše, co potřebuješ vědět</h2>
           <p>Aktivní středoškoláci se při svých aktivitách často potýkají s nezájmem či odporem učitelů nebo ředitele a škola se tak často stává překážkou v jejich rozvoji.</p>
           <p>Protože si myslíme, že mimoškolní rozvoj je pro extrémně aktivní studenty důležitý, rozhodli jsme se v následujících otázkách a odpovědích nastínit, jak probíhá získávání individuálního vzdělávacího plánu (IVP). Věříme, že tyto FAQs budou užitečné pro všechny středoškoláky a středoškolačky co se rozhodli do svých aktivit pustit naplno!</p>
         </div>
@@ -21,7 +21,7 @@ stránkách se věnujeme pouze IVP pro nadané žáky) a je zakotven v § 3 a 4 
       <div class="why-description">IVP využívají aktivní studenti středních škol především za účelem možnosti zvýšení školní
 absence, jejíž obvyklá povolená hranice 25 % jim většinou brání v jejich mimoškolních
 aktivitách, které vnímají jako důležitější než školní docházku. Konkrétní podmínky IVP na
-každé škole a už každého žáka jsou ale velice individuální.</div>
+každé škole a u každého žáka jsou ale velice individuální.</div>
 
       </div>
       <div class="why-wrapper">
@@ -29,7 +29,7 @@ každé škole a už každého žáka jsou ale velice individuální.</div>
           <div
               class="why-description"
             >Udělení IVP musí vždy předcházet oficiální písemná žádost adresovaná řediteli školy. Tuto
-žádost podává buď zletilý žák nebo zákonný zástupce nezletilého žáka. Více o procesu
+žádost podává buď zletilý žák, nebo zákonný zástupce nezletilého žáka. Více o procesu
 podávání žádosti a nezbytných dokumentů je níže.</div>
 
       </div>
@@ -45,7 +45,7 @@ poslední týden v měsíci), někteří žáci nenavštěvují školu vůbec a 
 komisionální zkoušky, někteří žáci jsou s IVP omluveni pouze z některých hodin (například z
 některých ranních hodin kvůli dopoledním sportovním tréninkům). Často slyšíme dotazy, zda
 s IVP nemusí žák psát všechny testy, zda si nemusí omlouvat absenci či zda má možnost
-neomezené absence, na ty však nemáme odpověď - podmínky na každé škole a u každého
+neomezené absence, na ty však nemáme odpověď – podmínky na každé škole a u každého
 žáka s IVP se liší.</div>
 
       </div>
@@ -70,15 +70,15 @@ IVP je poměrně flexibilní proces, a pokud se tak ozveš i na začátku školn
             >Oficiální proces žádosti o IVP začíná podáním oficiální žádosti řediteli školy. Před
 sepisováním úředních dokumentů je však ideální IVP konzultovat s vedením školy
 neformálně, ještě před samotným podáním žádosti. Ze všeho nejdříve si škola i ty ujasníte,
-co od případného IVP očekáváte, případně zda ti ho škola vůbec udělí, pokud si o něj
-oficiálně požádáš. Zároveň ti vedení školy dá informace k tomu, jaké dokumenty po tobě
+co od případného IVP očekáváte, případně, zda ti ho škola vůbec udělí, pokud si o něj
+oficiálně požádáš. Zároveň ti vedení školy podá informace k tomu, jaké dokumenty po tobě
 bude k žádosti požadovat. Je důležité myslet na to, že ač je IVP oficiální úřední rozhodnutí,
-tvá komunikace s vedením a učiteli v jeho průběhu již bude čistě neformální a bude o právě
+tvá komunikace s vedením a učiteli v jeho průběhu již bude čistě neformální a bude to právě
 komunikace, která tvé podmínky a atmosféru na škole určí. Je tak dobré začít i samotný
-proces žádosti o IVP spíše přátelskou žádostí a otevřenou komunikací, než “mácháním
-oficiální žádostí” před obličejem ředitele školy.</div>
-<div class="why-description">Oficiální žádost o IVP podává zletilý žák nebo zákonný zástupce nezletilého žáka. O této
-žádosti škola rozhoduje buď schválením nebo zamítnutím. V oficiálním povolení IVP jsou
+proces žádosti o IVP spíše přátelskou žádostí a otevřenou komunikací, než „mácháním
+oficiální žádostí“ před obličejem ředitele školy.</div>
+<div class="why-description">Oficiální žádost o IVP podává zletilý žák, nebo zákonný zástupce nezletilého žáka. O této
+žádosti škola rozhoduje buď schválením, nebo zamítnutím. V oficiálním povolení IVP jsou
 většinou definované povinnosti a práva studujícího, v zamítnutí je většinou stručně uveden
 důvod, proč žákovi IVP udělen nebyl.</div>
 
@@ -88,7 +88,7 @@ důvod, proč žákovi IVP udělen nebyl.</div>
           <div
               class="why-description"
             >Základním dokumentem, který je pro získání IVP potřeba, je oficiální žádost. Tu podává buď
-zletilý žák nebo rodič nezletilého žáka a jedná se o veskrze formální dokument, ve kterém se
+zletilý žák, nebo rodič nezletilého žáka a jedná se o veskrze formální dokument, ve kterém se
 odkazuje na další dokumenty žádosti. Vzor takové oficiální žádosti nalezneš na našich
 webových stránkách.</div>
 <div class="why-description">Dále je většinou třeba dodat další dokumenty, které škole především vysvětlují, proč si o IVP
@@ -96,7 +96,7 @@ webových stránkách.</div>
 <ul>
   <li>seznam mimoškolních aktivit, kvůli kterým si o IVP žádáš (je vhodné uvádět pouze
 opravdu relevantní aktivity, především ty, ze kterých bude mít sama škola nějaký
-přínos, například tvou účastní na školních soutěžích či jinou reprezentací školy)</li>
+přínos, například svou účast na školních soutěžích či jiné reprezentaci školy)</li>
 <li>potvrzení tvých dospělých vedoucích, kteří potvrzují tvé mimoškolní aktivity, nebo tě k
 IVP přímo doporučují (doložíš tak, že mimo školu opravdu něco děláš a jsi při žádosti
 o IVP důvěryhodnější)</li>
@@ -117,10 +117,10 @@ kteří si již na škole o IVP žádali, a mají tak svou zkušenost.</div>
             >Nemá. IVP není nárokový a je na posouzení vedení školy, komu ho udělí. Jsou také školy,
 které již dopředu deklarují, že IVP jednoduše žádným svým studentům nepovolují. Může to
 být kvůli tomu, že s IVP mělo vedení školy v minulosti špatnou zkušenost, nebo naopak
-zkušenost žádnou, a tudíž neví, jak s takovými žáky pracovat. Ať už tak či tak, škola má na
+zkušenost žádnou, a tudíž neví, jak s takovými žáky pracovat. Ať už tak, či tak, škola má na
 tento přístup právo.</div>
-<div class="why-description">Existují jen málo početné výjimky, kde ze zákona mají některé skupiny žáků na IVP nárok.
-Jedná se například o profesionální sportovce, kteří reprezentují Českou republiku - v
+<div class="why-description">Existuje jen několik málo výjimek, kdy ze zákona mají některé skupiny žáků na IVP nárok.
+Jedná se například o profesionální sportovce, kteří reprezentují Českou republiku – v
 takovém případě je škola povinna IVP povolit.</div>
 
       </div>
@@ -128,7 +128,7 @@ takovém případě je škola povinna IVP povolit.</div>
           <div class="orange why-title">Co mám dělat, pokud mi škola IVP neudělí?</div>
           <div
               class="why-description"
-            >Bohužel, v takovém případě na to má škola právo. Mohlo se to stát z několika důvodů -
+            >Bohužel, v takovém případě na to má škola právo. Mohlo se to stát z několika důvodů –
 škola může mít s žáky s IVP špatnou zkušenost, nebo naopak zkušenost žádnou, je možné,
 že jsi škole nedostatečně zdůvodnil, proč IVP potřebuješ a proč jsou tvé aktivity důležité. Ať
 už to byl jakýkoliv důvod, je důležité o něm s vedením školy komunikovat, vysvětlovat, proč
@@ -153,9 +153,9 @@ středoškoláků.</div>
             >Mnoho škol oficiální IVP neuděluje, i tak si ale uvědomuje potřebu podporovat aktivní
 studenty a dopřávat jim například více svobody. Není tak výjimkou, že některé školy mají své
 speciální interní programy, například možnost chybět na některých specifických hodinách,
-možnost mít o něco vyšší absenci než umožňuje obvyklá hranice, možnost dopisovat testy s
-učiteli po vyučování. Pokud takové alternativy na tvé škole existují (či se tím nejsi jist) zkus
-je komunikovat s vedením školy, učiteli, či se na ně zeptat jiných aktivních žáků na tvé škole,
+možnost mít o něco vyšší absenci, než umožňuje obvyklá hranice, možnost dopisovat testy s
+učiteli po vyučování. Pokud takové alternativy na tvé škole existují (nebo si tím nejsi jist) zkus
+je komunikovat s vedením školy, učiteli nebo se na ně zeptat jiných aktivních žáků na tvé škole,
 kteří by o nich mohli něco vědět.</div>
 
       </div>
@@ -175,7 +175,7 @@ stát, že jsou na tebe učitelé nevrlí či ti nevychází vstříc. Bohužel 
 než otevřená komunikace, ať už se samotnými učiteli či s vedením školy. IVP je něco, co ti
 kolektiv učitelů a vedení školy poskytuje z dobré vůle, protože ti chtějí pomoci ve tvém
 rozvoji a protože ve tvých aktivitách vidí smysl. Nemá tak cenu řešit problémy s pedagogy
-jinak než otevřenou komunikací o vašich problémech.</div>
+jinak než otevřenou komunikací o svých problémech.</div>
 
       </div>
 
@@ -205,7 +205,7 @@ komisionální zkoušky často mezi studenty neoblíbené. Pokud navíc skládá
 zkoušky za druhé pololetí školního roku, čekají tě na konci srpna, přípravami na ně a
 systematickým učením tak pravděpodobně strávíš velkou část letních prázdnin.</div>
 <div class="why-description">Pokud se chceš komisionálním zkouškám vyhnout, je opět klíčové, abys otevřeně
-komunikovat s učiteli a vyvíjel úsilí pro doplnění klasifikace jiným způsobem. Snaž se
+komunikoval s učiteli a vyvíjel úsilí pro doplnění klasifikace jiným způsobem. Snaž se
 učitelům tento proces co nejvíce zjednodušit a měj pochopení pro to, že ne vždy mají čas a
 energii s tebou dopisovat písemky mimo vyučování.</div>
 
@@ -213,7 +213,7 @@ energii s tebou dopisovat písemky mimo vyučování.</div>
 
       <div class="end">
         V případě jakýchkoliv dotazů, ať už se jedná o ty k FAQ nebo o ty individuální, se můžeš
-obrátit na email <b>kletochova@gmail.com.</b>
+obrátit na email <b>info@prostredoskolaky.cz.</b>
       </div>
 
       </div>
