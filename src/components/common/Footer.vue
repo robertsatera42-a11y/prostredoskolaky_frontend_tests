@@ -14,7 +14,7 @@
         </div>
         <div class="social">
           <a @click="goToAndTrack('https://www.youtube.com/channel/UCzE5_oYsLRIYB5ej35unTBw', 'link', 'youtube')" class="yu"></a>
-          <a @click="goToAndTrack('https://www.instagram.com/prostredoskolakycz/', 'link', 'instagram')" class="ig"></a>
+          <a @click="goToAndTrack('https://www.instagram.com/prostredoskolaky/', 'link', 'instagram')" class="ig"></a>
           <a @click="goToAndTrack('https://www.facebook.com/prostredoskolaky/?fref=ts', 'link', 'facebook')" class="fb"></a>
           <a @click="goToAndTrack('https://cz.linkedin.com/company/prost%C5%99edo%C5%A1kol%C3%A1ky-z-s-', 'link', 'linkedin')" class="li"></a>
         </div>
