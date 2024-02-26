@@ -82,7 +82,7 @@
               <p
                 class="step-description"
               >Přijď se inspirovat od těch nejzajímavějších středoškoláků v České republice. Několikrát do roka pořádáme setkání, kde se s tebou o své zkušenosti a názory podělí mladí aktivní lidé, kteří už mají něco za sebou.</p>
-              <a class="step-link" @click="goToAndTrack('https://www.facebook.com/events/466453060623948/', 'link', 'free_spirit', true)">Konference Free Spirit</a>
+              <a class="step-link" @click="goToAndTrack('https://www.facebook.com/events/681821840504671/', 'link', 'free_spirit', true)">Konference Free Spirit</a>
             </div>
           </div>
         </div>
