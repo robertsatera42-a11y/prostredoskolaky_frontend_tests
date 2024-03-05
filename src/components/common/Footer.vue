@@ -5,7 +5,7 @@
       v-bind:class="{hidden: this.$route.path === '/abffd7'}">
         <div class="links">
           <router-link to="/">Domů</router-link>
-          <router-link to="/soutez">Středoškolák roku</router-link>
+          <a @click="goToAndTrack('https://stredoskolakroku.cz/', 'link', 'soutez')">Středoškolák roku</a>
           <!-- <router-link to="/finaliste">Finalisté</router-link> -->
           <router-link to="/amigo">Amigo</router-link>
           <router-link to="/databaze">Databáze</router-link>
