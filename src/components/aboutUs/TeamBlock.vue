@@ -5,24 +5,48 @@
 
       <div class="team">
         <div class="team-member">
-          <img loading="lazy" src="~@/assets/team/monika.jpg" alt="Monika Smiešková">
-          <div class="orange name">Monika Smiešková</div>
+          <img loading="lazy" src="~@/assets/team/adam.jpg" alt="Adam Holda">
+          <div class="orange name">Adam Holda</div>
           <div class="description">
-            <a href="mailto:monika.smieskova@prostredoskolaky.cz">email</a>
+            <p>Projektový vedoucí<p>
+            <a href="mailto:adam.holda@prostredoskolaky.cz">e-mail</a>
             <span>
-              <a href="https://www.linkedin.com/in/monika-smie%C5%A1kov%C3%A1/" target="_blank">LinkedIn</a> |
-              <a href="https://www.facebook.com/smi.monii" target="_blank">FB</a>
+              <a href="https://www.linkedin.com/in/adamholda/" target="_blank">LinkedIn</a> |
+              <a href="https://www.facebook.com/holda.adam/" target="_blank">FB</a>
             </span>
           </div>
         </div>
         <div class="team-member">
-          <img loading="lazy" src="~@/assets/team/adam.jpg" alt="Adam Holda">
-          <div class="orange name">Adam Holda</div>
+          <img loading="lazy" src="~@/assets/team/kata.jpg" alt="Kateřina Marešová">
+          <div class="orange name">Terezie Šubrtová</div>
           <div class="description">
-            <a href="mailto:adam.holda@prostredoskolaky.cz">email</a>
+            <p>Vedoucí eventů<p>
+            <a href="mailto:terezie.subrtova@prostredoskolaky.cz">e-mail</a>
             <span>
-              <a href="https://www.linkedin.com/in/adamholda/" target="_blank">LinkedIn</a> |
-              <a href="https://www.facebook.com/holda.adam/" target="_blank">FB</a>
+              <a href="https://www.linkedin.com/in/terezie-%C5%A1ubrtov%C3%A1-18857221a" target="_blank">LinkedIn</a> |
+              <a href="https://www.instagram.com/terez.subrtova" target="_blank">IG</a>
+            </span>
+          </div>
+        </div>
+        <div class="team-member">
+          <img loading="lazy" src="~@/assets/team/kata.jpg" alt="Kateřina Marešová">
+          <div class="orange name">Kateřina Marešová</div>
+          <div class="description">
+            <p>Vedoucí marketingu, vrchní grafička<p>
+            <a href="mailto:katerina.maresova@prostredoskolaky.cz">e-mail</a>
+            <span>
+              <a href="https://www.linkedin.com/in/kateřina-marešová-57272a248/" target="_blank">LinkedIn</a> |
+              <a href="https://www.instagram.com/maresovakata/" target="_blank">IG</a>
+            </span>
+          </div>
+        </div>
+        <div class="team-member">
+          <img loading="lazy" src="~@/assets/team/petra.jpg" alt="Petra Plachá">
+          <div class="orange name">Petra Plachá</div>
+          <div class="description">
+            <span>
+              <a href="http://www.linkedin.com/in/petra-placha/" target="_blank">LinkedIn</a> |
+              <a href="https://www.facebook.com/petra.placha.79" target="_blank">FB</a>
             </span>
           </div>
         </div>
@@ -31,10 +55,19 @@
       <h2>Síň slávy</h2>
       <div class="team">
         <div class="team-member">
+          <img loading="lazy" src="~@/assets/team/monika.jpg" alt="Monika Smiešková">
+          <div class="orange name">Monika Smiešková</div>
+          <div class="description">
+            <span>
+              <a href="https://www.linkedin.com/in/monika-smie%C5%A1kov%C3%A1/" target="_blank">LinkedIn</a> |
+              <a href="https://www.facebook.com/smi.monii" target="_blank">FB</a>
+            </span>
+          </div>
+        </div>
+        <div class="team-member">
           <img loading="lazy" src="~@/assets/team/lenka.jpg" alt="Lenka Novotná">
           <div class="orange name">Lenka Novotná</div>
           <div class="description">
-            <a href="mailto:lenka.novotna@prostredoskolaky.cz">email</a>
             <span>
               <a href="https://www.linkedin.com/in/lenka-novotná-1ba748180" target="_blank">LinkedIn</a> |
               <a href="https://www.facebook.com/lenka.novotna.7146557" target="_blank">FB</a>
@@ -57,16 +90,6 @@
           <div class="description">
             <span>
               <a href="https://www.facebook.com/profile.php?id=100008535060056" target="_blank">FB</a>
-            </span>
-          </div>
-        </div>
-        <div class="team-member">
-          <img loading="lazy" src="~@/assets/team/petra.jpg" alt="Petra Plachá">
-          <div class="orange name">Petra Plachá</div>
-          <div class="description">
-            <span>
-              <a href="http://www.linkedin.com/in/petra-placha/" target="_blank">LinkedIn</a> |
-              <a href="https://www.facebook.com/petra.placha.79" target="_blank">FB</a>
             </span>
           </div>
         </div>
