@@ -26,6 +26,10 @@
             </span>
           </div>
         </div>
+      </div>
+
+      <h2>Síň slávy</h2>
+      <div class="team">
         <div class="team-member">
           <img loading="lazy" src="~@/assets/team/lenka.jpg" alt="Lenka Novotná">
           <div class="orange name">Lenka Novotná</div>
@@ -113,10 +117,6 @@
             </span>
           </div>
         </div>
-      </div>
-
-      <h2>Síň slávy</h2>
-      <div class="team">
         <div class="team-member">
           <img loading="lazy" src="~@/assets/team/paja.jpg" alt="Pája Macečková">
           <div class="orange name">Pája Macečková</div>
