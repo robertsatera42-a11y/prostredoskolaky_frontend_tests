@@ -12,12 +12,12 @@
             <a href="mailto:adam.holda@prostredoskolaky.cz">e-mail</a>
             <span>
               <a href="https://www.linkedin.com/in/adamholda/" target="_blank">LinkedIn</a> |
-              <a href="https://www.facebook.com/holda.adam/" target="_blank">FB</a>
+              <a href="https://www.instagram.com/holdaadam/" target="_blank">IG</a>
             </span>
           </div>
         </div>
         <div class="team-member">
-          <img loading="lazy" src="~@/assets/team/kata.jpg" alt="Kateřina Marešová">
+          <img loading="lazy" src="~@/assets/team/terez.jpg" alt="Terezie Šubrtová">
           <div class="orange name">Terezie Šubrtová</div>
           <div class="description">
             <p>Vedoucí eventů<p>
@@ -37,6 +37,76 @@
             <span>
               <a href="https://www.linkedin.com/in/kateřina-marešová-57272a248/" target="_blank">LinkedIn</a> |
               <a href="https://www.instagram.com/maresovakata/" target="_blank">IG</a>
+            </span>
+          </div>
+        </div>
+        <div class="team-member">
+          <img loading="lazy" src="~@/assets/team/luky.jpg" alt="Lukáš Hladík">
+          <div class="orange name">Lukáš Hladík</div>
+          <div class="description">
+            <p>Vedoucí AMIGA<p>
+            <a href="mailto:lukas.hladik@prostredoskolaky.cz">e-mail</a>
+            <span>
+              <a href="https://www.linkedin.com/in/luk%C3%A1%C5%A1-hlad%C3%ADk-740774220" target="_blank">LinkedIn</a> |
+              <a href="https://www.instagram.com/lukaas_hladik" target="_blank">IG</a>
+            </span>
+          </div>
+        </div>
+        <div class="team-member">
+          <img loading="lazy" src="~@/assets/team/mari.jpg" alt="Marianna Kohoutová">
+          <div class="orange name">Marianna Kohoutová</div>
+          <div class="description">
+            <p>Členka marketingového týmu<p>
+            <a href="mailto:marianna.kohoutova@prostredoskolaky.cz">e-mail</a>
+            <span>
+              <a href="https://www.linkedin.com/in/marianna-kohoutov%C3%A1-440a37226/" target="_blank">LinkedIn</a> |
+              <a href="https://www.instagram.com/marianna.moment/" target="_blank">IG</a>
+            </span>
+          </div>
+        </div>
+        <div class="team-member">
+          <img loading="lazy" src="~@/assets/team/mila.jpg" alt="Miloslav Dymeš">
+          <div class="orange name">Miloslav Dymeš</div>
+          <div class="description">
+            <p>Fundraising a člen eventového týmu<p>
+            <a href="mailto:miloslav.dymes@prostredoskolaky.cz">e-mail</a>
+            <span>
+              <a href="https://www.linkedin.com/in/miloslav-dyme%C5%A1-59a5a923a/" target="_blank">LinkedIn</a> |
+              <a href="https://www.instagram.com/dymes_miloslav" target="_blank">IG</a>
+            </span>
+          </div>
+        </div>
+        <div class="team-member">
+          <img loading="lazy" src="~@/assets/team/paja.png" alt="Pavlína Skudová">
+          <div class="orange name">Pavlína Skudová</div>
+          <div class="description">
+            <p>Členka PR & marketingového týmu<p>
+            <a href="mailto:pavlina.skudova@prostredoskolaky.cz">e-mail</a>
+            <span>
+              <a href="https://www.linkedin.com/in/pavlina-skudova/" target="_blank">LinkedIn</a>
+            </span>
+          </div>
+        </div>
+        <div class="team-member">
+          <img loading="lazy" src="~@/assets/team/lea.jpg" alt="Leona Wagnerová">
+          <div class="orange name">Leona Wagnerová</div>
+          <div class="description">
+            <p>Členka eventového týmu<p>
+            <a href="mailto:leona.wagnerova@prostredoskolaky.cz">e-mail</a>
+            <span>
+              <a href="https://www.linkedin.com/in/lea-wagnerová-3a1b58258" target="_blank">LinkedIn</a> |
+              <a href="https://www.instagram.com/wagleea" target="_blank">IG</a>
+            </span>
+          </div>
+        </div>
+        <div class="team-member">
+          <img loading="lazy" src="~@/assets/team/tonda.jpg" alt="Antonín Šváb">
+          <div class="orange name">Antonín Šváb</div>
+          <div class="description">
+            <p>Člen PR & marketingového týmu<p>
+            <span>
+              <a href="https://www.linkedin.com/in/anton%C3%ADn-%C5%A1v%C3%A1b-631563228/" target="_blank">LinkedIn</a> |
+              <a href="http://www.instagram.com/svab_tonda/" target="_blank">IG</a>
             </span>
           </div>
         </div>
