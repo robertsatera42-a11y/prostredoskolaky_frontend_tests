@@ -2,7 +2,7 @@
   <section class="main-section">
     <div class="content">
       <div class="half">
-        <h1>360+ mimoškolních aktivit na&nbsp;jednom místě</h1>
+        <h1>400+ mimoškolních aktivit na&nbsp;jednom místě</h1>
         <p>
           Shromáždili jsme všechny zajímavé aktivity v&nbsp;ČR i&nbsp;zahraničí. Ať už chceš dělat vědu, sportovat nebo podnikat, u&nbsp;nás najdeš nekonečně mnoho příležitostí.
         </p>
