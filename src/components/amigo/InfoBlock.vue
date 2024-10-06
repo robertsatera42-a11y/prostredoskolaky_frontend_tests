@@ -258,7 +258,7 @@
           </div>
 
           <div class="flex-1 amigo">
-            <img loading="lazy" class="amigo-img" src="~@/assets/amigo/vala.jpg">
+            <img loading="lazy" class="amigo-img" src="~@/assets/amigo/vala.png">
             <span class="amigo-name">Jonáš Vala</span>
             <span class="orange amigo-hashtags">#studium #IT #medicina #psaninaklavesnici #souteze</span>
             <div v-bind:class="['amigo-more-info', ({active: activeAmigo === 'vala'}) ]">
