@@ -263,7 +263,7 @@
             <span class="orange amigo-hashtags">#studium #IT #medicina #psaninaklavesnici #souteze</span>
             <div v-bind:class="['amigo-more-info', ({active: activeAmigo === 'vala'}) ]">
               <ul>
-                <li>Jmenuji se Jonáš a studuji medicínu. V průběhu své střední školy jsem se hodně věnoval informace, programoval jsem nebo jsem soutěžil v psaní na klávesnici. Kromě toho jsem dělal jazyky, především němčinu, nebo trávil čas nad přípravou školního časopisu.</li>
+                <li>Jmenuji se Jonáš a studuji medicínu. V průběhu své střední školy jsem se hodně věnoval informatice, programoval jsem nebo jsem soutěžil v psaní na klávesnici. Kromě toho jsem dělal jazyky, především němčinu, nebo trávil čas nad přípravou školního časopisu.</li>
                 <li>Výrazně mne ovlivnilo psaní na klávesnici, kterému jsem se věnoval už od základní školy. Účastnil jsem se soutěží a na mistrovství světa jsem opakovaně získal titul mistra světa. Dnes tuto disciplínu vyučuji, podílím se na organizaci republikových soutěží nebo sám se podílím na zkvalitňování jeho e-learningu.</li>
                 <li>Na Univerzitě Karlově jsem dnes také členem fakultního i univerzitního akademického senátu. Na fakultní úrovni se pak zabývám zkvalitňováním výuky coby člen komise pro evaluaci výuky.</li>
                 <li>Rád se s Tebou pobavím o mimoškolních aktivitách, o výběru školy nebo třeba o různých certifikátech, které by Ti mohly pomoct získat budoucí zaměstnání.</li>
