@@ -66,7 +66,7 @@
             <div v-bind:class="['amigo-more-info', ({active: activeAmigo === 'jedlickova'}) ]">
               <ul>
                 <li>Ahoj, jsem Adri a studuji medicínu a chemii.</li>
-                <li>Vědě se věnuji už od svých 15 let a mám za sebou účast na řadě soutěží, konferencí a stáží, zároveň se aktivně zapojuji do neziskových projekt. Ve volném čase mě baví triatlon a chození po horách.</li>
+                <li>Vědě se věnuji už od svých 15 let a mám za sebou účast na řadě soutěží, konferencí a stáží, zároveň se aktivně zapojuji do neziskových projektů. Ve volném čase mě baví triatlon a chození po horách.</li>
                 <li>Ráda Ti poradím s čímkoliv ohledně studia na VŠ (ať už jedné nebo více:)), pomůžu se zařizováním stáží, hledáním příležitostí a hlavně se podělím o tipy, jak to všechno zvládnout a nezbláznit se z toho.</li>
               </ul>
               <div class="amigo-more-info-overlay"></div>
@@ -216,7 +216,7 @@
 
           <div class="flex-1 amigo">
             <img loading="lazy" class="amigo-img" src="~@/assets/amigo/tomastikova.jpg">
-            <span class="amigo-name">Jana Tomaštítková</span>
+            <span class="amigo-name">Jana Tomaštíková</span>
             <span class="orange amigo-hashtags">#neurověda #psychologie #studiumvzahraničí #tanec</span>
             <div v-bind:class="['amigo-more-info', ({active: activeAmigo === 'tomastikova'}) ]">
               <ul>
