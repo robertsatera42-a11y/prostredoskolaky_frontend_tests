@@ -148,18 +148,25 @@
 
         <div class="flex">
           <div class="flex-1 amigo">
-            <img loading="lazy" class="amigo-img" src="~@/assets/amigo/vitkova.jpg">
-            <span class="amigo-name">Denisa Vítková</span>
-            <span class="orange amigo-hashtags">#životvzahraničí #věda #STEM</span>
-            <div v-bind:class="['amigo-more-info', ({active: activeAmigo === 'vitkova'}) ]">
+            <img loading="lazy" class="amigo-img" src="~@/assets/amigo/kriz.jpg">
+            <span class="amigo-name">Vítězslav Kříž</span>
+            <span class="orange amigo-hashtags">#education #🍞 #AI #e-learning</span>
+            <div v-bind:class="['amigo-more-info', ({active: activeAmigo === 'kriz'}) ]">
               <ul>
-                <li>👋 Jsem Denča, srdcem dobrovolnice i dobrodruh. </li>
-                <li>⚛️ Věnuji se hlavně STEM, na střední jsem studovala print(“IT”) a volný čas trávila různými mimoškolními aktivitami.</li>
-                <li>🫶 Pomůžu Ti najít něco, co by Tě mohlo zajímat a budu Tvojí podporou, nejen pokud zrovna procházíš složitým životním obdobím. Ráda se od Tebe také něco přiučím!</li>
-                <li>🧳 Kromě Erasmu+ mám zkušenosti i s životem v zahraničí. Setkávali bychom se on-line a můžeme se klidně bavit i in English:)</li>
+                <li>Ahojky! Jmenuju se Víťa a sice se ještě neznáme, ale už teď se na tebe těším! Právě teď studuji učitelství na FI MU v Brně, ale hlavně učím IT na ZŠ a SŠ, dělám lektora AI pro Škoda Auto a Volkswagen, trochu podnikám jako e-learningový specialista a beru každej job, ze kterýho se můžu naučit něco novýho. Abych ale trochu vyvážil tu karmickou nerovnováhu, dávám energii i do několika neziskových projektů, které mi dávají smysl – aktuálně stojím třeba za obsahem soutěže Tour de App, které mi přirostlo k srdci. Zkrátka dělám každý den něco jiného, jen abych se nenudil.</li>
+                <li>S tím vším jsem začal už na střední díky pár skvělým lidem, kteří mě nakazili svojí vášní k dělání cool věcí. Moc rád se pokusím o to samé i s tebou!</li>
+                <li>Rád s tebou proberu cokoliv ohledně vzdělávání (se), AI & IT, vypadnutí z komfortní zóny & zapadnutí do kolektivu, jak mířit vysoko a při tom zůstat nohama na zemi. A když budeš opravdu hodně chtít, klidně se s tebou podělím i o svůj recept na domácí chleba™🍞</li>
               </ul>
               <div class="amigo-more-info-overlay"></div>
             </div>
+            <div
+              v-bind:class="['orange', 'amigo-info', ({active: activeAmigo === 'kriz'})]"
+              @click="changeAmigo('kriz')"
+            >
+              <span></span>
+              {{activeAmigo === 'kriz' ? 'Zobrazit méně' : 'Více o veteránovi'}}
+            </div>
+          </div>
             <div
               v-bind:class="['orange', 'amigo-info', ({active: activeAmigo === 'vitkova'})]"
               @click="changeAmigo('vitkova')"
@@ -498,31 +505,6 @@
             </div>
           </div>
         </div>
-
-        
-        <div class="flex">
-          <div class="flex-1 amigo">
-            <img loading="lazy" class="amigo-img" src="~@/assets/amigo/kriz.jpg">
-            <span class="amigo-name">Vítězslav Kříž</span>
-            <span class="orange amigo-hashtags">#education #🍞 #AI #e-learning</span>
-            <div v-bind:class="['amigo-more-info', ({active: activeAmigo === 'kriz'}) ]">
-              <ul>
-                <li>Ahojky! Jmenuju se Víťa a sice se ještě neznáme, ale už teď se na tebe těším! Právě teď studuji učitelství na FI MU v Brně, ale hlavně učím IT na ZŠ a SŠ, dělám lektora AI pro Škoda Auto a Volkswagen, trochu podnikám jako e-learningový specialista a beru každej job, ze kterýho se můžu naučit něco novýho. Abych ale trochu vyvážil tu karmickou nerovnováhu, dávám energii i do několika neziskových projektů, které mi dávají smysl – aktuálně stojím třeba za obsahem soutěže Tour de App, které mi přirostlo k srdci. Zkrátka dělám každý den něco jiného, jen abych se nenudil.</li>
-                <li>S tím vším jsem začal už na střední díky pár skvělým lidem, kteří mě nakazili svojí vášní k dělání cool věcí. Moc rád se pokusím o to samé i s tebou!</li>
-                <li>Rád s tebou proberu cokoliv ohledně vzdělávání (se), AI & IT, vypadnutí z komfortní zóny & zapadnutí do kolektivu, jak mířit vysoko a při tom zůstat nohama na zemi. A když budeš opravdu hodně chtít, klidně se s tebou podělím i o svůj recept na domácí chleba™🍞</li>
-              </ul>
-              <div class="amigo-more-info-overlay"></div>
-            </div>
-            <div
-              v-bind:class="['orange', 'amigo-info', ({active: activeAmigo === 'kriz'})]"
-              @click="changeAmigo('kriz')"
-            >
-              <span></span>
-              {{activeAmigo === 'kriz' ? 'Zobrazit méně' : 'Více o veteránovi'}}
-            </div>
-          </div>
-        </div>
-
       </div>
 
       <div class="mentor-box">
