@@ -167,14 +167,6 @@
               {{activeAmigo === 'kriz' ? 'Zobrazit méně' : 'Více o veteránovi'}}
             </div>
           </div>
-            <div
-              v-bind:class="['orange', 'amigo-info', ({active: activeAmigo === 'vitkova'})]"
-              @click="changeAmigo('vitkova')"
-            >
-              <span></span>
-              {{activeAmigo === 'vitkova' ? 'Zobrazit méně' : 'Více o veteránovi'}}
-            </div>
-          </div>
 
           <div class="flex-1 amigo">
             <img loading="lazy" class="amigo-img" src="~@/assets/amigo/bernhardova.jpg">
