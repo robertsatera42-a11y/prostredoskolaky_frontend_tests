@@ -1,7 +1,7 @@
 import Vue from "vue";
 import Router from "vue-router";
 import Home from "./views/Home.vue";
-import firebase from "firebase/app";
+import { getAuth } from "firebase/auth";
 
 Vue.use(Router);
 
@@ -145,7 +145,8 @@ router.beforeEach(async (to, from, next) => {
     const requiresAuth = to.matched.some((x) => x.meta.requiresAuth);
     const arr = to.matched.find((x) => x.meta.requiredRoles);
     const requiredRoles = arr && arr.meta && arr.meta.requiredRoles;
-    const currentUser = firebase.auth().currentUser;
+    const auth = getAuth();
+    const currentUser = auth.currentUser;
     // TODO predelat
     if (requiresAuth && !currentUser) {
       if (to.name === "database-page") {

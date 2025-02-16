@@ -169,7 +169,7 @@ export default {
           this.isLoading = false
           this.showSuccess = true
           this.registrationId = result.registrationId
-          await fb.updateProfile(this.user)
+          await fb.updateProfileForCurrentUser(this.user)
           this.user.hasRegistration = true
           tracking.track('competition', 'entrance_page', 'form_finished')
         } else this.error = config.errors.requiredTerms

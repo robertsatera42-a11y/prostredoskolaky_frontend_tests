@@ -1,5 +1,5 @@
-import firebase from 'firebase/app'
-import 'firebase/auth'
+import { initializeApp } from 'firebase/app';
+import { getAuth, createUserWithEmailAndPassword, signInWithEmailAndPassword, signOut, sendPasswordResetEmail, updateProfile, EmailAuthProvider, reauthenticateWithCredential, getIdToken as getIdTokenFirebase, getIdTokenResult } from 'firebase/auth';
 import client from './client/client.js'
 import transformerUtils from './utils/transformerUtils'
 
@@ -13,18 +13,17 @@ var firebaseConfig = {
   appId: '1:408860937046:web:e46a3b696ecd93a57be4f7'
 }
 
-firebase.initializeApp(firebaseConfig)
-
-const auth = firebase.auth()
+const app = initializeApp(firebaseConfig);
+const auth = getAuth(app);
 
 const createUser = async (user, password) => {
   try {
-    await auth.createUserWithEmailAndPassword(user.email, password)
-    await auth.currentUser.updateProfile({
+    const userCredential = await createUserWithEmailAndPassword(auth, user.email, password);
+    await updateProfile(userCredential.user, {
       displayName: user.firstName + ' ' + user.lastName
     })
     await client.createUser(user)
-    sendEmailVerification()
+    await sendEmailVerification(userCredential.user);
     return 'OK'
   } catch (err) {
     console.log(err)
@@ -34,7 +33,7 @@ const createUser = async (user, password) => {
 
 const loginUser = async (email, password) => {
   try {
-    await auth.signInWithEmailAndPassword(email, password)
+    await signInWithEmailAndPassword(auth, email, password);
     return 'OK'
   } catch (err) {
     console.log(err)
@@ -44,15 +43,7 @@ const loginUser = async (email, password) => {
 
 const logoutUser = async () => {
   try {
-    await firebase.auth().signOut()
-  } catch (err) {
-    console.log(err)
-  }
-}
-
-const sendEmailVerification = async () => {
-  try {
-    await auth.currentUser.sendEmailVerification()
+    await signOut(auth);
   } catch (err) {
     console.log(err)
   }
@@ -60,7 +51,7 @@ const sendEmailVerification = async () => {
 
 const renewPassword = async email => {
   try {
-    await auth.sendPasswordResetEmail(email)
+    await sendPasswordResetEmail(auth, email);
     return 'OK'
   } catch (err) {
     console.log(err)
@@ -68,9 +59,9 @@ const renewPassword = async email => {
   }
 }
 
-const updateProfile = async user => {
+const updateProfileForCurrentUser = async user => {
   try {
-    await auth.currentUser.updateProfile({
+    await updateProfile(auth.currentUser, {
       displayName: user.firstName + ' ' + user.lastName
     })
   } catch (err) {
@@ -81,7 +72,7 @@ const updateProfile = async user => {
 
 const updateUser = async (email, user) => {
   try {
-    await updateProfile(user)
+    await updateProfileForCurrentUser(user)
     await client.updateUser(email, user)
     return 'OK'
   } catch (err) {
@@ -92,13 +83,15 @@ const updateUser = async (email, user) => {
 
 const changePassword = async (email, password, newPassword) => {
   try {
-    const credential = firebase.auth.EmailAuthProvider.credential(
+    const credential = EmailAuthProvider.credential(
       email,
       password
     )
-    await auth.currentUser.reauthenticateWithCredential(credential)
-    await auth.currentUser.updatePassword(newPassword)
-    return 'OK'
+    if (auth.currentUser) {
+      await reauthenticateWithCredential(auth.currentUser, credential);
+      await auth.currentUser.updatePassword(newPassword);
+      return 'OK';
+    }
   } catch (err) {
     console.log(err)
     return transformerUtils.mapLoginErrorCodes(err.code)
@@ -107,7 +100,9 @@ const changePassword = async (email, password, newPassword) => {
 
 const getIdToken = async () => {
   try {
-    return firebase.auth().currentUser.getIdToken(/* forceRefresh */ true)
+    if (auth.currentUser) {
+      return await getIdTokenFirebase(auth.currentUser, /* forceRefresh */ true);
+    }
   } catch (err) {
     console.log(err)
   }
@@ -115,9 +110,11 @@ const getIdToken = async () => {
 
 const getRole = async () => {
   try {
-    const result = await firebase.auth().currentUser.getIdTokenResult()
-    const role = result && result.claims && result.claims.role
-    return role
+    if (auth.currentUser) {
+      const result = await getIdTokenResult(auth.currentUser);
+      const role = result && result.claims && result.claims.role;
+      return role;
+    }
   } catch (err) {
     console.log(err)
   }
@@ -125,11 +122,11 @@ const getRole = async () => {
 
 const reauthenticate = async (email, password) => {
   try {
-    const credential = firebase.auth.EmailAuthProvider.credential(
-      email,
-      password
-    )
-    await firebase.auth().currentUser.reauthenticateWithCredential(credential)
+    const credential = EmailAuthProvider.credential(email, password);
+    if (auth.currentUser) {
+      await reauthenticateWithCredential(auth.currentUser, credential);
+      return 'OK';
+    }
     return 'OK'
   } catch (err) {
     console.log(err)
@@ -144,7 +141,7 @@ export default {
   logoutUser,
   renewPassword,
   updateUser,
-  updateProfile,
+  updateProfileForCurrentUser,
   changePassword,
   getIdToken,
   getRole,
