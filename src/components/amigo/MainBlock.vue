@@ -3,20 +3,17 @@
     <div class="content">
       <div class="half">
         <h1>Mentoringový program Amigo</h1>
-        <p>
-          Vyber si jednoho z našich mentorů, který ti pomůže dostat se na novou úroveň.<br/>
-        </p>
         <!-- <p>
-          Letošní kolo právě probíhá, přihlašování už proto bylo ukončeno. Příští rok na podzim však otevřeme další.<br/>
+          Vyber si jednoho z našich mentorů, který ti pomůže dostat se na novou úroveň.<br/>
         </p> -->
+        <p>
+          Letošní kolo právě probíhá, přihlašování už proto bylo ukončeno. Příští rok na podzim však otevřeme další.<br/>
+        </p>
+        <!-- <button class="button is-active is-primary" @click="goToForm">Přihlas se do programu</button> -->
         <button
         class="button is-active is-primary"
-        @click="goToForm"
-        >Přihlas se do programu</button>
-        <!-- <button
-        class="button is-active is-primary"
         disabled="true"
-        >Přihlašování bylo ukončeno</button> -->
+        >Přihlašování bylo ukončeno</button>
       </div>
       <span class="image-overlay"/>
       <span class="overlay"/>

@@ -35,10 +35,10 @@
           </div>
         </div>
         <div class="round-time">
-          Přihlas se do
-          <span class="orange">31. října 2024</span>
+          Přihlašování
+          <span class="orange">ukončeno</span>, další ročník bude otevřen na <span class="orange">podzim 2025</span>
         </div>
-        <a href="https://forms.gle/pw6q2u53ztvYa1CW9" target="_blank" class="step-link">Vyplnit přihlášku</a>
+        <!-- <a href="https://forms.gle/pw6q2u53ztvYa1CW9" target="_blank" class="step-link">Vyplnit přihlášku</a> -->
       </div>
 
       <div class="picture-wrapper">
@@ -500,9 +500,9 @@
       </div>
 
       <div class="mentor-box">
-        <div class="mentor-title">Přihlas se ještě dnes!</div>
-        <a href="https://forms.gle/pw6q2u53ztvYa1CW9" target="_blank" class="mentor-button button">Přihlas se do programu</a>
-        <!-- <a target="_blank" class="mentor-button button">Přihlašování bylo ukončeno</a> -->
+        <!-- <div class="mentor-title">Přihlas se ještě dnes!</div> -->
+        <!-- <a href="https://forms.gle/pw6q2u53ztvYa1CW9" target="_blank" class="mentor-button button">Přihlas se do programu</a> -->
+        <a target="_blank" class="mentor-button button">Přihlašování bylo ukončeno</a>
       </div>
     </div>
   </section>
