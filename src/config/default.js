@@ -8,23 +8,23 @@ export default {
         { name: 'Čtvrtý', value: '4-4' }
       ],
       six: [
-        { name: 'První', value: '1-6' },
-        { name: 'Druhý', value: '2-6' },
-        { name: 'Třetí', value: '3-6' },
-        { name: 'Čtvrtý', value: '4-6' },
-        { name: 'Pátý', value: '5-6' },
-        { name: 'Šestý', value: '6-6' }
+        /*{ name: "První", value: "1-6" },
+        { name: "Druhý", value: "2-6" },*/
+        { name: "Třetí", value: "3-6" },
+        { name: "Čtvrtý", value: "4-6" },
+        { name: "Pátý", value: "5-6" },
+        { name: "Šestý", value: "6-6" },
       ],
       eight: [
-        { name: 'První', value: '1-8' },
-        { name: 'Druhý', value: '2-8' },
-        { name: 'Třetí', value: '3-8' },
-        { name: 'Čtvrtý', value: '4-8' },
-        { name: 'Pátý', value: '5-8' },
-        { name: 'Šestý', value: '6-8' },
-        { name: 'Sedmý', value: '7-8' },
-        { name: 'Osmý', value: '8-8' }
-      ]
+        /*{ name: "První", value: "1-8" },
+        { name: "Druhý", value: "2-8" },
+        { name: "Třetí", value: "3-8" },
+        { name: "Čtvrtý", value: "4-8" }, */
+        { name: "Pátý", value: "5-8" },
+        { name: "Šestý", value: "6-8" },
+        { name: "Sedmý", value: "7-8" },
+        { name: "Osmý", value: "8-8" },
+      ],
     },
     jobs: ['student', 'učitel', 'organizátor mimoškolních aktivit', 'prostě návštěvník'],
     regions: [ 'Praha', 'Středočeský', 'Jihočeský', 'Plzeňský', 'Karlovarský', 'Ústecký', 'Liberecký', 'Královéhradecký', 'Pardubický', 'Vysočina', 'Jihomoravský', 'Olomoucký', 'Moravskoslezský', 'Zlínský' ],

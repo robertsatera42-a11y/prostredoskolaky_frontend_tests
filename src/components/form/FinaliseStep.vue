@@ -88,7 +88,9 @@
     <a class="button a-orange" @click="goToEditActivities">Zpět k úpravám</a>
 
     <div class="consent">
-      <b-checkbox v-model="isAgree">Souhlasím s <a href="https://drive.google.com/file/d/1Jq48GaNIC-yhYy583tWcLdhWL3_6NIX9/view?usp=sharing" target="_blank">podmínkami soutěže</a> a uděluji <a href="https://drive.google.com/file/d/1-bEgTzhrrQahPBU0wRtNJ5bE-phOChO9/view?usp=sharing" target="_blank">souhlas se zpracováním osobních údajů</a>.</b-checkbox>
+      <b-checkbox v-model="isAgree">
+        Souhlasím s <a href="https://drive.google.com/file/d/1Jq48GaNIC-yhYy583tWcLdhWL3_6NIX9/view?usp=sharing" target="_blank">podmínkami soutěže</a> a uděluji <a href="https://drive.google.com/file/d/1-bEgTzhrrQahPBU0wRtNJ5bE-phOChO9/view?usp=sharing" target="_blank">souhlas se zpracováním osobních údajů</a>.  Zároveň potvrzuji, že jsem si přečetl dokument <a style="color: #1dbcb9" href="https://storage.googleapis.com/ps-others/Jak_na_prihlasku.pdf" target="_blank">Jak na přihlášku</a>.
+      </b-checkbox>
     </div>
 
     <div class="help-link">

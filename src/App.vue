@@ -8,7 +8,7 @@
     }">
       <div class="content">
         <div @click="goToHome" class="logo">
-          <img src="~@/assets/logo.png" alt="Prostředoškoláky">
+          <img src="~@/assets/logo_new.svg" alt="Prostředoškoláky">
         </div>
 
         <span
