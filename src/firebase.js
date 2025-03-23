@@ -1,5 +1,17 @@
 import { initializeApp } from 'firebase/app';
-import { getAuth, createUserWithEmailAndPassword, signInWithEmailAndPassword, signOut, sendPasswordResetEmail, updateProfile, EmailAuthProvider, reauthenticateWithCredential, getIdToken as getIdTokenFirebase, getIdTokenResult } from 'firebase/auth';
+import { 
+  getAuth, 
+  createUserWithEmailAndPassword, 
+  signInWithEmailAndPassword, 
+  signOut, 
+  sendPasswordResetEmail, 
+  updateProfile, 
+  EmailAuthProvider, 
+  reauthenticateWithCredential, 
+  getIdToken as getIdTokenFirebase, 
+  getIdTokenResult, 
+  sendEmailVerification // Import sendEmailVerification
+} from 'firebase/auth';
 import client from './client/client.js'
 import transformerUtils from './utils/transformerUtils'
 
@@ -21,13 +33,13 @@ const createUser = async (user, password) => {
     const userCredential = await createUserWithEmailAndPassword(auth, user.email, password);
     await updateProfile(userCredential.user, {
       displayName: user.firstName + ' ' + user.lastName
-    })
-    await client.createUser(user)
-    await sendEmailVerification(userCredential.user);
-    return 'OK'
+    });
+    await client.createUser(user);
+    await sendEmailVerification(userCredential.user); // This will now work
+    return 'OK';
   } catch (err) {
-    console.log(err)
-    return transformerUtils.mapLoginErrorCodes(err.code)
+    console.log(err);
+    return transformerUtils.mapLoginErrorCodes(err.code);
   }
 }
 
