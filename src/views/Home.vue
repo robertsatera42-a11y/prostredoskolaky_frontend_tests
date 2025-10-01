@@ -49,7 +49,7 @@
               <div class="step-title">Najdi si, co dělat</div>
               <p
                 class="step-description"
-              >Je potřeba začít něco dělat. A že je toho spousty pro každého. Do začátku nemusíš nic umět. Možnost má každý. Nezávisle na ročníku, ve kterém jsi, škole či bydlišti. Připravili jsme databázi 360+ mimoškolních aktivit. Stačí si jen vybrat.</p>
+              >Je potřeba začít něco dělat. A že je toho spousty pro každého. Do začátku nemusíš nic umět. Možnost má každý. Nezávisle na ročníku, ve kterém jsi, škole či bydlišti. Připravili jsme databázi 400+ mimoškolních aktivit. Stačí si jen vybrat.</p>
               <a class="step-link" @click="goToAndTrack('/databaze', 'link', 'database')">Databáze mimoškolních aktivit</a>
             </div>
           </div>
