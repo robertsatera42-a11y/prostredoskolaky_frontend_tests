@@ -27,7 +27,7 @@
             <span class="link-underline"/>
           </div>
           <div class="menu-bottom-link">
-            <router-link @click.native="closeMenu" to="/amigo">Amigo</router-link>
+            <router-link @click.native="closeMenu" to="/amigo">AMIGO</router-link>
             <span class="link-underline"/>
           </div>
           <div class="menu-bottom-link">
