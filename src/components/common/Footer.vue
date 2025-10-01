@@ -7,7 +7,7 @@
           <router-link to="/">Domů</router-link>
           <a @click="goToAndTrack('https://stredoskolakroku.cz/', 'link', 'soutez')">Středoškolák roku</a>
           <!-- <router-link to="/finaliste">Finalisté</router-link> -->
-          <router-link to="/amigo">Amigo</router-link>
+          <router-link to="/amigo">AMIGO</router-link>
           <router-link to="/databaze">Databáze</router-link>
           <router-link to="/o-nas">O nás</router-link>
           <a @click="goToAndTrack('https://prostredoskolaky-cz.medium.com/', 'link', 'blog')">Blog</a>
