@@ -78,7 +78,7 @@
           <div class="flex-2 padding-left">
             <div class="step max-width-80">
               <div class="step-no">Krok 3</div>
-              <div class="step-title">Nech se inspirovat na konferenci Free Spirit</div>
+              <div class="step-title">Nech se inspirovat na Konferenci Free Spirit</div>
               <p
                 class="step-description"
               >Přijď se inspirovat od těch nejzajímavějších středoškoláků v České republice. Několikrát do roka pořádáme setkání, kde se s tebou o své zkušenosti a názory podělí mladí aktivní lidé, kteří už mají něco za sebou.</p>
@@ -213,7 +213,7 @@
                 <div class="activity-title">Databáze mimoškolních aktivit</div>
                 <p
                   class="activity-description"
-                >Máme databázi více než 300 mimoškolních aktivit napříč všemi obory.</p>
+                >Máme databázi více než 400 mimoškolních aktivit napříč všemi obory.</p>
               </div>
             </a>
             <a class="activity">
