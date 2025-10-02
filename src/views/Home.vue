@@ -3,8 +3,7 @@
     <section class="main-container">
       <div class="content">
         <h1>
-          Na střední můžeš objevit svůj talent.
-          <span></span>Nebo ho taky navždy pohřbít.
+          Tvoříme komunitu aktivních středoškoláků.
         </h1>
         <button
           @click="startExploring('steps-container')"
