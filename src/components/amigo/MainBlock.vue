@@ -2,7 +2,7 @@
   <section class="main-section">
     <div class="content">
       <div class="half">
-        <h1>Mentoringový program Amigo</h1>
+        <h1>Mentoringový program AMIGO</h1>
         <!-- <p>
           Vyber si jednoho z našich mentorů, který ti pomůže dostat se na novou úroveň.<br/>
         </p> -->
