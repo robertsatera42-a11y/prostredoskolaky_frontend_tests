@@ -366,7 +366,7 @@
           </div>
         </div>
 
-        <div class="flex-1 amigo">  
+        <div class="flex">  
           <div class="flex-1 amigo">
             <img loading="lazy" class="amigo-img" src="~@/assets/amigo/tadeas-vylita.jpg">
             <span class="amigo-name">Tadeáš Vylita</span>
