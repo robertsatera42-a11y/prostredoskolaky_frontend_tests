@@ -60,7 +60,7 @@
         <h2>Naši amigos</h2>
         <div class="flex">
           <div class="flex-1 amigo">
-            <img loading="lazy" class="amigo-img" src="~@/assets/amigo/Anna Černá.jpg">
+            <img loading="lazy" class="amigo-img" src="~@/assets/amigo/anna-cerna.jpg">
             <span class="amigo-name">Anna Černá</span>
             <span class="orange amigo-hashtags">#molekulárníbiologie #věda #SOČ #studiumvzahraničí</span>
             <div v-bind:class="['amigo-more-info', ({active: activeAmigo === 'cerna'}) ]">
@@ -80,7 +80,7 @@
           </div>
 
           <div class="flex-1 amigo">
-            <img loading="lazy" class="amigo-img" src="~@/assets/amigo/Anna Průšová.jpg">
+            <img loading="lazy" class="amigo-img" src="~@/assets/amigo/anna-prusova.jpg">
             <span class="amigo-name">Anna Průšová</span>
             <span class="orange amigo-hashtags">#fyzika #studiumvzahraničí</span>
             <div v-bind:class="['amigo-more-info', ({active: activeAmigo === 'prusova'}) ]">
@@ -102,7 +102,7 @@
 
         <div class="flex">
           <div class="flex-1 amigo">
-            <img loading="lazy" class="amigo-img" src="~@/assets/amigo/Antonín Svoboda.jpg">
+            <img loading="lazy" class="amigo-img" src="~@/assets/amigo/antonin-svoboda.jpg">
             <span class="amigo-name">Antonín Svoboda</span>
             <span class="orange amigo-hashtags">#mluvení #adiktologie #mindfulness</span>
             <div v-bind:class="['amigo-more-info', ({active: activeAmigo === 'svoboda'}) ]">
@@ -123,7 +123,7 @@
           </div>
 
           <div class="flex-1 amigo">
-            <img loading="lazy" class="amigo-img" src="~@/assets/amigo/Hana Bernhardová.JPG">
+            <img loading="lazy" class="amigo-img" src="~@/assets/amigo/hana-bernhardova.jpg">
             <span class="amigo-name">Hana Bernhardová</span>
             <span class="orange amigo-hashtags">#biochemie #studiumvzahraničí #věda</span>
             <div v-bind:class="['amigo-more-info', ({active: activeAmigo === 'bernhardova'}) ]">
@@ -167,7 +167,7 @@
           </div>
 
           <div class="flex-1 amigo">
-            <img loading="lazy" class="amigo-img" src="~@/assets/amigo/Johana Valová.JPG">
+            <img loading="lazy" class="amigo-img" src="~@/assets/amigo/johana-valova.jpg">
             <span class="amigo-name">Johana Valová</span>
             <span class="orange amigo-hashtags">#hudba #autorskátvorba #umění #psanínaklávesnici #vzdělávaní</span>
             <div v-bind:class="['amigo-more-info', ({active: activeAmigo === 'valova'}) ]">
@@ -190,7 +190,7 @@
 
         <div class="flex">
           <div class="flex-1 amigo">
-            <img loading="lazy" class="amigo-img" src="~@/assets/amigo/Matěj Prokop.jpg">
+            <img loading="lazy" class="amigo-img" src="~@/assets/amigo/matej-prokop.jpg">
             <span class="amigo-name">Matěj Prokop</span>
             <span class="orange amigo-hashtags">#politika #mezinárodnívztahy #participace #lobbing #socialimpact</span>
             <div v-bind:class="['amigo-more-info', ({active: activeAmigo === 'prokop'}) ]">
@@ -211,7 +211,7 @@
             </div>
           </div>
           <div class="flex-1 amigo">
-            <img loading="lazy" class="amigo-img" src="~@/assets/amigo/Matěj Šicner.jpg">
+            <img loading="lazy" class="amigo-img" src="~@/assets/amigo/matej-sicner.jpg">
             <span class="amigo-name">Matěj Šicner</span>
             <span class="orange amigo-hashtags">#věda #fyzika #sport #táboryproděcka #eventmanagement #bioinformatika</span>
             <div v-bind:class="['amigo-more-info', ({active: activeAmigo === 'sicner'}) ]">
@@ -235,7 +235,7 @@
 
         <div class="flex">
           <div class="flex-1 amigo">
-            <img loading="lazy" class="amigo-img" src="~@/assets/amigo/Metoděj Svoboda.png">
+            <img loading="lazy" class="amigo-img" src="~@/assets/amigo/metodej-svoboda.png">
             <span class="amigo-name">Metoděj Svoboda</span>
             <span class="orange amigo-hashtags">#projectmanagement #přednášení #idkhlavněchciabytocodělámmělosmysl</span>
             <div v-bind:class="['amigo-more-info', ({active: activeAmigo === 'svoboda2'}) ]">
@@ -257,7 +257,7 @@
             </div>
           </div>
           <div class="flex-1 amigo">
-            <img loading="lazy" class="amigo-img" src="~@/assets/amigo/Ondřej Pazourek.jpeg">
+            <img loading="lazy" class="amigo-img" src="~@/assets/amigo/ondrej-pazourek.jpeg">
             <span class="amigo-name">Ondřej Pazourek</span>
             <span class="orange amigo-hashtags">#dev #software #tech</span>
             <div v-bind:class="['amigo-more-info', ({active: activeAmigo === 'pazourek'}) ]">
@@ -281,7 +281,7 @@
 
         <div class="flex">
           <div class="flex-1 amigo">
-            <img loading="lazy" class="amigo-img" src="~@/assets/amigo/Ondřej Pelánek.jpg">
+            <img loading="lazy" class="amigo-img" src="~@/assets/amigo/ondrej-pelanek.jpg">
             <span class="amigo-name">Ondřej Pelánek</span>
             <span class="orange amigo-hashtags">#biologie #fotografie #studiumvzahraničí</span>
             <div v-bind:class="['amigo-more-info', ({active: activeAmigo === 'pelanek'}) ]">
@@ -324,7 +324,7 @@
 
         <div class="flex">
           <div class="flex-1 amigo">
-            <img loading="lazy" class="amigo-img" src="~@/assets/amigo/Šimon Špilar.jpg">
+            <img loading="lazy" class="amigo-img" src="~@/assets/amigo/simon-spilar.jpg">
             <span class="amigo-name">Šimon Špilar</span>
             <span class="orange amigo-hashtags">#investice #ekonomie #politika #němčina</span>
             <div v-bind:class="['amigo-more-info', ({active: activeAmigo === 'spilar'}) ]">
@@ -344,7 +344,7 @@
           </div>
 
           <div class="flex-1 amigo">
-            <img loading="lazy" class="amigo-img" src="~@/assets/amigo/Tadeáš Fryčák.JPG">
+            <img loading="lazy" class="amigo-img" src="~@/assets/amigo/tadeas-frycak.jpg">
             <span class="amigo-name">Tadeáš Fryčák</span>
             <span class="orange amigo-hashtags">#informatika #věda #studiumvzahraničí</span>
             <div v-bind:class="['amigo-more-info', ({active: activeAmigo === 'frycak'}) ]">
@@ -368,7 +368,7 @@
 
         <div class="flex-1 amigo">  
           <div class="flex-1 amigo">
-            <img loading="lazy" class="amigo-img" src="~@/assets/amigo/Tadeáš Vylita.jpg">
+            <img loading="lazy" class="amigo-img" src="~@/assets/amigo/tadeas-vylita.jpg">
             <span class="amigo-name">Tadeáš Vylita</span>
             <span class="orange amigo-hashtags">#vzdělávání #pedagogika #sport #organizace akcí</span>
             <div v-bind:class="['amigo-more-info', ({active: activeAmigo === 'vylita'}) ]">
@@ -388,7 +388,7 @@
           </div>
 
           <div class="flex-1 amigo">
-            <img loading="lazy" class="amigo-img" src="~@/assets/amigo/Tereza Przeczková.JPG">
+            <img loading="lazy" class="amigo-img" src="~@/assets/amigo/tereza-przeczkova.jpg">
             <span class="amigo-name">Tereza Przeczková</span>
             <span class="orange amigo-hashtags">#studiumvzahraničí #biomedicína #věda #sport</span>
             <div v-bind:class="['amigo-more-info', ({active: activeAmigo === 'przeczkova'}) ]">
@@ -411,7 +411,7 @@
 
         <div class="flex">
           <div class="flex-1 amigo">
-            <img loading="lazy" class="amigo-img" src="~@/assets/amigo/Tereza Tomášková.jpg">
+            <img loading="lazy" class="amigo-img" src="~@/assets/amigo/tereza-tomaskova.jpg">
             <span class="amigo-name">Tereza Tomášková</span>
             <span class="orange amigo-hashtags">#konzervatoř #flétna #výzkum #molekulárníbiologie</span>
             <div v-bind:class="['amigo-more-info', ({active: activeAmigo === 'tomaskova'}) ]">
@@ -432,7 +432,7 @@
           </div>
 
           <div class="flex-1 amigo">
-            <img loading="lazy" class="amigo-img" src="~@/assets/amigo/Veronika Zelinková.jpg">
+            <img loading="lazy" class="amigo-img" src="~@/assets/amigo/veronika-zelinkova.jpg">
             <span class="amigo-name">Veronika Zelinková</span>
             <span class="orange amigo-hashtags">#programming #iOSDevelopment #careerTips</span>
             <div v-bind:class="['amigo-more-info', ({active: activeAmigo === 'zelinkova'}) ]">
