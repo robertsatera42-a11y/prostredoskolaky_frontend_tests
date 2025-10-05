@@ -104,7 +104,7 @@
           <div class="flex-1 amigo">
             <img loading="lazy" class="amigo-img" src="~@/assets/amigo/Antonín Svoboda.jpg">
             <span class="amigo-name">Antonín Svoboda</span>
-            <span class="orange amigo-hashtags">#mluvení #adiktologie  #mindfulness</span>
+            <span class="orange amigo-hashtags">#mluvení #adiktologie #mindfulness</span>
             <div v-bind:class="['amigo-more-info', ({active: activeAmigo === 'svoboda'}) ]">
               <ul>
                 <li>Aby se člověk nevyšťavil hned na prvním projektu jak jablečný mošt🥁, tak by si jako nultý projekt mohl dát třeba sebe. Jaké možnosti jsou? Některé tušíte, na jiné přijdeme společně v Amigu. Takže se pobavíme o tom, jak nakonec všechno zvládnout a jak si odpočinout. Nebo z jiného soudku, jak vymaxovat schopnost mluvit, přednášet a prezentovat. (popřípadě cokoli z níže vypsaného)</li>
