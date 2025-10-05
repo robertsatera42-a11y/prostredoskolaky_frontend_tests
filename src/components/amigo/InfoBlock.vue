@@ -60,34 +60,33 @@
         <h2>Naši amigos</h2>
         <div class="flex">
           <div class="flex-1 amigo">
-            <img loading="lazy" class="amigo-img" src="~@/assets/amigo/jedlickova.jpg">
-            <span class="amigo-name">Adriena Jedličková</span>
-            <span class="orange amigo-hashtags">#medicína #věda #biologie #chemie</span>
-            <div v-bind:class="['amigo-more-info', ({active: activeAmigo === 'jedlickova'}) ]">
+            <img loading="lazy" class="amigo-img" src="~@/assets/amigo/Anna Černá.jpg">
+            <span class="amigo-name">Anna Černá</span>
+            <span class="orange amigo-hashtags">#molekulárníbiologie #věda #SOČ #studiumvzahraničí</span>
+            <div v-bind:class="['amigo-more-info', ({active: activeAmigo === 'cerna'}) ]">
               <ul>
-                <li>Ahoj, jsem Adri a studuji medicínu a chemii.</li>
-                <li>Vědě se věnuji už od svých 15 let a mám za sebou účast na řadě soutěží, konferencí a stáží, zároveň se aktivně zapojuji do neziskových projektů. Ve volném čase mě baví triatlon a chození po horách.</li>
-                <li>Ráda Ti poradím s čímkoliv ohledně studia na VŠ (ať už jedné nebo více:)), pomůžu se zařizováním stáží, hledáním příležitostí a hlavně se podělím o tipy, jak to všechno zvládnout a nezbláznit se z toho.</li>
+                <li>Ahoj! Jsem Anička a studuji Přírodní vědy na Maastricht University v Nizozemsku. Od konce prváku na gymplu jsem dělala výzkum v oblasti molekulární biologie na Masarykově univerzitě a mám zkušenosti z vědeckých soutěží v Česku i v zahraničí.</li>
+                <li>Jako mentorka pomohu s výběrem a oslovením laboratoře, přípravou SOČ, posteru a obhajoby, i s přihláškami na české i zahraniční VŠ a se stipendii nebo prostě s čímkoliv, co zrovna bude potřeba;).</li>
               </ul>
               <div class="amigo-more-info-overlay"></div>
             </div>
             <div
-              v-bind:class="['orange', 'amigo-info', ({active: activeAmigo === 'jedlickova'})]"
-              @click="changeAmigo('jedlickova')"
+              v-bind:class="['orange', 'amigo-info', ({active: activeAmigo === 'cerna'})]"
+              @click="changeAmigo('cerna')"
             >
               <span></span>
-              {{activeAmigo === 'jedlickova' ? 'Zobrazit méně' : 'Více o veteránovi'}}
+              {{activeAmigo === 'cerna' ? 'Zobrazit méně' : 'Více o veteránovi'}}
             </div>
           </div>
 
           <div class="flex-1 amigo">
-            <img loading="lazy" class="amigo-img" src="~@/assets/amigo/prusova.jpg">
+            <img loading="lazy" class="amigo-img" src="~@/assets/amigo/Anna Průšová.jpg">
             <span class="amigo-name">Anna Průšová</span>
             <span class="orange amigo-hashtags">#fyzika #studiumvzahraničí</span>
             <div v-bind:class="['amigo-more-info', ({active: activeAmigo === 'prusova'}) ]">
               <ul>
-                <li>Ahoj, jmenuji se Anička a momentálně studuji třetím rokem fyziku na Technické univerzitě v Mnichově.</li>
-                <li>Během střední jsem se věnovala nejen fyzice, ale i chemii. Mám za sebou stáž na Fyzikálním i Astronomickém ústavu AV ČR, vícero soutěží, letní školu fyzikální chemie, samostudium cizích jazyků, praxi v architektonické kanceláři a mateřské škole v Německu.</li>
+                <li>Ahoj, jmenuji se Anička a momentálně ukončuji bakalářské studium na Technické univerzitě v Mnichově s plánem začít magisterské studium na LMU se zaměřením na lékařskou fyziku.</li>
+                <li>Během gymnázia jsem se věnovala nejen fyzice, ale i chemii. Mám za sebou stáž na Fyzikálním i Astronomickém ústavu AV ČR, vícero soutěží, letní školu fyzikální chemie, samostudium cizích jazyků, praxi v architektonické kanceláři a mateřské škole v Německu.</li>
                 <li>Ráda poradím s hledáním stáží, soutěží a vysoké školy, jak v Čechách, tak zahraničí.</li></ul>
               <div class="amigo-more-info-overlay"></div>
             </div>
@@ -103,75 +102,30 @@
 
         <div class="flex">
           <div class="flex-1 amigo">
-            <img loading="lazy" class="amigo-img" src="~@/assets/amigo/ryba.jpg">
-            <span class="amigo-name">David Ryba</span>
-            <span class="orange amigo-hashtags">#vzdělávání #architektura #soft-skills #eventmanagement #sport #cestování</span>
-            <div v-bind:class="['amigo-more-info', ({active: activeAmigo === 'ryba'}) ]">
+            <img loading="lazy" class="amigo-img" src="~@/assets/amigo/Antonín Svoboda.jpg">
+            <span class="amigo-name">Antonín Svoboda</span>
+            <span class="orange amigo-hashtags">#mluvení #adiktologie  #mindfulness</span>
+            <div v-bind:class="['amigo-more-info', ({active: activeAmigo === 'svoboda'}) ]">
               <ul>
-                <li>Ze všeho nejvíc mě baví učit se – za knížkami mě spíš nenajdete, ale co se dovedností týče, budete jen těžko hledat někoho, kdo se takhle nadchne v podstatě pro cokoliv. Nejvíce času aktuálně trávím tím, že se snažím učitele učit prezentační dovednosti, aby výuka na školách u nás byla praktičtější.</li>
-                <li>Dva roky jsem vedl soutěž Prezentiáda, vedu přípravy konference TEDxPrague: Metamorphosis. Bydlím v Brně, kde studuji 4. ročník architektury, mám rád sporty a zkoušení různých způsobů cestování – naposledy jsme se s kamarádem stopem dostali za 54 hodin z Pardubic k moři do Francie. Těším se, s čím budu moct pomoct!</li>
+                <li>Aby se člověk nevyšťavil hned na prvním projektu jak jablečný mošt🥁, tak by si jako nultý projekt mohl dát třeba sebe. Jaké možnosti jsou? Některé tušíte, na jiné přijdeme společně v Amigu. Takže se pobavíme o tom, jak nakonec všechno zvládnout a jak si odpočinout. Nebo z jiného soudku, jak vymaxovat schopnost mluvit, přednášet a prezentovat. (popřípadě cokoli z níže vypsaného)</li>
+                <li>Jsem Tonda a studuji na 1.LF UK Adiktologii. Dva roky po sobě jsme s bráchou vyhráli národní kolo Prezentiády, což pak vedlo k přednáškám pro Akademii Díky, že můžem, Kampus Hybernská nebo různě po školách v ČR. Angažuji se ve spolcích ProStředoškoláky, SCG a ČASA a 13 let hraji na housle. Na druhé straně jsem pak vychodil 8 týdenní kurz MBSR, coaching s Coachville, medituji, cvičím yogu a vyrostl jsem na stoicismu a journalingu</li>
+                <li>Setkání on-line kdykoli, nebo naživo v Praze📍</li>
               </ul>
               <div class="amigo-more-info-overlay"></div>
             </div>
             <div
-              v-bind:class="['orange', 'amigo-info', ({active: activeAmigo === 'ryba'})]"
-              @click="changeAmigo('ryba')"
+              v-bind:class="['orange', 'amigo-info', ({active: activeAmigo === 'svoboda'})]"
+              @click="changeAmigo('svoboda')"
             >
               <span></span>
-              {{activeAmigo === 'ryba' ? 'Zobrazit méně' : 'Více o veteránovi'}}
+              {{activeAmigo === 'svoboda' ? 'Zobrazit méně' : 'Více o veteránovi'}}
             </div>
           </div>
 
           <div class="flex-1 amigo">
-            <img loading="lazy" class="amigo-img" src="~@/assets/amigo/nimrichtr.jpg">
-            <span class="amigo-name">David Theodor Nimrichtr</span>
-            <span class="orange amigo-hashtags">#ITveVědě #nezisk #organizace</span>
-            <div v-bind:class="['amigo-more-info', ({active: activeAmigo === 'nimrichtr'}) ]">
-              <ul>
-                <li>Ahoj, já jsem Theo a aktuálně začínám kombinovaně studovat všeobecné lékařství na 3. Lékařské fakultě UK a Informatiku na FIT ČVUT. Pokud mne tyto školy nerozemelou, mohu ti nabídnout zkušenosti s kombinovaným studiem a nějaké obecné tipy na time management a plánování úkolů.</li>
-                <li>Už na gymplu jsem rád organizoval všechno možné a několik let působím v neziskové organizaci Evropský parlament mládeže zaměřené na vzdělávání středoškoláků skrz simulace. Mohu ti tak předat rady a zkušenosti o vedení neziskových spolků, organizaci akcí pro desítky až stovky účastníků, mezinárodních spolupracích, získávání zajímavých partnerů a politiků a hlavně fundraisování velkých částek a dlouhodobých dotací z veřejného i soukromého sektoru.</li>
-                <li>V rámci mnoha projektů jsem integroval (čti: bastlil v garáži) IT do přírodních věd, a vytvořil jsem tak např. polární sondu, stratobalón, ponorku nebo UV-VIS-IR spektrometr. S těmito jsem pak různě soutěžil a byl m.j. dvakrát na bedně v SOČce.</li>
-                <li>Absolvoval jsem taky třeba program STC, přednášel na Juniorské vědecké konferenci nebo MakerFairu a umístil se na soutěžích jako České hlavičky, CanSat, Czech Rocket Challenge nebo na mnoha předmětových olympiádách. Navíc jsem několik let vyučoval různě staré základoškoláky robotiku a programování.</li>
-                <li>V tom, co nazývám volným časem, tančím a zpívám ve folklórním souboru, občas si zahraju na klavír nebo na housle, přečtu si nějakou klasickou knížku a taky docela cestuju po Evropě, můžeme tak zavést řeč i sem.</li>
-              </ul>
-              <div class="amigo-more-info-overlay"></div>
-            </div>
-            <div
-              v-bind:class="['orange', 'amigo-info', ({active: activeAmigo === 'nimrichtr'})]"
-              @click="changeAmigo('nimrichtr')"
-            >
-              <span></span>
-              {{activeAmigo === 'nimrichtr' ? 'Zobrazit méně' : 'Více o veteránovi'}}
-            </div>
-          </div>
-        </div>
-
-        <div class="flex">
-          <div class="flex-1 amigo">
-            <img loading="lazy" class="amigo-img" src="~@/assets/amigo/kriz.jpg">
-            <span class="amigo-name">Vítězslav Kříž</span>
-            <span class="orange amigo-hashtags">#education #🍞 #AI #e-learning</span>
-            <div v-bind:class="['amigo-more-info', ({active: activeAmigo === 'kriz'}) ]">
-              <ul>
-                <li>Ahojky! Jmenuju se Víťa a sice se ještě neznáme, ale už teď se na tebe těším! Právě teď studuji učitelství na FI MU v Brně, ale hlavně učím IT na ZŠ a SŠ, dělám lektora AI pro Škoda Auto a Volkswagen, trochu podnikám jako e-learningový specialista a beru každej job, ze kterýho se můžu naučit něco novýho. Abych ale trochu vyvážil tu karmickou nerovnováhu, dávám energii i do několika neziskových projektů, které mi dávají smysl – aktuálně stojím třeba za obsahem soutěže Tour de App, které mi přirostlo k srdci. Zkrátka dělám každý den něco jiného, jen abych se nenudil.</li>
-                <li>S tím vším jsem začal už na střední díky pár skvělým lidem, kteří mě nakazili svojí vášní k dělání cool věcí. Moc rád se pokusím o to samé i s tebou!</li>
-                <li>Rád s tebou proberu cokoliv ohledně vzdělávání (se), AI & IT, vypadnutí z komfortní zóny & zapadnutí do kolektivu, jak mířit vysoko a při tom zůstat nohama na zemi. A když budeš opravdu hodně chtít, klidně se s tebou podělím i o svůj recept na domácí chleba™🍞</li>
-              </ul>
-              <div class="amigo-more-info-overlay"></div>
-            </div>
-            <div
-              v-bind:class="['orange', 'amigo-info', ({active: activeAmigo === 'kriz'})]"
-              @click="changeAmigo('kriz')"
-            >
-              <span></span>
-              {{activeAmigo === 'kriz' ? 'Zobrazit méně' : 'Více o veteránovi'}}
-            </div>
-          </div>
-
-          <div class="flex-1 amigo">
-            <img loading="lazy" class="amigo-img" src="~@/assets/amigo/bernhardova.jpg">
+            <img loading="lazy" class="amigo-img" src="~@/assets/amigo/Hana Bernhardová.JPG">
             <span class="amigo-name">Hana Bernhardová</span>
-            <span class="orange amigo-hashtags">#studiumvzahranici #biochemie #věda</span>
+            <span class="orange amigo-hashtags">#biochemie #studiumvzahraničí #věda</span>
             <div v-bind:class="['amigo-more-info', ({active: activeAmigo === 'bernhardova'}) ]">
               <ul>
                 <li>Ahoj, jsem Hanka a v současnosti dělám doktorát na lékařské fakultě ve Vídni, kde se věnuji výzkumu dětské rakoviny kostí. Své bakalářské a magisterské studium biochemie a molekulární biologie jsem absolvovala v Anglii na Oxfordské univerzitě.</li>
@@ -192,28 +146,6 @@
 
         <div class="flex">
           <div class="flex-1 amigo">
-            <img loading="lazy" class="amigo-img" src="~@/assets/amigo/zegzulka.jpg">
-            <span class="amigo-name">Jakub Zegzulka</span>
-            <span class="orange amigo-hashtags">#design #tech</span>
-            <div v-bind:class="['amigo-more-info', ({active: activeAmigo === 'zegzulka'}) ]">
-              <ul>
-                <li>Zaměřuji se na tvorbu digitálních produktů, převážně v oblastech interakčního designu, UX a future technologies.</li>
-                <li>Mám zkušenosti z firem jako Apple, Meta, Avast, Kiwi.com a vícero startupů, kde jsem se zaměřoval na UI/UX, product growth a brand.</li>
-                <li>Aktuálně bydlím mezi Los Angeles a San Franciscem. Studuji interakční design na ArtCenter College of Design.</li>
-                <li>Baví mě pomáhat ostatním dosáhnout jejich  potenciálu, který je často mnohem větší, než si myslíme.</li>
-              </ul>
-              <div class="amigo-more-info-overlay"></div>
-            </div>
-            <div
-              v-bind:class="['orange', 'amigo-info', ({active: activeAmigo === 'zegzulka'})]"
-              @click="changeAmigo('zegzulka')"
-            >
-              <span></span>
-              {{activeAmigo === 'zegzulka' ? 'Zobrazit méně' : 'Více o veteránovi'}}
-            </div>
-          </div>
-
-          <div class="flex-1 amigo">
             <img loading="lazy" class="amigo-img" src="~@/assets/amigo/tomastikova.jpg">
             <span class="amigo-name">Jana Tomaštíková</span>
             <span class="orange amigo-hashtags">#neurověda #psychologie #studiumvzahraničí #tanec</span>
@@ -233,17 +165,16 @@
               {{activeAmigo === 'tomastikova' ? 'Zobrazit méně' : 'Více o veteránovi'}}
             </div>
           </div>
-        </div>
 
-        <div class="flex">
           <div class="flex-1 amigo">
-            <img loading="lazy" class="amigo-img" src="~@/assets/amigo/valova.jpg">
+            <img loading="lazy" class="amigo-img" src="~@/assets/amigo/Johana Valová.JPG">
             <span class="amigo-name">Johana Valová</span>
             <span class="orange amigo-hashtags">#hudba #autorskátvorba #umění #psanínaklávesnici #vzdělávaní</span>
             <div v-bind:class="['amigo-more-info', ({active: activeAmigo === 'valova'}) ]">
               <ul>
-                <li>Ahoj! Já jsem Johana a aktuálně jsem studentkou prvního ročníku na 1. lékařské fakultě UK v Praze.</li>
-                <li>Na střední škole jsem se naplno věnovala umění, především hraní na klavír, zpěvu a divadlu. V roce 2022 jsem absolvovala letní kurz Národního divadla Young, který byl zakončen inscenací na Nové scéně ND. V současnosti se mou vášní stal zpěv a skládání vlastních písní, se kterými jsem vystoupila například na Zlínském filmovém festivalu nebo v rámci oslav 17. listopadu Korzo národní. Kromě autorské tvorby se aktivně věnuji psaní na klávesnici, v němž jsem několikanásobnou mistryní světa a taktéž jsem hrdou propagátorkou klávesnicové gramotnosti!</li>
+                <li>Ahoj! Já jsem Johana a studuji druhý ročník na 1. lékařské fakultě UK. Mou velkou vášní a místem, kam můžu vždy utéct, je hudba a umění. Na střední škole jsem se naplno věnovala hraní na klavír, zpěvu a divadlu. V roce 2022 jsem absolvovala letní kurz Národního divadla Young, který byl zakončen inscenací na Nové scéně ND.</li>
+                <li>V současnosti se nejvíce věnuji zpěvu a skládání vlastních písní, se kterými jsem vystoupila například na Zlínském filmovém festivalu nebo v rámci oslav 17. listopadu Korzo národní. Kromě autorské tvorby se aktivně věnuji psaní na klávesnici, v němž jsem několikanásobnou mistryní světa a taktéž jsem hrdou propagátorkou klávesnicové gramotnosti.</li>
+                <li>Pokud tě zajímají věci z hudebního světa, skládání, nahrávání nebo třeba balancování více různých koníčků najednou, jsem tady pro tebe a těším se na společné sdílení a objevování nových pohledů na věc.</li>
               </ul>
               <div class="amigo-more-info-overlay"></div>
             </div>
@@ -255,83 +186,18 @@
               {{activeAmigo === 'valova' ? 'Zobrazit méně' : 'Více o veteránovi'}}
             </div>
           </div>
-
-          <div class="flex-1 amigo">
-            <img loading="lazy" class="amigo-img" src="~@/assets/amigo/vala.png">
-            <span class="amigo-name">Jonáš Vala</span>
-            <span class="orange amigo-hashtags">#studium #IT #medicina #psaninaklavesnici #souteze</span>
-            <div v-bind:class="['amigo-more-info', ({active: activeAmigo === 'vala'}) ]">
-              <ul>
-                <li>Jmenuji se Jonáš a studuji medicínu. V průběhu své střední školy jsem se hodně věnoval informatice, programoval jsem nebo jsem soutěžil v psaní na klávesnici. Kromě toho jsem dělal jazyky, především němčinu, nebo trávil čas nad přípravou školního časopisu.</li>
-                <li>Výrazně mne ovlivnilo psaní na klávesnici, kterému jsem se věnoval už od základní školy. Účastnil jsem se soutěží a na mistrovství světa jsem opakovaně získal titul mistra světa. Dnes tuto disciplínu vyučuji, podílím se na organizaci republikových soutěží nebo sám se podílím na zkvalitňování jeho e-learningu.</li>
-                <li>Na Univerzitě Karlově jsem dnes také členem fakultního i univerzitního akademického senátu. Na fakultní úrovni se pak zabývám zkvalitňováním výuky coby člen komise pro evaluaci výuky.</li>
-                <li>Rád se s Tebou pobavím o mimoškolních aktivitách, o výběru školy nebo třeba o různých certifikátech, které by Ti mohly pomoct získat budoucí zaměstnání.</li>
-              </ul>
-              <div class="amigo-more-info-overlay"></div>
-            </div>
-            <div
-              v-bind:class="['orange', 'amigo-info', ({active: activeAmigo === 'vala'})]"
-              @click="changeAmigo('vala')"
-            >
-              <span></span>
-              {{activeAmigo === 'vala' ? 'Zobrazit méně' : 'Více o veteránovi'}}
-            </div>
-          </div>
         </div>
 
         <div class="flex">
           <div class="flex-1 amigo">
-            <img loading="lazy" class="amigo-img" src="~@/assets/amigo/steinova.jpg">
-            <span class="amigo-name">Kamila Steinová</span>
-            <span class="orange amigo-hashtags">#umění #psychologie #seberozvoj</span>
-            <div v-bind:class="['amigo-more-info', ({active: activeAmigo === 'steinova'}) ]">
-              <ul>
-                <li>Ahojky, jsem Kamča a ráda dělám věci, které mě skutečně naplňují a posouvají vpřed. Chceš se dozvědět více o šachovém světě a jeho zákulisí? Zajímá tě, jaký je to pocit, když stojíš na jevišti Nové scény Národního divadla? Máš v plánu napsat knihu, ale nevíš, jak začít? Baví tě psychologie a filozofie? Můj drahý amigo, jsi na správném místě!</li>
-                <li>V mém mentoringovém programu odblokuju tvé dosavadní bariéry a naučím tě vzácné schopnosti: NEBÁT SE. Popovídáme si o tvých zájmech a cílech a budeme společně posouvat tvé hranice.</li>
-              </ul>
-              <div class="amigo-more-info-overlay"></div>
-            </div>
-            <div
-              v-bind:class="['orange', 'amigo-info', ({active: activeAmigo === 'steinova'})]"
-              @click="changeAmigo('steinova')"
-            >
-              <span></span>
-              {{activeAmigo === 'steinova' ? 'Zobrazit méně' : 'Více o veteránovi'}}
-            </div>
-          </div>
-
-          <div class="flex-1 amigo">
-            <img loading="lazy" class="amigo-img" src="~@/assets/amigo/musilova.jpg">
-            <span class="amigo-name">Majda Musilová</span>
-            <span class="orange amigo-hashtags">#vědavýzkum #komunikacevědeckýchtématveřejnosti #sport #worklifebalance</span>
-            <div v-bind:class="['amigo-more-info', ({active: activeAmigo === 'musilova'}) ]">
-              <ul>
-                <li>Ahojky, říkají mi Majdi, mám ráda vědu a to napříč obory a nehledě na specializaci, a také proto jsem už v prvním ročníku na střední začala stážovat na Akademii věd ČR. Od té doby jsem prošla různými středoškolskými vědeckými soutěžemi, a tak ti můžu mimo jiné pomoct třeba s psaním nějakého odborného článku nebo publikace.</li>
-                <li>Svítí mi oči, když se můžu dozvědět něco nového, mým největším pomocníkem je plánovač a nikam bych se nevydala bez poznámkového bloku. Od tohoto akademického roku jsem studentkou oboru fyzioterapie na FTVS a nutriční terapie na 1. LF UK. Na soutěžní úrovni se věnuji tanečnímu sportu a naplňuje mě i práce s dětmi, jejich vedení ke zdravému pohybu a také vzdělávání v rámci matematicko-informatického korespondenčního semináře Jáma lvová nebo prostřednictvím geograficko-environmentálního projektu Na suchu.</li>
-                <li>Můj den je často plný od rozednění do setmění, ale nemysli si prosím, že jsem robot. Nene, také u mě si perfekcionismus a workoholismus čas od času vybírá svou daň, a tak si s tebou kromě zmíněných témat ráda promluvím i o tématu duševního zdraví, zkrátka budu tvým parťákem jakkoli budeš potřebovat. Navíc věřím, že komunikace a objetí mají kouzelnou sílu.</li>
-              </ul>
-              <div class="amigo-more-info-overlay"></div>
-            </div>
-            <div
-              v-bind:class="['orange', 'amigo-info', ({active: activeAmigo === 'musilova'})]"
-              @click="changeAmigo('musilova')"
-            >
-              <span></span>
-              {{activeAmigo === 'musilova' ? 'Zobrazit méně' : 'Více o veteránovi'}}
-            </div>
-          </div>
-        </div>
-
-        <div class="flex">
-          <div class="flex-1 amigo">
-            <img loading="lazy" class="amigo-img" src="~@/assets/amigo/prokop.jpg">
+            <img loading="lazy" class="amigo-img" src="~@/assets/amigo/Matěj Prokop.jpg">
             <span class="amigo-name">Matěj Prokop</span>
             <span class="orange amigo-hashtags">#politika #mezinárodnívztahy #participace #lobbing #socialimpact</span>
             <div v-bind:class="['amigo-more-info', ({active: activeAmigo === 'prokop'}) ]">
               <ul>
                 <li>Štve tě něco? Změň to! Pokud máš tenhle mindset, budeme si rozumět 🙂 Jsem Matěj a aktuálně pracuji v kabinetu ministra školství, kde měním přístup státu k začleňování mládeže do tvorby politik, protože mě vždycky štvalo, že stát mladé nebere moc vážně.</li>
                 <li>Zkušenosti mám i s prací v Radě EU, v lobbingové agentuře, nebo v různých startupech. V každé práci mě vždy motivovala hlavně možnost stát za pozitivní společenskou změnou.</li>
-                <li>Jsem čerstvý absolvent práv a také dokončují studium na VŠE, kde jsem nejdříve studoval diplomacii a teď mezinárodní obchod. Ze 6 let studia jsem strávil téměř půlku v zahraničí, nejraději se ale stejně vždycky vracím zpět do Česka.</li>
+                <li>Jsem absolvent práv z Karlovky a taky VŠE, kde jsem nejdříve studoval diplomacii a teď mezinárodní obchod. Ze šesti let studia jsem strávil téměř půlku v zahraničí, nejraději se ale stejně vždycky vracím zpět do Česka.</li>
                 <li>Rád přijímám nové výzvy a jsem tu, abych Ti byl po ruce jako parťák, na kterého se můžeš obrátit s jakoukoli výzvou, které čelíš. Budu se moc těšit, až se poznáme 🙂</li>
               </ul>
               <div class="amigo-more-info-overlay"></div>
@@ -344,14 +210,83 @@
               {{activeAmigo === 'prokop' ? 'Zobrazit méně' : 'Více o veteránovi'}}
             </div>
           </div>
-
           <div class="flex-1 amigo">
-            <img loading="lazy" class="amigo-img" src="~@/assets/amigo/pelanek.jpg">
+            <img loading="lazy" class="amigo-img" src="~@/assets/amigo/Matěj Šicner.jpg">
+            <span class="amigo-name">Matěj Šicner</span>
+            <span class="orange amigo-hashtags">#věda #fyzika #sport #táboryproděcka #eventmanagement #bioinformatika</span>
+            <div v-bind:class="['amigo-more-info', ({active: activeAmigo === 'sicner'}) ]">
+              <ul>
+                <li>Čau, já jsem Matěj a pokud tě baví věda a její popularizace, nebojíš se pohybu a hledáš, do čeho se na střední zapojit, tak si budeme rozumět!</li>
+                <li>Na gymplu jsem propadl fyzice – hlavně astronomii, později i kvantovce, které jsem se věnoval i v rámci své SOČky. Od září studuju bioinformatiku na UK v Praze a na magistra bych rád vyrazil do zahraničí.</li>
+                <li>Vždycky jsem chtěl dělat to, co mě opravdu baví, takže jsem školní lavici často vyměňoval za různé akce pro středoškoláky. Nakonec jsem je začal i sám organizovat – nejdřív AstroPi Hackathon, později Zvaž vědu!</li>
+                <li>Práce s mladými mi dává smysl – podílím se na organizaci táborů, vedu kroužek na škole a věnuju se mentoringu. K tomu rád relaxuju při sportu, nejvíc mě baví horská turistika, cyklistika a běh.</li>
+              </ul>
+              <div class="amigo-more-info-overlay"></div>
+            </div>
+            <div
+              v-bind:class="['orange', 'amigo-info', ({active: activeAmigo === 'sicner'})]"
+              @click="changeAmigo('sicner')"
+            >
+              <span></span>
+              {{activeAmigo === 'sicner' ? 'Zobrazit méně' : 'Více o veteránovi'}}
+            </div>
+          </div>
+        </div>
+
+        <div class="flex">
+          <div class="flex-1 amigo">
+            <img loading="lazy" class="amigo-img" src="~@/assets/amigo/Metoděj Svoboda.png">
+            <span class="amigo-name">Metoděj Svoboda</span>
+            <span class="orange amigo-hashtags">#projectmanagement #přednášení #idkhlavněchciabytocodělámmělosmysl</span>
+            <div v-bind:class="['amigo-more-info', ({active: activeAmigo === 'svoboda2'}) ]">
+              <ul>
+                <li>Vadí mi, když si neuvědomuji, co mi vadí a mám jenom divný pocit. Když se ale naučíme vnímat, co chceme a nechceme, náš život se, myslím, dost posune – paradoxně na to ale často zapomínáme a děláme věci, za nimiž smysl nevidíme.</li>
+                <li>Jsem Metoděj a s bráchou jsme dvakrát vyhráli nadnárodní kolo Prezentiády, největší soutěže v prezentování v ČR. Vzhledem k tomu teď přednášíme pro Akademii Díky, že můžem nebo Kampus Hybernská pod Univerzitou Karlovou. </li>
+                <li>Ačkoli jsem celkem hluboko zabrouzdal do širokého rozptylu oborů od matematiky a programování přes výzkumu v biochemii až po poezii, hudbu a vlastní tvorbu, nejvíc se teď shlížím v projektovém managementu. Začínal jsem s řadou projektů na škole, organizoval Prezentiádu a pIšQworky. A teď od letošního roku vedu organizaci ProStředoškoláky.</li>
+                <li>Neporadím ti ve výběru vysoké školy, zahraničím, podnikáním a vyděláváním peněz, neboť většinou dělám v nezisku:D</li>
+                <li>Pokud máš před sebou těžko rozlusknutelný oříšek, nebo chceš nějaký vytvořit, rád ti s tím pomůžu:D Nejpodstatnější je pokud je tvojí hlavní motivací smysl… dává to smysl?</li>
+              </ul>
+              <div class="amigo-more-info-overlay"></div>
+            </div>
+            <div
+              v-bind:class="['orange', 'amigo-info', ({active: activeAmigo === 'svoboda2'})]"
+              @click="changeAmigo('svoboda2')"
+            >
+              <span></span>
+              {{activeAmigo === 'svoboda2' ? 'Zobrazit méně' : 'Více o veteránovi'}}
+            </div>
+          </div>
+          <div class="flex-1 amigo">
+            <img loading="lazy" class="amigo-img" src="~@/assets/amigo/Ondřej Pazourek.jpeg">
+            <span class="amigo-name">Ondřej Pazourek</span>
+            <span class="orange amigo-hashtags">#dev #software #tech</span>
+            <div v-bind:class="['amigo-more-info', ({active: activeAmigo === 'pazourek'}) ]">
+              <ul>
+                <li>Zaměřuji se převážně na computer science, vývoj softwaru a počítačové sítě.</li>
+                <li>Mám zkušenosti z firem jako AT&T, Red Hat a GOAL SPORT SOFTWARE, kde jsem pracoval na projektech od modernizace 5G sítí na vývoj softwaru pro sportovní stadiony. </li>
+                <li>Právě studuji Computer Science na University of Twente v Nizozemsku a žiji zde.</li>
+                <li>Baví mě pomáhat ostatním rozvíjet jejich potenciál a předávat zkušenosti z technologií, sportu a projektového vedení.</li>
+              </ul>
+              <div class="amigo-more-info-overlay"></div>
+            </div>
+            <div
+              v-bind:class="['orange', 'amigo-info', ({active: activeAmigo === 'pazourek'})]"
+              @click="changeAmigo('pazourek')"
+            >
+              <span></span>
+              {{activeAmigo === 'pazourek' ? 'Zobrazit méně' : 'Více o veteránovi'}}
+            </div>
+          </div>
+        </div>
+
+        <div class="flex">
+          <div class="flex-1 amigo">
+            <img loading="lazy" class="amigo-img" src="~@/assets/amigo/Ondřej Pelánek.jpg">
             <span class="amigo-name">Ondřej Pelánek</span>
             <span class="orange amigo-hashtags">#biologie #fotografie #studiumvzahraničí</span>
             <div v-bind:class="['amigo-more-info', ({active: activeAmigo === 'pelanek'}) ]">
               <ul>
-                <li>Jsem nadšencem do biologie, focení, cestování a přírody. Střední jsem strávil s Biologickou olympiádou, SOČkou, počítal ptáky, zašel do molekulárně-biologické laboratoře, zafilozofoval si na Princetonu a celkově ji prožil akčně. Teď jsem dokončil magisterské studium na University College London, během kterého jsem se mimo jiné na rok podíval do Austrálie. V říjnu začínám doktorát zoologie na univerzitě v Cambridge, takže směřuju vědeckým směrem. Nejradši jsem na výpravách venku, cestuji po světě, koukám po ptákách a fotím zvířata (celkem profi ;-)).</li>
+                <li>Jsem nadšencem do biologie, focení, cestování a přírody. Střední jsem strávil s Biologickou olympiádou, SOČkou, počítal ptáky, zašel do molekulárně-biologické laboratoře, zafilozofoval si na Princetonu a celkově ji prožil akčně. Vystudoval jsem v Anglii na University College London a v průběhu studia mimo jiné strávil rok v Austrálii. Teď jsem na doktorátu ze zoologie na univerzitě v Cambridge a směřuju vědeckým směrem. Nejradši jsem na výpravách venku, cestuji po světě, koukám po ptákách a fotím zvířata (celkem profi ;-)).</li>
                 <li>Jestli Tě baví příroda, fotografie či věda, tak mám spoustu tipů, co a jak dělat, materiálů a kontaktů. Nakopnu do aktivit, poradím k soutěžím, stážím, skouknu psaní, vymyslíme ochranářský projekt a pokecáme.</li>
               </ul>
               <div class="amigo-more-info-overlay"></div>
@@ -364,9 +299,7 @@
               {{activeAmigo === 'pelanek' ? 'Zobrazit méně' : 'Více o veteránovi'}}
             </div>
           </div>
-        </div>
 
-        <div class="flex">
           <div class="flex-1 amigo">
             <img loading="lazy" class="amigo-img" src="~@/assets/amigo/placha.jpg">
             <span class="amigo-name">Petra Plachá</span>
@@ -387,39 +320,39 @@
               {{activeAmigo === 'placha' ? 'Zobrazit méně' : 'Více o veteránovi'}}
             </div>
           </div>
-
-          <div class="flex-1 amigo">
-            <img loading="lazy" class="amigo-img" src="~@/assets/amigo/millerova.jpg">
-            <span class="amigo-name">Sabina Millerová</span>
-            <span class="orange amigo-hashtags">#historie #archeologie #zpěv #umění</span>
-            <div v-bind:class="['amigo-more-info', ({active: activeAmigo === 'millerova'}) ]">
-              <ul>
-                <li>Už od dětství jsem se soutěžně věnovala sólovému zpěvu a postupně začala jezdit i na soutěže v latinsko-americkém tanci. Kromě toho mě to vždy táhlo k herectví. Během studia na gymplu jsem se ale začala věnovat humanitním vědám – konkrétně historii a archeologii, které v současnosti studuji ve dvouoboru na FF UK. Již na střední jsem se zúčastnila vysokoškolských praxí, stážovala v rámci Otevřené vědy na dvou různých ústavech AV ČR a zúčastnila se projektů Eustory.</li>
-                <li>Zajímalo by tě, jak skloubit mimoškolní zájmy z různých oborů i naprosto jiné druhy mimoškolních aktivit? Baví tě humanitní vědy, ale nevíš, jestli najdeš uplatnění? Zajímá tě umění a hledáš další možnost uplatnění se? S tím vším Ti mohu pomoct. :)  </li>
-              </ul>
-              <div class="amigo-more-info-overlay"></div>
-            </div>
-            <div
-              v-bind:class="['orange', 'amigo-info', ({active: activeAmigo === 'millerova'})]"
-              @click="changeAmigo('millerova')"
-            >
-              <span></span>
-              {{activeAmigo === 'millerova' ? 'Zobrazit méně' : 'Více o veteránovi'}}
-            </div>
-          </div>
         </div>
 
         <div class="flex">
           <div class="flex-1 amigo">
-            <img loading="lazy" class="amigo-img" src="~@/assets/amigo/frycak.jpg">
+            <img loading="lazy" class="amigo-img" src="~@/assets/amigo/Šimon Špilar.jpg">
+            <span class="amigo-name">Šimon Špilar</span>
+            <span class="orange amigo-hashtags">#investice #ekonomie #politika #němčina</span>
+            <div v-bind:class="['amigo-more-info', ({active: activeAmigo === 'spilar'}) ]">
+              <ul>
+                <li>Šimon Špilar je studentem Financial Economics na University of St Andrews, který působí v oblasti ekonomie a investic. Má za sebou vítězství v Celostátní přehlídce SOČ, účast na Regeneron ISEF a pracovní angažmá ve financích.</li>
+                <li>Během střední školy se kromě ekonomických soutěží věnoval také participaci v European Youth Parliament a Česko-německém fóru mládeže, kde působil jako mluvčí. Rád Ti tedy poradí s dotazy v oblastech ekonomie, financí, politických akcí, němčiny, ale i time managementu a přihlášek na zahraniční univerzity.</li>
+              </ul>
+              <div class="amigo-more-info-overlay"></div>
+            </div>
+            <div
+              v-bind:class="['orange', 'amigo-info', ({active: activeAmigo === 'spilar'})]"
+              @click="changeAmigo('spilar')"
+            >
+              <span></span>
+              {{activeAmigo === 'spilar' ? 'Zobrazit méně' : 'Více o veteránovi'}}
+            </div>
+          </div>
+
+          <div class="flex-1 amigo">
+            <img loading="lazy" class="amigo-img" src="~@/assets/amigo/Tadeáš Fryčák.JPG">
             <span class="amigo-name">Tadeáš Fryčák</span>
             <span class="orange amigo-hashtags">#informatika #věda #studiumvzahraničí</span>
             <div v-bind:class="['amigo-more-info', ({active: activeAmigo === 'frycak'}) ]">
               <ul>
                 <li>Studuji Computer Science and Engineering na TU Delft v Nizozemsku, pokud zvažuješ studium technického oboru v zahraničí, určitě mě neváhej kontaktovat.</li>
-                <li>Informatiku ale jen nestuduji, snažím se ji propojit s jinými obory, nejčastěji pomocí Computer Vision, Data Science, Machine Learning a AI metod. Využití mých algoritmů nacházejí nejen biologická vědeckovýzkumná pracoviště, ale také i softwarové firmy jako například Seznam.cz, kde jsem absolvoval několikaletou stáž.</li>
+                <li>Informatiku ale jen nestuduji, snažím se ji propojovat s jinými obory, nejčastěji pomocí Computer Vision, Data Science, Machine Learning a AI metod. Využití mých algoritmů nacházejí nejen biologická vědeckovýzkumná pracoviště, ale také i softwarové firmy jako například Seznam.cz, kde jsem absolvoval několikaletou stáž.</li>
                 <li>Prošel jsem si programy pro středoškoláky, jako je Badatel či Newton na Univerzitě Palackého nebo Otevřená věda na Akademii věd ČR, což mi umožnilo vytvořit nejednu publikaci. Také jsem se úspěšně účastnil Středoškolské odborné činnosti, Soutěže v programování či Mistrovství ČR v radioelektrotechnice.</li>
-                <li>Kontaktovat mě můžeš také v případě, že bys chtěl poradit v elektrotechnice; umím navrhovat v prostředí KiCAD či Eagle a mám zkušenosti nejen s STM32 či ESP32.</li>
+                <li>Kontaktovat mě můžeš také v případě, že bys chtěl poradit v programování (ať už se jedná o web, návrh architektury softwaru, či jen klasické programování) nebo elektrotechnice (umím navrhovat v prostředí KiCAD či Eagle a mám zkušenosti nejen s STM32 či ESP32).</li>
               </ul>
               <div class="amigo-more-info-overlay"></div>
             </div>
@@ -431,14 +364,17 @@
               {{activeAmigo === 'frycak' ? 'Zobrazit méně' : 'Více o veteránovi'}}
             </div>
           </div>
+        </div>
 
+        <div class="flex-1 amigo">  
           <div class="flex-1 amigo">
-            <img loading="lazy" class="amigo-img" src="~@/assets/amigo/vylita.jpg">
+            <img loading="lazy" class="amigo-img" src="~@/assets/amigo/Tadeáš Vylita.jpg">
             <span class="amigo-name">Tadeáš Vylita</span>
-            <span class="orange amigo-hashtags">#životní prostředí #pedagogika #sport #organizace akcí</span>
+            <span class="orange amigo-hashtags">#vzdělávání #pedagogika #sport #organizace akcí</span>
             <div v-bind:class="['amigo-more-info', ({active: activeAmigo === 'vylita'}) ]">
               <ul>
-                <li>Tadeáš je nadšencem do ochrany životního prostředí, pedagogiky a sportu. Studuje na Přírodovědecké fakultě UK. Všude, kde to jde, jezdí na kole, závodně hraje volejbal a trénuje malé děti. Během stáže v Mattoni 1873 vede jedinečný vzdělávací projekt o vodě a biodiverzitě pro 1. stupně ZŠ a zároveň se podílí na tvorbě nových učebnic prvouky pro 1. stupně ZŠ. Organizoval několik celorepublikových soutěží, natočil dokumentární film o jeho volejbalovém klubu a na KVIFFu se stará o zelenější festival. Dobrovolničí a vedl sportovně-vzdělávací program pro ukrajinské vrstevníky.</li>
+                <li>Tadeáš učí informatiku na základní škole a zároveň je stážistou v Mattoni 1873, kde má na starosti vzdělávací projekty pro děti na 1. a 2. stupni základních škol. Studuje dálkově na Pedagogické fakultě UK a všude, kde to jde, jezdí na kole. Závodně hrál volejbal a ten teď trénuje malé děti.</li>
+                <li>Organizoval několik celorepublikových soutěží, natočil dokumentární film o jeho volejbalovém klubu a na KVIFFu se stará o zelenější festival. Dobrovolničí a vedl sportovně-vzdělávací program pro ukrajinské vrstevníky.</li>
               </ul>
               <div class="amigo-more-info-overlay"></div>
             </div>
@@ -450,19 +386,16 @@
               {{activeAmigo === 'vylita' ? 'Zobrazit méně' : 'Více o veteránovi'}}
             </div>
           </div>
-        </div>
 
-        <div class="flex">
           <div class="flex-1 amigo">
-            <img loading="lazy" class="amigo-img" src="~@/assets/amigo/przeczkova.jpg">
+            <img loading="lazy" class="amigo-img" src="~@/assets/amigo/Tereza Przeczková.JPG">
             <span class="amigo-name">Tereza Przeczková</span>
-            <span class="orange amigo-hashtags">#studiumvzahraničí #biomedicína #výzkum #sport </span>
+            <span class="orange amigo-hashtags">#studiumvzahraničí #biomedicína #věda #sport</span>
             <div v-bind:class="['amigo-more-info', ({active: activeAmigo === 'przeczkova'}) ]">
               <ul>
-                <li>Ahoj! Jsem Terka a momentálně studuji obor Biomedical Sciences na University College London. Absolvovala jsem dvě stáže na Fyziologickém ústavu Akademie věd a také na Katedře organické chemie PřF UPOL. Na olomoucké univerzitě jsem mimojiné vystudovala buněčnou biologii již na střední. Prošla jsem si taky řadou soutěží počínaje slavnou SOČkou a končíce u Českých hlaviček.</li>
-                <li>Vzdálené mi není ani dobrovolnictví. Mám za sebou všechny úrovně programu DofE, kde momentálně působím jako online vedoucí. Taky jsem součástí redakčního týmu neziskové organizace Nevyhasni, kde se zabýváme prevencí syndromu vyhoření.</li>
-                <li>Celou střední mě doprovázel i sport. Hrála jsem závodně volejbal na postu libera, věnovala se crossfitu a vzápětí objevila svou vášeň pro vzpírání.</li>
-                <li>Zajímají tě přírodní vědy? Láká tě výzkum? Chceš pomoci hacknout systém a studovat na VŠ jako středoškolák? Chystáš se vyjet na školu do zahraničí nebo chceš pomoci nastartovat kariéru aktivního studenta? Pak se těším na vzájemnou spolupráci!</li>
+                <li>Ahoj, jsem Terka a momentálně studuji obor Biomedical Sciences na University College London (UCL). Prošla jsem si stážemi na Fyziologickém ústavu AV ČR, Katedře organické chemie PřF UPOL či v centru BIOCEV. Na olomoucké univerzitě jsem dokonce vystudovala buněčnou biologii již jako středoškolák a prošla jsem si také řadou soutěží přes slavnou SOČ až po České hlavičky.</li>
+                <li>Jsem aktivní dobrovolnicí. Působím jako vedoucí v programu DOFE a zabývám se prevencí syndromu vyhoření v organizaci Nevyhasni. No a to vše se ještě snažím zkombinovat s olympijským vzpíráním, kterému se závodně věnuji.</li>
+                <li>Ráda se s tebou pobavím o studiu v zahraničí, možnostech zapojení se do výzkumu, a to jak v ČR, tak v zahraničí nebo taky o tom, jak hacknout systém a studovat VŠ už na střední. Pomůžu ti posouvat své hranice a naučím tě klíčovou vlastnost pro úspěch – nebát se a věci hlavně zkoušet!</li>
               </ul>
               <div class="amigo-more-info-overlay"></div>
             </div>
@@ -474,16 +407,38 @@
               {{activeAmigo === 'przeczkova' ? 'Zobrazit méně' : 'Více o veteránovi'}}
             </div>
           </div>
+        </div>
 
+        <div class="flex">
+          <div class="flex-1 amigo">
+            <img loading="lazy" class="amigo-img" src="~@/assets/amigo/Tereza Tomášková.jpg">
+            <span class="amigo-name">Tereza Tomášková</span>
+            <span class="orange amigo-hashtags">#konzervatoř #flétna #výzkum #molekulárníbiologie</span>
+            <div v-bind:class="['amigo-more-info', ({active: activeAmigo === 'tomaskova'}) ]">
+              <ul>
+                <li>Ahoj! Jsem Terka a momentálně studuji čtvrťák na gymplu a třeťák na Pražské konzervatoři, kde se věnuju hře na příčnou flétnu. S flétnou jsem už zažila mnoho, třeba vyhrála pár soutěží, zúčastnila se stipendijní akademie Menart a hrála v několika orchestrech.</li>
+                <li>Zároveň se velmi zajímám o medicínu a vědu. Minulý rok jsem absolvovala stáž na Ústavu živočišné fyziologie a genetiky. Letos jsem na Ústavu molekulární genetiky, kde se věnuju výzkumu senescentních buněk po protinádorové léčbě a možnostem, jak je odstranit. Zkušenosti jsem sbírala i na kurzu Laboratory Skills v Liverpoolu. Navíc mám úspěšně složené zkoušky AP Biology a AP Chemistry.</li>
+                <li>Určitě si můžeme popovídat třeba o studiu na konzervatoři, protože to není úplně typická škola, o tom jak se dostat do vědy a zařídit si stáže či jiné příležitosti, jak vyzrát nad AP (a co to vůbec je :-)) a nebo o čemkoliv jiném, co Tě napadne.</li>
+              </ul>
+              <div class="amigo-more-info-overlay"></div>
+            </div>
+            <div
+              v-bind:class="['orange', 'amigo-info', ({active: activeAmigo === 'tomaskova'})]"
+              @click="changeAmigo('tomaskova')"
+            >
+              <span></span>
+              {{activeAmigo === 'tomaskova' ? 'Zobrazit méně' : 'Více o veteránovi'}}
+            </div>
+          </div>
 
           <div class="flex-1 amigo">
-            <img loading="lazy" class="amigo-img" src="~@/assets/amigo/zelinkova.jpg">
+            <img loading="lazy" class="amigo-img" src="~@/assets/amigo/Veronika Zelinková.jpg">
             <span class="amigo-name">Veronika Zelinková</span>
             <span class="orange amigo-hashtags">#programming #iOSDevelopment #careerTips</span>
             <div v-bind:class="['amigo-more-info', ({active: activeAmigo === 'zelinkova'}) ]">
               <ul>
-                <li>Ahoj, jsem Verča a věnuji se vývoji mobilních aplikací pro iOS. Pracuji jako freelancer (hodně cestuji a klienty si hledám sama), přednáším na technických konferencích a píšu diplomku.</li>
-                <li>V IT pracuji od druháku na střední a od té doby jsem sbírala zkušenosti ve firmách jako je Alza, STRV, na zahraničním trhu pak třeba Microsoft, IBM, Porsche nebo Docler.</li>
+                <li>Ahoj, jsem Verča a věnuji se vývoji mobilních aplikací pro iOS. Pracuji jako freelancer (což znamená že hodně cestuji a klienty si hledám sama) momentálně pro BeReal a přednáším na technických konferencích.</li>
+                <li>V IT pracuji od druháku na střední a od té doby jsem sbírala zkušenosti ve firmách jako je Alza, STRV, na zahraničmí trhu pak třeba Microsoft, IBM, Porsche nebo BeReal.</li>
                 <li>Ráda ti předám všechny své tipy na středoškolské soutěže a programy, poradím s tím jak přemluvit firmu, aby tě vzala na stáž, či se sebevědomím v IT. Po technické stránce se můžeme pobavit o tom, jak se naučit programovat co nejefektivněji, a jak vyvinout svou první iOS aplikaci.</li>
               </ul>
               <div class="amigo-more-info-overlay"></div>
@@ -497,6 +452,7 @@
             </div>
           </div>
         </div>
+
       </div>
 
       <div class="mentor-box">
