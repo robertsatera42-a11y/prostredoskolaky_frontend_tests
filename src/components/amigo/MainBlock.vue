@@ -3,17 +3,17 @@
     <div class="content">
       <div class="half">
         <h1>Mentoringový program AMIGO</h1>
-        <!-- <p>
-          Vyber si jednoho z našich mentorů, který ti pomůže dostat se na novou úroveň.<br/>
-        </p> -->
         <p>
-          Letošní kolo právě probíhá, přihlašování už proto bylo ukončeno. Příští rok na podzim však otevřeme další.<br/>
+          Vyber si jednoho z našich mentorů, který ti pomůže dostat se na novou úroveň.<br/>
         </p>
-        <!-- <button class="button is-active is-primary" @click="goToForm">Přihlas se do programu</button> -->
-        <button
+        <!-- <p>
+          Letošní kolo právě probíhá, přihlašování už proto bylo ukončeno. Příští rok na podzim však otevřeme další.<br/>
+        </p> -->
+        <button class="button is-active is-primary" @click="goToForm">Přihlas se do programu</button>
+        <!-- <button
         class="button is-active is-primary"
         disabled="true"
-        >Přihlašování bylo ukončeno</button>
+        >Přihlašování bylo ukončeno</button> -->
       </div>
       <span class="image-overlay"/>
       <span class="overlay"/>
@@ -26,7 +26,7 @@ export default {
   name: 'main-block',
   methods: {
     goToForm () {
-      window.open('https://forms.gle/pw6q2u53ztvYa1CW9', '_blank')
+      window.open('https://forms.gle/oTQx8Amvrw7XVKzTA', '_blank')
     }
   }
 }
