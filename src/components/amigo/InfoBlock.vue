@@ -526,7 +526,7 @@
 
       <div class="mentor-box">
         <div class="mentor-title">Přihlas se ještě dnes!</div>
-        <a href="https://forms.gle/pw6q2u53ztvYa1CW9" target="_blank" class="mentor-button button">Přihlas se do programu</a>
+        <a href="https://forms.gle/oTQx8Amvrw7XVKzTA" target="_blank" class="mentor-button button">Přihlas se do programu</a>
         <!-- <a target="_blank" class="mentor-button button">Přihlašování bylo ukončeno</a> -->
       </div>
     </div>
