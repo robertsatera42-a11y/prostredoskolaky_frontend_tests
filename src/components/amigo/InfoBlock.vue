@@ -60,6 +60,27 @@
         <h2>Naši amigos</h2>
         <div class="flex">
           <div class="flex-1 amigo">
+            <img loading="lazy" class="amigo-img" src="~@/assets/amigo/anezka-indrackova.jpg">
+            <span class="amigo-name">Anežka Indráčková</span>
+            <span class="orange amigo-hashtags">#sport #psychickézdraví #fotografie #studiumvzahraničí #sociálnísítě</span>
+            <div v-bind:class="['amigo-more-info', ({active: activeAmigo === 'indrackova'}) ]">
+              <ul>
+                <li>Helou! Jsem Anežka a aktuálně si dávám gap year. S největší chutí bych teď procestovala celý svět, ale profesionálně se věnuji sportu a čas mi to tak bohužel nedovolí.</li>
+                <li>Konec střední jsem strávila na sportovním gymnáziu v Rakousku, zároveň se připravovala na českou maturitu a trénovala. Ve volném čase pak ráda fotím, trávím čas s přáteli, cestuji a zkouším si rozjet instagram.</li>
+                <li>Jestli tě zajímá sport, psychika a zvládání stresu, studium v zahraničí či cokoli jiného, tak ráda s Tebou pokecám a poznám Tě. Už teď se těším!</li>
+              </ul>
+              <div class="amigo-more-info-overlay"></div>
+            </div>
+            <div
+              v-bind:class="['orange', 'amigo-info', ({active: activeAmigo === 'indrackova'})]"
+              @click="changeAmigo('indrackova')"
+            >
+              <span></span>
+              {{activeAmigo === 'indrackova' ? 'Zobrazit méně' : 'Více o veteránovi'}}
+            </div>
+          </div>
+
+          <div class="flex-1 amigo">
             <img loading="lazy" class="amigo-img" src="~@/assets/amigo/anna-cerna.jpg">
             <span class="amigo-name">Anna Černá</span>
             <span class="orange amigo-hashtags">#molekulárníbiologie #věda #SOČ #studiumvzahraničí</span>
@@ -78,7 +99,9 @@
               {{activeAmigo === 'cerna' ? 'Zobrazit méně' : 'Více o veteránovi'}}
             </div>
           </div>
+        </div>
 
+        <div class="flex">
           <div class="flex-1 amigo">
             <img loading="lazy" class="amigo-img" src="~@/assets/amigo/anna-prusova.jpg">
             <span class="amigo-name">Anna Průšová</span>
@@ -98,9 +121,7 @@
               {{activeAmigo === 'prusova' ? 'Zobrazit méně' : 'Více o veteránovi'}}
             </div>
           </div>
-        </div>
 
-        <div class="flex">
           <div class="flex-1 amigo">
             <img loading="lazy" class="amigo-img" src="~@/assets/amigo/antonin-svoboda.jpg">
             <span class="amigo-name">Antonín Svoboda</span>
@@ -119,6 +140,31 @@
             >
               <span></span>
               {{activeAmigo === 'svoboda' ? 'Zobrazit méně' : 'Více o veteránovi'}}
+            </div>
+          </div>
+        </div>
+
+        <div class="flex">
+          <div class="flex-1 amigo">
+            <img loading="lazy" class="amigo-img" src="~@/assets/amigo/eliska-konecna.jpg">
+            <span class="amigo-name">Eliška Konečná</span>
+            <span class="orange amigo-hashtags">#vědeckésoutěže #sport #mezioborovost</span>
+            <div v-bind:class="['amigo-more-info', ({active: activeAmigo === 'konecna'}) ]">
+              <ul>
+                <li>Ahoj! Jsem Eliška a vždycky jsem byla dobrá v topení se v rozhodnutích o tom, kterým jedním směrem mají mé kroky směřovat.</li>
+                <li>Část mě patří vodám „bio“. Během střední školy jsem se věnovala výzkumu na pomezí molekulární biologie a chemie a soutěžila jsem v SOČ i navazujících zahraničních soutěžích v Americe a Číně.</li>
+                <li>Vždy mě lákala kombinace více oborů, a proto jsem nakonec skončila u studia mezioborové Bioinformatiky.</li>
+                <li>Zároveň jsem často „utíkala“ k závodní atletice a snažila jsem se tak zkombinovat vše, co mi (v daný moment) dávalo smysl – to vnímám jako cestu k výběru toho správného rybníčku.</li>
+                <li>Ráda se podělím o zkušenosti s výzkumem na SŠ, SOČ, přípravou na nominaci i samotnými zahraničními soutěžemi, ale také o tipy, jak plavat mezi všemi svými zájmy, i když se některý může jevit jen jako útěk, a ne kariérní růst (aka např. sport).</li>
+              </ul>
+              <div class="amigo-more-info-overlay"></div>
+            </div>
+            <div
+              v-bind:class="['orange', 'amigo-info', ({active: activeAmigo === 'konecna'})]"
+              @click="changeAmigo('konecna')"
+            >
+              <span></span>
+              {{activeAmigo === 'konecna' ? 'Zobrazit méně' : 'Více o veteránovi'}}
             </div>
           </div>
 
@@ -146,14 +192,14 @@
 
         <div class="flex">
           <div class="flex-1 amigo">
-            <img loading="lazy" class="amigo-img" src="~@/assets/amigo/tomastikova.jpg">
+            <img loading="lazy" class="amigo-img" src="~@/assets/amigo/jana-tomastikova.jpg">
             <span class="amigo-name">Jana Tomaštíková</span>
-            <span class="orange amigo-hashtags">#neurověda #psychologie #studiumvzahraničí #tanec</span>
+            <span class="orange amigo-hashtags">#neurověda #psychologie #výzkum #studiumvzahraničí</span>
             <div v-bind:class="['amigo-more-info', ({active: activeAmigo === 'tomastikova'}) ]">
               <ul>
-                <li>Tady Jana! Na konci střední jsem se rozhodla vrhnout se do studia mozku a lidského chování. Teď jsem studentkou posledního ročníku psychologie na University of Edinburgh a pracuju na tom, abych se stala kognitivní neurovědkyní. Ne vždy jsem ale věděla, co bych chtěla dělat.</li>
-                <li>Přes má středoškolská léta jsem sportovala, soutěžně tancovala v Česku a jiných zemích, ale zároveň jsem třeba i prezentovala na Přírodovědecké konferenci, překládala články z angličtiny do češtiny pro Mensa časopis, nebo dobrovolničila v Alzheimer centru. Nakonec jsem si vysnila studovat v zahraničí. Minulý rok jsem dokončila neurovědeckou stáž na University of Cambridge. Nikdy nevíš, kde tě malé kroky, které teď děláš, nakonec zavedou.</li>
-                <li>Ráda pokecám o psychologii a neurovědě. Poradím, co s volným časem, nebo jak na přihlášky na univerzitu v zahraničí. Můžeme spolu probrat, co tě zajímá a baví, a vymyslet jak nejlíp dál (a jak se při tom nezbláznit!).</li>
+                <li>Ahoj, tady Jana! Na konci střední školy jsem se rozhodla vrhnout do studia mozku a lidského chování. Teď studuju obor kognitivních neurověd na University of Cambridge. Ne vždy jsem ale věděla, čemu bych se chtěla věnovat.</li>
+                <li>Během střední školy jsem sportovala, soutěžně tancovala v Česku i v zahraničí, ale zároveň jsem třeba prezentovala na Přírodovědecké konferenci, překládala články z angličtiny do češtiny pro časopis Mensa nebo dobrovolničila v Alzheimer centru v Ostravě. Nakonec jsem si vysnila studium v zahraničí. S podporou svého okolí jsem mohla vystudovat psychologii na University of Edinburgh. Teď se věnuju výzkumu vnímání a pozornosti v Cambridge.</li>
+                <li>Ráda pokecám o psychologii a neurovědě. Poradím, co s volným časem nebo jak na přihlášky na univerzitu v zahraničí. Můžeme spolu probrat, co tě zajímá a baví, a vymyslet, jak nejlíp pokračovat dál (a jak se při tom nezbláznit!).</li>
               </ul>
               <div class="amigo-more-info-overlay"></div>
             </div>
@@ -301,7 +347,7 @@
           </div>
 
           <div class="flex-1 amigo">
-            <img loading="lazy" class="amigo-img" src="~@/assets/amigo/placha.jpg">
+            <img loading="lazy" class="amigo-img" src="~@/assets/amigo/petra-placha.jpg">
             <span class="amigo-name">Petra Plachá</span>
             <span class="orange amigo-hashtags">#vzdelavani #management #fundraising #softskills</span>
             <div v-bind:class="['amigo-more-info', ({active: activeAmigo === 'placha'}) ]">
@@ -324,6 +370,26 @@
 
         <div class="flex">
           <div class="flex-1 amigo">
+            <img loading="lazy" class="amigo-img" src="~@/assets/amigo/simon-falta.jpg">
+            <span class="amigo-name">Šimon Falta</span>
+            <span class="orange amigo-hashtags">#startups #sport #business</span>
+            <div v-bind:class="['amigo-more-info', ({active: activeAmigo === 'falta'}) ]">
+              <ul>
+                <li>Ahoj! Jmenuju se Šimon Falta a jsem student na FEL ČVUT. Rád hledám ve všem plný potenciál a dotahuju věci do konce. Aktuálně působím na pozici CEO ve firmě IQstat, kde pomáháme šetřit za elektřinu skrz technologie. V minulosti jsem také soutěžil na mezinárodní úrovni v silovém trojboji, hrál na různé hudební nástroje apod. – klasický život aktivního středoškoláka : )</li>
+                <li>Jako mentor pomůžu hlavně v oblasti byznysu. Jak založit startup už na střední? Kde vzít peníze? Kde najít první zákazníky? A jak to všechno stíhat při škole? Pokud děláš jakýkoli sport, budeme si rozumět : ) V silovém trojboji jsem došel k titulu mistra Evropy a k pár národním rekordům. Rád pomůžu hlavně s mindsetem a disciplínou.</li>
+              </ul>
+              <div class="amigo-more-info-overlay"></div>
+            </div>
+            <div
+              v-bind:class="['orange', 'amigo-info', ({active: activeAmigo === 'falta'})]"
+              @click="changeAmigo('falta')"
+            >
+              <span></span>
+              {{activeAmigo === 'falta' ? 'Zobrazit méně' : 'Více o veteránovi'}}
+            </div>
+          </div>
+
+          <div class="flex-1 amigo">
             <img loading="lazy" class="amigo-img" src="~@/assets/amigo/simon-spilar.jpg">
             <span class="amigo-name">Šimon Špilar</span>
             <span class="orange amigo-hashtags">#investice #ekonomie #politika #němčina</span>
@@ -342,7 +408,9 @@
               {{activeAmigo === 'spilar' ? 'Zobrazit méně' : 'Více o veteránovi'}}
             </div>
           </div>
+        </div>
 
+        <div class="flex">
           <div class="flex-1 amigo">
             <img loading="lazy" class="amigo-img" src="~@/assets/amigo/tadeas-frycak.jpg">
             <span class="amigo-name">Tadeáš Fryčák</span>
@@ -364,9 +432,7 @@
               {{activeAmigo === 'frycak' ? 'Zobrazit méně' : 'Více o veteránovi'}}
             </div>
           </div>
-        </div>
 
-        <div class="flex">  
           <div class="flex-1 amigo">
             <img loading="lazy" class="amigo-img" src="~@/assets/amigo/tadeas-vylita.jpg">
             <span class="amigo-name">Tadeáš Vylita</span>
@@ -386,7 +452,9 @@
               {{activeAmigo === 'vylita' ? 'Zobrazit méně' : 'Více o veteránovi'}}
             </div>
           </div>
+        </div>
 
+        <div class="flex">
           <div class="flex-1 amigo">
             <img loading="lazy" class="amigo-img" src="~@/assets/amigo/tereza-przeczkova.jpg">
             <span class="amigo-name">Tereza Przeczková</span>
@@ -407,9 +475,7 @@
               {{activeAmigo === 'przeczkova' ? 'Zobrazit méně' : 'Více o veteránovi'}}
             </div>
           </div>
-        </div>
 
-        <div class="flex">
           <div class="flex-1 amigo">
             <img loading="lazy" class="amigo-img" src="~@/assets/amigo/tereza-tomaskova.jpg">
             <span class="amigo-name">Tereza Tomášková</span>
@@ -430,7 +496,9 @@
               {{activeAmigo === 'tomaskova' ? 'Zobrazit méně' : 'Více o veteránovi'}}
             </div>
           </div>
+        </div>
 
+        <div class="flex">
           <div class="flex-1 amigo">
             <img loading="lazy" class="amigo-img" src="~@/assets/amigo/veronika-zelinkova.jpg">
             <span class="amigo-name">Veronika Zelinková</span>
