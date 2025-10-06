@@ -24,7 +24,7 @@
             <span class="orange why-title">Jak to bude probíhat?</span>
             <div class="why-description">
               <ul>
-              <li>Zaujme-li tě alespoň jeden z našich amigů, klikni na „Přihlas se do programu“ a vyplň přihlášku. Odešli ji nejpozději do 31. 10. 2024 23:59.</li>
+              <li>Zaujme-li tě alespoň jeden z našich amigů, klikni na „Přihlas se do programu“ a vyplň přihlášku. Odešli ji nejpozději do 2. 11. 2025 23:59.</li>
               <li>Úvodní setkání již proběhlo, ale pořád si můžeš vybrat svého mentora a absolvovat všechna další setkání.</li>
               <li>Ty i tvůj amigo obdržíte krátký seznam neformálních instrukcí, jak a o čem vést vaše rozhovory, abyste si to oba užili.</li>
               <li>Několikrát si zavoláte nebo se sejdete, záleží na Vašich možnostech, a pokusíte se posunout tvé aktivity o kousek dál či v tobě jen zažehnout ducha aktivního středoškoláka.</li>
@@ -35,10 +35,11 @@
           </div>
         </div>
         <div class="round-time">
-          Přihlašování
-          <span class="orange">ukončeno</span>, další ročník bude otevřen na <span class="orange">podzim 2025</span>
+          <a href="https://forms.gle/oTQx8Amvrw7XVKzTA" target="_blank" class="step-link">Vyplnit přihlášku</a>
         </div>
-        <!-- <a href="https://forms.gle/pw6q2u53ztvYa1CW9" target="_blank" class="step-link">Vyplnit přihlášku</a> -->
+        <!-- Přihlašování
+          <span class="orange">ukončeno</span>, další ročník bude otevřen na <span class="orange">podzim 2025</span> -->
+        <!-- <a href="https://forms.gle/oTQx8Amvrw7XVKzTA" target="_blank" class="step-link">Vyplnit přihlášku</a> -->
       </div>
 
       <div class="picture-wrapper">
@@ -524,9 +525,9 @@
       </div>
 
       <div class="mentor-box">
-        <!-- <div class="mentor-title">Přihlas se ještě dnes!</div> -->
-        <!-- <a href="https://forms.gle/pw6q2u53ztvYa1CW9" target="_blank" class="mentor-button button">Přihlas se do programu</a> -->
-        <a target="_blank" class="mentor-button button">Přihlašování bylo ukončeno</a>
+        <div class="mentor-title">Přihlas se ještě dnes!</div>
+        <a href="https://forms.gle/pw6q2u53ztvYa1CW9" target="_blank" class="mentor-button button">Přihlas se do programu</a>
+        <!-- <a target="_blank" class="mentor-button button">Přihlašování bylo ukončeno</a> -->
       </div>
     </div>
   </section>
