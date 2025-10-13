@@ -14,7 +14,7 @@ import FooterBlock from '../components/common/Footer'
 export default {
   name: 'amigo-page',
   metaInfo: {
-    title: 'Amigo',
+    title: 'AMIGO',
     titleTemplate: '%s | mentoringový program pro středoškoláky',
     meta: [
       { name: 'description', content: 'Dali jsme dohromady ty nejaktivnější bývalé středoškoláky, aby ti pomohli s tvým rozletem. Ať už chceš poradit se svým projektem, hledáš rady a tipy jak dělat něco navíc a nebo si chceš popovídat, co s životem po střední.' }
