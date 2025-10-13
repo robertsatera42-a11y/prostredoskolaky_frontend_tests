@@ -88,7 +88,7 @@ export default {
     titleTemplate: '%s | Podporujeme středoškoláky v mimoškolních aktivitách',
     meta: [
       { name: 'description', content: 'Jsme organizace propojující středoškoláky, kteří jsou aktivní mimo školu. Pořádáme soutěž Středoškolák roku a poskytuje informace o možnostech mimoškolního vzdělávání.' }
-    ]
+    ],
     link: [
       { rel: 'icon', type: 'image/x-icon', href: require('@/assets/favicon.ico') }
     ]
