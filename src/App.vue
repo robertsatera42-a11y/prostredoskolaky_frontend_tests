@@ -90,7 +90,7 @@ export default {
       { name: 'description', content: 'Jsme organizace propojující středoškoláky, kteří jsou aktivní mimo školu. Pořádáme soutěž Středoškolák roku a poskytuje informace o možnostech mimoškolního vzdělávání.' }
     ],
     link: [
-      { rel: 'icon', type: 'image/x-icon', href: require('@/assets/favicon.ico') }
+      { rel: 'icon', type: 'image/png', href: require('@/assets/favicon.png') }
     ]
   },
   data () {
