@@ -192,6 +192,28 @@
         </div>
 
         <div class="flex">
+
+          <div class="flex-1 amigo">
+            <img loading="lazy" class="amigo-img" src="~@/assets/amigo/jan-barva.jpg">
+            <span class="amigo-name">Jan Barva</span>
+            <span class="orange amigo-hashtags">#mezinárodnívztahy #extracuricularactivities #projectmanagement #právo #angličtina</span>
+            <div v-bind:class="['amigo-more-info', ({active: activeAmigo === 'barva'}) ]">
+              <ul>
+                <li>Nemám rád houby, písek v botách a lhostejnost. Pokud se alespoň na tom posledním shodneme, myslím, že si budeme rozumět! Věřím, že svět se posouvá dopředu, když se lidi zapojují, mluví spolu a umí si naslouchat. Jsem Honza, první rok studuju na Právnické fakultě Masarykovy univerzity, a rád hledám cesty, jak dobré nápady přetavit v realitu.</li>
+                <li>Kromě nynějšího studia práva, jsem absolvoval International Baccalaureate Diploma Programme, který mě naučil, dívat se na problémy z vícero perspektiv. Mám taky zkušenost se zahraničím. V roce 2024 jsem reprezentoval Česko v programu BFTF, který pořádá vláda USA a zamiloval si mezinárodní vztahy a diplomacii. Založil jsem také projekt Voices for Rights, který jsme představili prezidentu ČR, a jsem členem poradních skupin mladých při Velvyslanectví USA i MPSV. V nezisku jsem si taky vyzkoušel doučování angličtiny u dětí ze znevýhodněného prostředí nebo dobrovolnictví pro Amnesty International.</li>
+                <li>Ať už hledáš nové způsoby, jak trávit čas, chceš vyšperkovat svoje CVčko, rozjet nový projekt nebo jen chceš sparring partnera, se kterým můžeš sdílet jakékoliv nápady a myšlenky, jsem tu pro tebe. Těším se, až se potkáme!</li>
+              </ul>
+              <div class="amigo-more-info-overlay"></div>
+            </div>
+            <div
+              v-bind:class="['orange', 'amigo-info', ({active: activeAmigo === 'barva'})]"
+              @click="changeAmigo('barva')"
+            >
+              <span></span>
+              {{activeAmigo === 'barva' ? 'Zobrazit méně' : 'Více o veteránovi'}}
+            </div>
+          </div>
+
           <div class="flex-1 amigo">
             <img loading="lazy" class="amigo-img" src="~@/assets/amigo/jana-tomastikova.jpg">
             <span class="amigo-name">Jana Tomaštíková</span>
@@ -213,6 +235,9 @@
             </div>
           </div>
 
+        </div>
+
+        <div class="flex">
           <div class="flex-1 amigo">
             <img loading="lazy" class="amigo-img" src="~@/assets/amigo/johana-valova.jpg">
             <span class="amigo-name">Johana Valová</span>
@@ -233,9 +258,7 @@
               {{activeAmigo === 'valova' ? 'Zobrazit méně' : 'Více o veteránovi'}}
             </div>
           </div>
-        </div>
 
-        <div class="flex">
           <div class="flex-1 amigo">
             <img loading="lazy" class="amigo-img" src="~@/assets/amigo/matej-prokop.jpg">
             <span class="amigo-name">Matěj Prokop</span>
@@ -257,6 +280,11 @@
               {{activeAmigo === 'prokop' ? 'Zobrazit méně' : 'Více o veteránovi'}}
             </div>
           </div>
+
+        </div>
+
+        <div class="flex">
+
           <div class="flex-1 amigo">
             <img loading="lazy" class="amigo-img" src="~@/assets/amigo/matej-sicner.jpg">
             <span class="amigo-name">Matěj Šicner</span>
@@ -278,9 +306,7 @@
               {{activeAmigo === 'sicner' ? 'Zobrazit méně' : 'Více o veteránovi'}}
             </div>
           </div>
-        </div>
 
-        <div class="flex">
           <div class="flex-1 amigo">
             <img loading="lazy" class="amigo-img" src="~@/assets/amigo/metodej-svoboda.png">
             <span class="amigo-name">Metoděj Svoboda</span>
@@ -303,6 +329,11 @@
               {{activeAmigo === 'svoboda2' ? 'Zobrazit méně' : 'Více o veteránovi'}}
             </div>
           </div>
+
+        </div>
+
+        <div class="flex">
+
           <div class="flex-1 amigo">
             <img loading="lazy" class="amigo-img" src="~@/assets/amigo/ondrej-pazourek.jpeg">
             <span class="amigo-name">Ondřej Pazourek</span>
@@ -324,9 +355,7 @@
               {{activeAmigo === 'pazourek' ? 'Zobrazit méně' : 'Více o veteránovi'}}
             </div>
           </div>
-        </div>
 
-        <div class="flex">
           <div class="flex-1 amigo">
             <img loading="lazy" class="amigo-img" src="~@/assets/amigo/ondrej-pelanek.jpg">
             <span class="amigo-name">Ondřej Pelánek</span>
@@ -346,6 +375,10 @@
               {{activeAmigo === 'pelanek' ? 'Zobrazit méně' : 'Více o veteránovi'}}
             </div>
           </div>
+
+        </div>
+
+        <div class="flex">
 
           <div class="flex-1 amigo">
             <img loading="lazy" class="amigo-img" src="~@/assets/amigo/petra-placha.jpg">
@@ -367,9 +400,7 @@
               {{activeAmigo === 'placha' ? 'Zobrazit méně' : 'Více o veteránovi'}}
             </div>
           </div>
-        </div>
 
-        <div class="flex">
           <div class="flex-1 amigo">
             <img loading="lazy" class="amigo-img" src="~@/assets/amigo/simon-falta.jpg">
             <span class="amigo-name">Šimon Falta</span>
@@ -390,6 +421,10 @@
             </div>
           </div>
 
+        </div>
+
+        <div class="flex">
+
           <div class="flex-1 amigo">
             <img loading="lazy" class="amigo-img" src="~@/assets/amigo/simon-spilar.jpg">
             <span class="amigo-name">Šimon Špilar</span>
@@ -409,9 +444,7 @@
               {{activeAmigo === 'spilar' ? 'Zobrazit méně' : 'Více o veteránovi'}}
             </div>
           </div>
-        </div>
 
-        <div class="flex">
           <div class="flex-1 amigo">
             <img loading="lazy" class="amigo-img" src="~@/assets/amigo/tadeas-frycak.jpg">
             <span class="amigo-name">Tadeáš Fryčák</span>
@@ -434,6 +467,10 @@
             </div>
           </div>
 
+        </div>
+
+        <div class="flex">
+
           <div class="flex-1 amigo">
             <img loading="lazy" class="amigo-img" src="~@/assets/amigo/tadeas-vylita.jpg">
             <span class="amigo-name">Tadeáš Vylita</span>
@@ -453,9 +490,7 @@
               {{activeAmigo === 'vylita' ? 'Zobrazit méně' : 'Více o veteránovi'}}
             </div>
           </div>
-        </div>
 
-        <div class="flex">
           <div class="flex-1 amigo">
             <img loading="lazy" class="amigo-img" src="~@/assets/amigo/tereza-przeczkova.jpg">
             <span class="amigo-name">Tereza Przeczková</span>
@@ -477,6 +512,10 @@
             </div>
           </div>
 
+        </div>
+
+        <div class="flex">
+
           <div class="flex-1 amigo">
             <img loading="lazy" class="amigo-img" src="~@/assets/amigo/tereza-tomaskova.jpg">
             <span class="amigo-name">Tereza Tomášková</span>
@@ -497,9 +536,7 @@
               {{activeAmigo === 'tomaskova' ? 'Zobrazit méně' : 'Více o veteránovi'}}
             </div>
           </div>
-        </div>
 
-        <div class="flex">
           <div class="flex-1 amigo">
             <img loading="lazy" class="amigo-img" src="~@/assets/amigo/veronika-zelinkova.jpg">
             <span class="amigo-name">Veronika Zelinková</span>
@@ -520,6 +557,7 @@
               {{activeAmigo === 'zelinkova' ? 'Zobrazit méně' : 'Více o veteránovi'}}
             </div>
           </div>
+
         </div>
 
       </div>
