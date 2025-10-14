@@ -58,7 +58,7 @@
       </div>
 
       <div class="amigos-wrapper">
-        <h2>Naši amigos</h2>
+        <h2>Naši mentoři</h2>
         <div class="flex">
           <div class="flex-1 amigo">
             <img loading="lazy" class="amigo-img" src="~@/assets/amigo/anezka-indrackova.jpg">
