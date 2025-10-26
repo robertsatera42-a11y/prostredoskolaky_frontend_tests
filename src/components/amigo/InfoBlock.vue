@@ -14,22 +14,21 @@
             <span class="orange why-title">Proč se programu zúčastnit?</span>
             <div
               class="why-description"
-            >I když se snažíš využít svou střední školu na maximum, je občas lepší nepostupovat jen cestou pokus-omyl, ale obrátit se na někoho, kdo si už podobnými situacemi, jaké teď řešíš, prošel a může se na tvá nynější rozhodnutí podívat s větším odstupem. Přinášíme ti skupinu tvořenou mentory z řad finalistů soutěže Středoškolák roku, ale i dalších úspěšných lidí, kteří jsou sice jen pár let po střední, ale dokázali už nabrat plno cenných zkušeností.</div>
+            >I když se snažíš ze střední vytěžit maximum, někdy je lepší nevymýšlet všechno od nuly. Pomůže ti někdo, kdo už si podobnými rozhodnutími prošel – a může ti ukázat cestu, jak se posunout dál.<br></br>Spojujeme tě s mladými lidmi, kteří již za sebou mají spoustu projektů, a už ví, jak v tom všem chodit. Naši mentoři jsou finalisté soutěže Středoškolák roku nebo další inspirativní studenti a mají zkušenosti, které ti mohou ušetřit spoustu času i nervů.</div>
             <span class="orange why-title">Co od programu očekávat?</span>
             <div
               class="why-description"
-            >Během programu budeš mít příležitost se několikrát setkat či si zavolat se svým amigo veteránem, se kterým budeš řešit tvé aktuální problémy a otázky. Tvůj veterán se ti bude snažit předat svůj pohled na věc, své rady a tipy a motivovat tě do dalších rozhodnutí.</div>
+            >Během programu budeš mít příležitost se několikrát potkat se svým mentorem osobně nebo online. Během vašich setkání můžeš řešit své aktuální problémy – od projektů, stáží, soutěží přes to, jak si naplánovat čas a vyhnout se tak syndromu vyhoření nebo jak se dostat ke studiu v zahraničí. <br></br>Tvůj mentor ti dá cennou zpětnou vazbu, nabídne svůj pohled na věc nebo předá své tipy a rady. V jiných případech ti dá motivaci a pocit, že na to nejsi sám, což je někdy vše, co potřebuješ.</div>
           </div>
           <div class="flex-1">
             <span class="orange why-title">Jak to bude probíhat?</span>
             <div class="why-description">
               <ul>
-              <li>Zaujme-li tě alespoň jeden z našich amigů, klikni na „Přihlas se do programu“ a vyplň přihlášku. Odešli ji nejpozději do 2. 11. 2025 23:59.</li>
-              <li>Úvodní setkání již proběhlo, ale pořád si můžeš vybrat svého mentora a absolvovat všechna další setkání.</li>
-              <li>Ty i tvůj amigo obdržíte krátký seznam neformálních instrukcí, jak a o čem vést vaše rozhovory, abyste si to oba užili.</li>
-              <li>Několikrát si zavoláte nebo se sejdete, záleží na Vašich možnostech, a pokusíte se posunout tvé aktivity o kousek dál či v tobě jen zažehnout ducha aktivního středoškoláka.</li>
+              <li>Vyber si alespoň jednoho z našich mentorů, klikni na „Přihlas se do programu“ a vyplň přihlášku. Odešli ji nejpozději do 2.11. 2025 23:59.</li>
+              <li>Úvodní setkání mentorů i mentees proběhne v pátek večer 14. listopadu 2025 ve Student Hubu v prostorech Bakala Foundation.</li>
+              <li>Ty i tvůj mentor obdržíte neformální seznam instrukcí, jak a o čem se bavit, abyste si program oba užili a vzájemně se obohatili.</li>
+              <li>Několikrát si zavoláte nebo se sejdete, záleží na vašich možnostech. Pokusíte se posunout tvé aktivity o kousek dál či v tobě jen zažehnout ducha aktivního středoškoláka.</li>
               <li>Pravidelně tě budeme kontaktovat, abychom ověřili, že jde vše hladce a setkání jsou pro tebe přínosná. Kdybyste zjistili, že si nesedíte, dej nám vědět a podíváme se po možné náhradě.</li>
-              <li>Hlavně si to však oba musíte užít a co nejvíce se vzájemně obohatit.</li>
               </ul>
             </div>
           </div>
@@ -389,6 +388,7 @@
                 <li>Čauko, já jsem Péťa. Pokud se zajímáš o projektový management a organizaci akcí, studentské spolky nebo rozvoj soft skills, tak to nejspíš bude match. Zároveň studuju andragogiku a pedagogiku na MUNI, což znamená, že si tebou ráda pokecám i o vzdělávání.</li>
                 <li>Mám zkušenost z nezisku, start-upu i korporátu, ze studia víc škol na jednou, z absolvování i organizování vzdělávacích projektů pro studenty. Můj background je v managementu, fundraisingu, marketingu a HR. Jestli toužíš po něčem konkrétním, mrkni na můj LinkedIn.</li>
                 <li>Neumím vařit a řídit, ale umím zařídit, aby věci fungovaly. A udělá mi radost, když v tom budu moct pomoc i tobě. Mám ráda příběhy a jsem fakt skvělá v únikovkách a laser game. Potkávat se můžeme v Brně, Plzni, Praze, třeba v čajce nebo klidně online.</li>
+                <li>Právě jsem se vrátila z Himálaje, kde jsem 3,5 měsíce učila děti informatiku v malých vesnických školách, takže momentálně mám i co říct k tomu.</li>
               </ul>
               <div class="amigo-more-info-overlay"></div>
             </div>
