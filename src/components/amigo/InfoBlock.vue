@@ -18,13 +18,13 @@
             <span class="orange why-title">Co od programu očekávat?</span>
             <div
               class="why-description"
-            >Během programu budeš mít příležitost se několikrát potkat se svým mentorem osobně nebo online. Během vašich setkání můžeš řešit své aktuální problémy – od projektů, stáží, soutěží přes to, jak si naplánovat čas a vyhnout se tak syndromu vyhoření nebo jak se dostat ke studiu v zahraničí. <br></br>Tvůj mentor ti dá cennou zpětnou vazbu, nabídne svůj pohled na věc nebo předá své tipy a rady. V jiných případech ti dá motivaci a pocit, že na to nejsi sám, což je někdy vše, co potřebuješ.</div>
+            >Během programu budeš mít příležitost se několikrát potkat se svým mentorem osobně nebo online. Během vašich setkání můžeš řešit své aktuální problémy – od projektů, stáží a soutěží i přes to, jak si naplánovat čas a vyhnout se tak syndromu vyhoření, nebo jak se dostat ke studiu v zahraničí.<br></br>Tvůj mentor ti dá cennou zpětnou vazbu, nabídne svůj pohled na věc nebo předá své tipy a rady. V jiných případech ti dá motivaci a pocit, že na to nejsi sám, což je někdy vše, co potřebuješ.</div>
           </div>
           <div class="flex-1">
             <span class="orange why-title">Jak to bude probíhat?</span>
             <div class="why-description">
               <ul>
-              <li>Vyber si alespoň jednoho z našich mentorů, klikni na „Přihlas se do programu“ a vyplň přihlášku. Odešli ji nejpozději do 2.11. 2025 23:59.</li>
+              <li>Vyber si alespoň jednoho z našich mentorů, klikni na „Přihlas se do programu“ a vyplň přihlášku. Odešli ji nejpozději do 2. 11. 2025 23:59.</li>
               <li>Úvodní setkání mentorů i mentees proběhne v pátek večer 14. listopadu 2025 ve Student Hubu v prostorech Bakala Foundation.</li>
               <li>Ty i tvůj mentor obdržíte neformální seznam instrukcí, jak a o čem se bavit, abyste si program oba užili a vzájemně se obohatili.</li>
               <li>Několikrát si zavoláte nebo se sejdete, záleží na vašich možnostech. Pokusíte se posunout tvé aktivity o kousek dál či v tobě jen zažehnout ducha aktivního středoškoláka.</li>
