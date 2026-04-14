@@ -16,6 +16,8 @@
           <a href="https://www.ddmp6.cz/" target="_blank"><img style="max-height:36px" loading="lazy" src="~@/assets/partners/ddm6.png" alt></a>
           <a href="https://www.ctenipomaha.cz/" target="_blank"><img style="max-height:36px" loading="lazy" src="~@/assets/partners/cteni.png" alt></a>
           <a href="https://www.nadacepreciosa.cz/" target="_blank"><img style="max-height:36px" loading="lazy" src="~@/assets/partners/preciosa.png" alt></a>
+          <a href="https://portal.rozhlas.cz/" target="_blank"><img style="max-height:36px" loading="lazy" src="~@/assets/partners/CRo-Cesky_rozhlas-Z-RGB.png" alt></a>
+          <a href="https://www.hotel-ilf.cz/" target="_blank"><img style="max-height:36px" loading="lazy" src="~@/assets/partners/logo-ILF-ramecek-barva-500.jpg" alt></a>
         </div>
       </div>
     </section>
@@ -291,6 +293,8 @@
             <a href="https://www.ddmp6.cz/" target="_blank"><img style="max-height:36px" loading="lazy" src="~@/assets/partners/ddm6.png" alt></a>
             <a href="https://www.ctenipomaha.cz/" target="_blank"><img style="max-height:36px" loading="lazy" src="~@/assets/partners/cteni.png" alt></a>
             <a href="https://www.nadacepreciosa.cz/" target="_blank"><img style="max-height:36px" loading="lazy" src="~@/assets/partners/preciosa.png" alt></a>
+            <a href="https://portal.rozhlas.cz/" target="_blank"><img style="max-height:36px" loading="lazy" src="~@/assets/partners/CRo-Cesky_rozhlas-Z-RGB.png" alt></a>
+            <a href="https://www.hotel-ilf.cz/" target="_blank"><img style="max-height:36px" loading="lazy" src="~@/assets/partners/logo-ILF-ramecek-barva-500.jpg" alt></a>
           </div>
         </div>
       </div>
