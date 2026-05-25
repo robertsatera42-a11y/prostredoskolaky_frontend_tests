@@ -120,16 +120,6 @@
             </span>
           </div>
         </div>
-        <div class="team-member">
-          <img loading="lazy" src="~@/assets/team/verca2.jpg" alt="Veronika Hývnarová">
-          <div class="orange name">Veronika Hývnarová</div>
-          <div class="description">
-            <span>
-              <a href="https://www.linkedin.com/in/veronika-hývnarová-a0ba93288/" target="_blank">LinkedIn</a> |
-              <a href="https://www.instagram.com/hyvnarova.veronika/" target="_blank">IG</a>
-            </span>
-          </div>
-        </div>
       </div>
 
       <h2>Síň slávy</h2>
