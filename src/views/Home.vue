@@ -238,7 +238,7 @@
           </div>
         </div>
 
-        <div class="our-team">
+        <!--<div class="our-team">
           <h2>Náš tým</h2>
 
           <div class="team">
@@ -274,7 +274,7 @@
             </div>
           </div>
           <a class="more-about-us" @click="goToAndTrack('/o-nas', 'link', 'about_us')">více o nás</a>
-        </div>
+        </div>-->
 
         <div class="our-partners">
           <h2>Pod záštitou</h2>
