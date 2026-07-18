@@ -246,9 +246,6 @@
               <img loading="lazy" src="~@/assets/team/monika.jpg" alt="Monika Smiešková">
             </div>
             <div class="team-member">
-              <img loading="lazy" src="~@/assets/team/adam.jpg" alt="Adam Holda">
-            </div>
-            <div class="team-member">
               <img loading="lazy" src="~@/assets/team/lenka.jpg" alt="Lenka Novotná">
             </div>
             <div class="team-member">
