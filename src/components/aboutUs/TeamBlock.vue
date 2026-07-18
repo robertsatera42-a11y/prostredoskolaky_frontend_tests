@@ -2,21 +2,20 @@
   <section class="team-section">
     <div class="content">
       <h2>Náš tým</h2>
-
       <div class="team">
         <div class="team-member">
-          <img loading="lazy" src="~@/assets/team/terez.jpg" alt="Terezie Šubrtová">
-          <div class="orange name">Terezie Šubrtová</div>
+          <img loading="lazy" src="~@/assets/team/metodej_svoboda.jpg" alt="Metoděj Svoboda">
+          <div class="orange name">Metoděj Svoboda</div>
           <div class="description">
-            <p>Vedoucí eventů</p>
-            <a href="mailto:terezie.subrtova@prostredoskolaky.cz">e-mail</a>
+            <p>Vedoucí organizace</p>
+            <a href="mailto:metodej.svoboda@prostredoskolaky.cz">e-mail</a>
             <span>
-              <a href="https://www.linkedin.com/in/terezie-%C5%A1ubrtov%C3%A1-18857221a" target="_blank">LinkedIn</a> |
-              <a href="https://www.instagram.com/terez.subrtova" target="_blank">IG</a>
+              <a href="https://www.linkedin.com/in/metodej-svoboda/" target="_blank">LinkedIn</a> |
+              <a href="https://www.instagram.com/metodej_svoboda/" target="_blank">IG</a>
             </span>
           </div>
         </div>
-        <div class="team-member">
+        <!--<div class="team-member">
           <img loading="lazy" src="~@/assets/team/kata.jpg" alt="Kateřina Marešová">
           <div class="orange name">Kateřina Marešová</div>
           <div class="description">
@@ -117,10 +116,10 @@
               <a href="https://www.instagram.com/hyvnarova.veronika/" target="_blank">IG</a>
             </span>
           </div>
-        </div>
+        </div>-->
       </div>
 
-      <h2>Síň slávy</h2>
+      <!--<h2>Síň slávy</h2>
       <div class="team">
         <div class="team-member">
           <img loading="lazy" src="~@/assets/team/monika.jpg" alt="Monika Smiešková">
@@ -267,7 +266,7 @@
               </span>
             </div>
           </div>
-      </div>
+      </div>-->
 
       <h2>Zakladatelé</h2>
         <div class="team">
