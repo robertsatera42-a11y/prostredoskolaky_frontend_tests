@@ -5,18 +5,6 @@
 
       <div class="team">
         <div class="team-member">
-          <img loading="lazy" src="~@/assets/team/adam.jpg" alt="Adam Holda">
-          <div class="orange name">Adam Holda</div>
-          <div class="description">
-            <p>Projektový vedoucí</p>
-            <a href="mailto:adam.holda@prostredoskolaky.cz">e-mail</a>
-            <span>
-              <a href="https://www.linkedin.com/in/adamholda/" target="_blank">LinkedIn</a> |
-              <a href="https://www.instagram.com/holdaadam/" target="_blank">IG</a>
-            </span>
-          </div>
-        </div>
-        <div class="team-member">
           <img loading="lazy" src="~@/assets/team/terez.jpg" alt="Terezie Šubrtová">
           <div class="orange name">Terezie Šubrtová</div>
           <div class="description">
