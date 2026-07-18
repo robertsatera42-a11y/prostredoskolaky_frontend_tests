@@ -406,7 +406,7 @@ export default {
     left: 0;
     width: 100%;
     height: 100%;
-    background: url(~@/assets/first-header1.png) center;
+    background: url(~@/assets/mainheader.jpg) center;
     background-size: cover;
     z-index: -1;
   }
