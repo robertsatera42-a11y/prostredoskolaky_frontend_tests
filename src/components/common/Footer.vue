@@ -6,6 +6,7 @@
         <div class="links">
           <router-link to="/">Domů</router-link>
           <a @click="goToAndTrack('https://stredoskolakroku.cz/', 'link', 'soutez')">Středoškolák roku</a>
+          <router-link to="/vysokoskolak-roku-2027">Vysokoškolák roku</router-link>
           <!-- <router-link to="/finaliste">Finalisté</router-link> -->
           <router-link to="/amigo">AMIGO</router-link>
           <router-link to="/databaze">Databáze</router-link>

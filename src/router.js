@@ -39,6 +39,11 @@ const router = new Router({
       component: () => import("./views/CompetitionPage.vue"),
     },
     {
+      path: '/vysokoskolak-roku-2027',
+      name: 'university-award-2027-page',
+      component: () => import('./views/VysokoskolakRoku2027Page.vue')
+    },
+    {
       path: "/finaliste",
       name: "finalists-page",
       component: () => import("./views/FinalistsPage.vue"),

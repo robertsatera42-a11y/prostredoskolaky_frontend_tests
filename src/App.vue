@@ -11,12 +11,15 @@
           <img src="~@/assets/logo_new.svg" alt="Prostředoškoláky">
         </div>
 
-        <span
+        <button
+          type="button"
           @click="toggleMenu"
+          :aria-expanded="mobileOpen"
+          aria-controls="site-navigation"
           class="mobile-menu-opener"
-        >MENU</span>
+        >MENU</button>
 
-        <nav :class="mobileOpen && 'mobile-open'">
+        <nav id="site-navigation" :class="mobileOpen && 'mobile-open'">
           <div class="menu-bottom-link">
             <router-link @click.native="closeMenu" to="/">Domů</router-link>
             <span class="link-underline"/>
@@ -24,6 +27,10 @@
           <div class="menu-bottom-link">
             <a href="https://stredoskolakroku.cz">Středoškolák roku</a>
             <!-- <router-link @click.native="closeMenu" to="/soutez">Středoškolák roku</router-link> -->
+            <span class="link-underline"/>
+          </div>
+          <div class="menu-bottom-link">
+            <router-link @click.native="closeMenu" to="/vysokoskolak-roku-2027">Vysokoškolák roku</router-link>
             <span class="link-underline"/>
           </div>
           <div class="menu-bottom-link">
@@ -273,7 +280,7 @@ export default {
         padding: 10px 20px;
       }
 
-      @media (max-width: 1050px) {
+      @media (max-width: 1200px) {
         &.open-menu {
 
           nav.mobile-open {
@@ -329,8 +336,18 @@ export default {
         align-items: center;
         display: none;
         cursor: pointer;
+        padding: 0;
+        border: 0;
+        background: none;
+        color: inherit;
+        font: inherit;
 
-        @media (max-width: 1050px) {
+        &:focus-visible {
+          outline: 2px solid $primary;
+          outline-offset: 4px;
+        }
+
+        @media (max-width: 1200px) {
           display: flex;
         }
       }
@@ -339,7 +356,7 @@ export default {
         align-items: center;
         display: flex;
 
-        @media (max-width: 1050px) {
+        @media (max-width: 1200px) {
           display: none;
 
           &.mobile-open {
@@ -352,7 +369,9 @@ export default {
             left: 0;
             top: 83px;
             flex-direction: column;
-            justify-content: center;
+            justify-content: flex-start;
+            overflow-y: auto;
+            padding: 24px 0;
 
             > div {
               margin-right: 0;
@@ -364,7 +383,7 @@ export default {
           position: relative;
           display: flex;
           justify-content: center;
-          margin-right: 15px;
+          margin-right: 6px;
 
           .link-underline {
             width: 80%;
@@ -376,10 +395,14 @@ export default {
           }
 
           a {
-            padding: 20px;
+            padding: 20px 8px;
             transition: .3s;
             color: $dark;
             font-family: 'NunitoLight', sans-serif;
+
+            @media (max-width: 1200px) {
+              padding: 10px 16px;
+            }
 
             /*&.router-link-exact-active {
               color: green
