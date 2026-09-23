@@ -130,7 +130,7 @@ export default {
     width: 300px;
     height: 300px;
     object-fit: cover;
-    object-position: center bottom;
+    object-position: center;
     border-radius: 12px;
 
     @media (max-width: 800px) {
