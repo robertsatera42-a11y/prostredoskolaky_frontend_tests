@@ -26,7 +26,7 @@ export default {
   name: 'main-block',
   methods: {
     goToForm () {
-      window.open('https://forms.gle/oTQx8Amvrw7XVKzTA', '_blank')
+      window.open('https://docs.google.com/forms/d/e/1FAIpQLSdOI5KjG2vpotVyQMWN5O_zi734gZlLIybXqREXJT5ICXxpqg/viewform?usp=dialog', '_blank')
     }
   }
 }
