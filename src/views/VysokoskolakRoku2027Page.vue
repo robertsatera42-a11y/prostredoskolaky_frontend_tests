@@ -160,6 +160,17 @@ export default {
     flex-wrap: wrap;
     gap: 20px 36px;
     margin-top: 32px;
+
+    @media (max-width: 800px) {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 12px;
+
+      .cta-button {
+        padding: 10px 8px;
+        font-size: 14px;
+      }
+    }
   }
 
   .cta-button {
@@ -196,6 +207,7 @@ export default {
     border-radius: 12px;
 
     @media (max-width: 800px) {
+      order: -1;
       flex-basis: auto;
       width: min(100%, 260px);
       height: 260px;

@@ -1,0 +1,92 @@
+- generic [ref=e2]:
+  - banner [ref=e3]:
+    - generic [ref=e4]:
+      - img "Prostředoškoláky" [ref=e6] [cursor=pointer]
+      - navigation [ref=e7]:
+        - link "Domů" [ref=e9] [cursor=pointer]:
+          - /url: /
+        - link "Středoškolák roku" [ref=e11] [cursor=pointer]:
+          - /url: https://stredoskolakroku.cz
+        - link "Vysokoškolák roku" [ref=e13] [cursor=pointer]:
+          - /url: /vysokoskolak-roku-2027
+        - link "AMIGO" [ref=e16] [cursor=pointer]:
+          - /url: /amigo
+        - link "Databáze" [ref=e18] [cursor=pointer]:
+          - /url: /databaze
+        - link "Vše o IVP" [ref=e20] [cursor=pointer]:
+          - /url: /ivp
+        - generic [ref=e21]: Blog
+        - link "O nás" [ref=e24] [cursor=pointer]:
+          - /url: /o-nas
+        - button "Přihlášení" [ref=e26] [cursor=pointer]
+  - generic [ref=e27]:
+    - main [ref=e28]:
+      - region [ref=e29]:
+        - generic [ref=e30]:
+          - generic [ref=e31]:
+            - heading "Cena Vysokoškolák roku 2027" [level=1] [ref=e32]
+            - paragraph [ref=e33]: Jsme projekt, který hledá, podporuje a propojuje aktivní vysokoškoláky, kteří nad rámec studia podnikají, dobrovolničí, angažují se v neziskovkách, sportují nebo se věnují občanské participaci.
+            - generic [ref=e34]:
+              - link "Chci ocenit" [ref=e35] [cursor=pointer]:
+                - /url: https://forms.cloud.microsoft/e/XauCr8y6np
+              - link "Sleduj Instagram!" [ref=e36] [cursor=pointer]:
+                - /url: https://www.instagram.com/vysokoskolak?stkn=MXFkMm9ycWNhNXpjcw==
+          - img "Logo Vysokoškolák roku" [ref=e37]
+      - region [ref=e38]:
+        - generic [ref=e39]:
+          - img "Přednášející a účastníci studentského setkání" [ref=e40]
+          - generic [ref=e41]:
+            - heading "Od střední se hodně změnilo…" [level=2] [ref=e42]
+            - paragraph [ref=e43]: Matematický klokan, Biologická olympiáda, Chemická, Ekonomická, Dějepisná, Pythágoriáda, Prezentiáda, Zvaž vědu! a další stovky soutěží a příležitostí se potkat napříč republikou. Na vysoké to ale někam všechno zmizelo. Zbyly nám fakultní spolky, pivo po přednášce a práce??? Studentský prostor se individualizoval. Pojďme to probořit – potkat se – zase soutěžit – vytvářet týmy a spolupráce.
+            - link "PŘIHLASTE SE DO VYSOKOŠKOLÁKA ROKU 2027" [ref=e44] [cursor=pointer]:
+              - /url: https://forms.cloud.microsoft/e/XauCr8y6np
+      - region [ref=e45]:
+        - generic [ref=e46]:
+          - heading "Kontakt" [level=2] [ref=e47]
+          - generic [ref=e48]:
+            - article [ref=e49]:
+              - img "Antonín Svoboda" [ref=e50]
+              - generic [ref=e51]:
+                - heading "Antonín Svoboda" [level=3] [ref=e52]
+                - paragraph [ref=e53]: Koordinátor projektu a spoluprací
+                - generic [ref=e54]:
+                  - link "antonin.svoboda@prostredoskolaky.cz" [ref=e55] [cursor=pointer]:
+                    - /url: mailto:antonin.svoboda@prostredoskolaky.cz
+                  - generic [ref=e56]: "IG: @antony.freedom"
+                  - link "+420 605 442 685" [ref=e57] [cursor=pointer]:
+                    - /url: tel:+420605442685
+            - article [ref=e58]:
+              - img "Kateřina Brouzdová" [ref=e59]
+              - generic [ref=e60]:
+                - heading "Kateřina Brouzdová" [level=3] [ref=e61]
+                - paragraph [ref=e62]: Marketing & Grafika
+                - link "katerina.brouzdova@gmail.com" [ref=e64] [cursor=pointer]:
+                  - /url: mailto:katerina.brouzdova@gmail.com
+    - contentinfo [ref=e65]:
+      - generic [ref=e66]:
+        - generic [ref=e67]:
+          - generic [ref=e68]:
+            - link "Domů" [ref=e69] [cursor=pointer]:
+              - /url: /
+            - generic [ref=e70] [cursor=pointer]: Středoškolák roku
+            - link "Vysokoškolák roku" [ref=e71] [cursor=pointer]:
+              - /url: /vysokoskolak-roku-2027
+            - link "AMIGO" [ref=e72] [cursor=pointer]:
+              - /url: /amigo
+            - link "Databáze" [ref=e73] [cursor=pointer]:
+              - /url: /databaze
+            - link "O nás" [ref=e74] [cursor=pointer]:
+              - /url: /o-nas
+            - generic [ref=e75] [cursor=pointer]: Blog
+          - generic [ref=e76]:
+            - generic [ref=e77] [cursor=pointer]
+            - generic [ref=e78] [cursor=pointer]
+            - generic [ref=e79] [cursor=pointer]
+            - generic [ref=e80] [cursor=pointer]
+        - generic [ref=e81]: © ProStředoškoláky 2026
+  - generic [ref=e82]:
+    - generic [ref=e83] [cursor=pointer]
+    - paragraph [ref=e84]:
+      - text: Procházením tohoto webu souhlasíte s používáním souborů cookies.
+      - link "Více informací." [ref=e85] [cursor=pointer]:
+        - /url: https://www.vimkamklikam.cz/zajimavosti/k-cemu-jsou-a-jak-funguji-cookies
