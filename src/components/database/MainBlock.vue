@@ -14,9 +14,10 @@
 </template>
 
 <script>
-
+import { platformAppearanceMixin } from '../platform/presentation'
 export default {
-  name: 'main-block'
+  name: 'main-block',
+  mixins: [platformAppearanceMixin]
 }
 </script>
 

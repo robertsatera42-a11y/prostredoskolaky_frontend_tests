@@ -1,19 +1,24 @@
 <template v-if="event.name">
-  <div>
+  <div :id="isPlatform ? 'platform-detail-dialog' : null" :class="{ 'platform-dialog': isPlatform }" :role="isPlatform ? 'dialog' : null" :aria-modal="isPlatform ? 'true' : null" :aria-labelledby="isPlatform ? 'database-detail-title' : null" @keydown="trapDialogFocus">
     <div class="modal-card" style="max-width: 800px">
-      <div v-if="actualKey !== 0" class="arrow-wrap left">
+      <div v-if="!isPlatform && actualKey !== 0" class="arrow-wrap left">
         <div class="arrow" @click="goToPrevious"/>
       </div>
-      <div v-if="actualKey !== events.length - 1" class="arrow-wrap right">
+      <div v-if="!isPlatform && actualKey !== events.length - 1" class="arrow-wrap right">
         <div class="arrow" @click="goToNext"/>
       </div>
       <header :class="`type-${event.types[0] && event.types[0].short} modal-card-head`">
-        <h1>{{event.name}}</h1>
+        <component :is="isPlatform ? 'h2' : 'h1'" :id="isPlatform ? 'database-detail-title' : null" :tabindex="isPlatform ? -1 : null" :data-dialog-heading="isPlatform ? '' : null">{{event.name}}</component>
+        <button v-if="isPlatform" type="button" class="platform-dialog-close" aria-label="Zavřít detail aktivity" @click="$parent.cancel('x')"/>
       </header>
+      <nav v-if="isPlatform && events.length > 1" class="platform-detail-navigation" aria-label="Procházení aktivit">
+        <button v-if="actualKey !== 0" type="button" class="button" aria-label="Předchozí aktivita" @click="goToPrevious">← Předchozí</button>
+        <button v-if="actualKey !== events.length - 1" type="button" class="button platform-detail-next" aria-label="Následující aktivita" @click="goToNext">Následující →</button>
+      </nav>
       <section class="modal-card-body">
         <div class="flex intro flex-half">
           <div>
-            <img :src="event.logoUrl + event.logo" alt>
+            <img :src="event.logoUrl + event.logo" :alt="isPlatform ? 'Úvodní fotografie aktivity ' + event.name : ''">
           </div>
           <div>
             <p>{{event.description}}</p>
@@ -78,9 +83,11 @@
 <script>
 import ReportActivity from './ReportActivity'
 import transformerUtils from '../../utils/transformerUtils'
+import { platformDialogMixin, modalAppearanceOptions } from '../platform/presentation'
 
 export default {
   name: 'detail',
+  mixins: [platformDialogMixin],
   components: { ReportActivity },
   data () {
     return {
@@ -121,16 +128,24 @@ export default {
       required: true
     }
   },
+  watch: {
+    actualKey () {
+      // Navigation may remove the focused control at either end of the list.
+      if (this.isPlatform && this.$el.contains(document.activeElement)) this.$nextTick(this.focusDialogHeading)
+    }
+  },
   methods: {
     openReport () {
       this.$modal.open({
+        ...modalAppearanceOptions(this.appearance),
         parent: this,
         component: ReportActivity,
         hasModalCard: true,
         canCancel: ['escape', 'x'],
         props: {
           name: this.event.name,
-          eventId: this.event.id
+          eventId: this.event.id,
+          appearance: this.appearance
         }
       })
     },

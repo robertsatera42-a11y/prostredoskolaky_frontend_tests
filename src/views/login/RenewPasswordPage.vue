@@ -1,52 +1,38 @@
 <template>
-  <div class="forgotten-password-page">
-    <div class="overlay"></div>
-
-    <section class="main-container">
-      <div class="content">
-        <div class="renew-password">
-          <b-field
-              label="Zadejte Váš email"
-              :type="errorsEmail.type"
-              :message="errorsEmail.message">
-            <b-input
-                type="email"
-                class="form__input"
-                v-model="email"
-                v-focus="focusedEmail"
-                @focus="focusedEmail = true"
-                @blur="focusedEmail = false"
-                placeholder="novak@email.cz"></b-input>
-          </b-field>
-          <message :type="messageType" :message="message"/>
-          <button @click="goToLogin" class="button">Zpět</button>
-          <button @click="renewPassword" class="button is-primary">Odeslat</button>
-          <div>Na zadanou adresu Vám zašleme email s proklikem, kde si budete moct změnit Vaše heslo.</div>
-          <div>{{message}}</div>
-        </div>
+  <div class="platform-page auth-page">
+    <main id="home-main" class="home-container auth-main" tabindex="-1">
+      <div class="auth-card">
+        <h1>Obnova hesla</h1>
+        <p class="auth-description">Na zadanou adresu Vám zašleme email s proklikem, kde si budete moct změnit Vaše heslo.</p>
+        <form id="auth-renew-form" class="auth-form" novalidate :aria-busy="pending ? 'true' : 'false'" @submit.prevent="renewPassword">
+          <auth-field label="Zadejte Váš email" input-id="auth-renew-email" :error="errorsEmail">
+            <b-input id="auth-renew-email" name="email" type="email" autocomplete="email" placeholder="novak@email.cz" v-model="email" :disabled="pending" :use-html5-validation="false" :aria-invalid="errorsEmail.type ? 'true' : 'false'" :aria-describedby="errorsEmail.message ? 'auth-renew-email-error' : null" @focus="focusedEmail = true" @blur="focusedEmail = false" />
+          </auth-field>
+          <auth-feedback :type="messageType" :message="message" />
+          <button type="submit" class="home-button home-button-orange auth-submit" :disabled="pending" @mousedown.prevent>{{ pending ? 'Odesílám…' : 'Odeslat' }}</button>
+          <router-link to="/login" class="home-text-link auth-back-link">Zpět na přihlášení</router-link>
+        </form>
       </div>
-    </section>
-
-    <footer-block/>
-
+    </main>
+    <home-footer />
   </div>
 </template>
 
 <script>
 import fb from '../../firebase.js'
-import ValidationUtils from '../../utils/validationUtils'
 import { required, email } from 'vuelidate/lib/validators'
-import { mixin as focusMixin } from 'vue-focus'
-import router from '../../router'
-import FooterBlock from '../../components/common/Footer'
-import Message from '../../components/common/Message'
+import HomeFooter from '../../components/home/HomeFooter'
+import AuthField from '../../components/login/AuthField'
+import AuthFeedback from '../../components/login/AuthFeedback'
+import { focusField, fieldError, invalidFormMessage, requestErrorMessage } from '../../components/login/authPresentation'
 
 export default {
   name: 'renew-password-page',
-  mixins: [focusMixin],
+  metaInfo: { title: 'Obnova hesla' },
   components: {
-    FooterBlock,
-    Message
+    HomeFooter,
+    AuthField,
+    AuthFeedback
   },
   data () {
     return {
@@ -54,37 +40,41 @@ export default {
       focusedEmail: '',
       submitStatus: '',
       message: '',
-      messageType: 'error'
+      messageType: 'error',
+      pending: false
     }
   },
   computed: {
     errorsEmail: function () {
-      this.focusedEmail
-      this.$v.email.$invalid
-      this.submitStatus
-      return ValidationUtils.validateBasic(this, 'email', 'focusedEmail')
+      return fieldError(this, this.$v.email, 'focusedEmail')
     }
   },
   methods: {
     async renewPassword () {
+      if (this.pending) return
       this.message = ''
+      this.messageType = 'error'
       if (this.$v.$invalid) {
         this.submitStatus = 'ERROR'
-      } else {
-        this.submitStatus = ''
+        this.message = invalidFormMessage
+        focusField(this, 'auth-renew-email')
+        return
+      }
+      this.submitStatus = ''
+      this.pending = true
+      try {
         const status = await fb.renewPassword(this.email)
-        if (status !== 'OK') {
-          this.messageType = 'error'
-          this.message = status
-        } else {
+        if (status !== 'OK') this.message = status
+        else {
           this.messageType = 'success'
           this.message = 'Email byl odeslán. Podívejte se do své pošty.'
           this.cleanForm()
         }
+      } catch (error) {
+        this.message = requestErrorMessage
+      } finally {
+        this.pending = false
       }
-    },
-    goToLogin () {
-      router.push('/login')
     },
     cleanForm () {
       this.email = ''
@@ -100,63 +90,6 @@ export default {
 }
 </script>
 
-<style scoped lang="scss">
-.forgotten-password-page {
-  position: relative;
-}
-.overlay {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 72%;
-  background: linear-gradient(160deg, rgba(127, 97, 250, 0.8) 25%, rgba(215, 109, 124, 0.8) 75%);
-  z-index: -1;
-  opacity: .25
-}
-.content {
-  width: 80%;
-  max-width: 1200px;
-  margin: 60px auto;
-  padding: 40px 40px 0;
-}
-
-.main-container {
-  padding: 100px 0 20px;
-  min-height: 100vh;
-  position: relative;
-  display: flex;
-
-  @media (max-width: 600px) {
-    padding: 100px 0 50px;
-  }
-
-  .content {
-    display: flex;
-    flex-direction: column;
-
-    @media (max-width: 800px) {
-      width: 90%;
-      padding: 20px;
-    }
-  }
-}
-
-.renew-password {
-  max-width: 50%;
-  width: 100%;
-  margin: auto;
-  background: white;
-  border-radius: 10px;
-  padding: 30px;
-
-  button {
-    margin-right: 10px;
-    margin-bottom: 10px;
-  }
-
-  @media (max-width: 650px) {
-    max-width: 100%;
-  }
-}
+<style lang="scss">
+@import '../../components/login/auth';
 </style>

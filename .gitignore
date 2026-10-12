@@ -1,6 +1,10 @@
 .DS_Store
 node_modules
 /dist
+/docs
+/output
+/sites
+/.playwright-cli
 
 yarn.lock # due to package.json
 

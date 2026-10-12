@@ -1,7 +1,7 @@
 <template>
   <div v-if="!this.cookie">
     <div class="cookie-bar">
-      <span class="close" @click="this.hideCookie">&nbsp;</span>
+      <button type="button" class="close" aria-label="Zavřít informaci o cookies" @click="this.hideCookie"></button>
       <p>Procházením tohoto webu souhlasíte s používáním souborů cookies. <a href="https://www.vimkamklikam.cz/zajimavosti/k-cemu-jsou-a-jak-funguji-cookies" target="_blank">Více informací.</a></p>
     </div>
   </div>
@@ -66,18 +66,25 @@ export default {
 }
 
 .close {
-  background: url(~@/assets/svg/close.svg) center;
-  background-size: cover;
-  width: 20px;
-  height: 20px;
+  background: transparent url(~@/assets/svg/close.svg) no-repeat center;
+  background-size: 20px;
+  border: 0;
+  padding: 0;
+  width: 44px;
+  height: 44px;
   position: absolute;
-  right: 10px;
-  top: 10px;
+  right: 0;
+  top: 0;
   transition: .3s;
   cursor: pointer;
 
   &:hover {
     opacity: .8;
+  }
+
+  &:focus-visible {
+    outline: 2px solid #1B1B1D;
+    outline-offset: -4px;
   }
 }
 
@@ -86,5 +93,16 @@ p {
   background-color: #ffd9ca;
   padding: 20px;
   border-radius: 0 0 9px 9px;
+
+  a {
+    color: #1B1B1D;
+    text-decoration: underline;
+    text-underline-offset: 3px;
+
+    &:focus-visible {
+      outline: 2px solid #1B1B1D;
+      outline-offset: 3px;
+    }
+  }
 }
 </style>

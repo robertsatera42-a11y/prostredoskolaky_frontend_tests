@@ -1,8 +1,9 @@
 <template>
   <div class="search-container">
-      <input v-model="search" v-on:keyup="getEvents" name="search" placeholder="Hledat aktivitu">
+      <label v-if="isPlatform" for="database-search" class="home-sr-only">Hledat aktivitu</label>
+      <input :id="isPlatform ? 'database-search' : null" v-model="search" v-on:keyup="getEvents" name="search" placeholder="Hledat aktivitu">
       <!-- <clear-box :name="'search'"></clear-box> -->
-      <div class="button" @keyup.enter="getEvents" @click="getEvents">Vyhledat</div>
+      <component :is="isPlatform ? 'button' : 'div'" :type="isPlatform ? 'button' : null" class="button" @keyup.enter="!isPlatform && getEvents()" @click="getEvents">Vyhledat</component>
   </div>
 </template>
 
@@ -12,9 +13,11 @@ import { FETCH_EVENTS } from '../../types'
 import { debounce } from 'debounce'
 import { mapFields } from 'vuex-map-fields'
 import ClearBox from '../common/ClearBox'
+import { platformAppearanceMixin } from '../platform/presentation'
 
 export default {
   name: 'search-block',
+  mixins: [platformAppearanceMixin],
   components: { ClearBox },
   methods: {
     ...mapActions({ fetchEvents: FETCH_EVENTS }),

@@ -1,12 +1,13 @@
 <template>
-  <section>
+  <section :id="isPlatform ? 'platform-activity-dialog' : null" :class="{ 'platform-dialog': isPlatform }" :role="isPlatform ? 'dialog' : null" :aria-modal="isPlatform ? 'true' : null" :aria-labelledby="isPlatform ? 'platform-activity-title' : null" @keydown="trapDialogFocus">
     <div v-if="submitStatus === 'OK'" class="modal-card">
       <header class="modal-card-head">
-        <h1 class="modal-card-title">Přidat novou aktivitu</h1>
+        <component :is="isPlatform ? 'h2' : 'h1'" class="modal-card-title" :id="isPlatform ? 'platform-activity-title' : null" :tabindex="isPlatform ? -1 : null" :data-dialog-heading="isPlatform ? '' : null">Přidat novou aktivitu</component>
+        <button v-if="isPlatform" type="button" class="platform-dialog-close" aria-label="Zavřít formulář aktivity" @click="$parent.cancel('x')"/>
       </header>
       <section class="modal-card-body">
-        <div v-if="status==='proposal'" class="success-message">Děkujeme Vám za návrh nové aktivity. Na aktivitu se podíváme a přidáme ji do databáze.</div>
-        <div v-else class="success-message">Změny byly uloženy.</div>
+        <div v-if="status==='proposal'" class="success-message" :role="isPlatform ? 'status' : null">Děkujeme Vám za návrh nové aktivity. Na aktivitu se podíváme a přidáme ji do databáze.</div>
+        <div v-else class="success-message" :role="isPlatform ? 'status' : null">Změny byly uloženy.</div>
       </section>
       <footer class="modal-card-foot">
         <button class="button" @click="$parent.close()">
@@ -17,15 +18,18 @@
 
     <div v-else class="modal-card">
       <header class="modal-card-head">
-        <h1 class="modal-card-title">{{status === 'publish' ? 'Publikovat aktivitu' : 'Přidat novou aktivitu'}}</h1>
+        <component :is="isPlatform ? 'h2' : 'h1'" class="modal-card-title" :id="isPlatform ? 'platform-activity-title' : null" :tabindex="isPlatform ? -1 : null" :data-dialog-heading="isPlatform ? '' : null">{{status === 'publish' ? 'Publikovat aktivitu' : 'Přidat novou aktivitu'}}</component>
+        <button v-if="isPlatform" type="button" class="platform-dialog-close" aria-label="Zavřít formulář aktivity" @click="$parent.cancel('x')"/>
       </header>
       <!--<form @submit.prevent="submit">-->
       <section class="modal-card-body">
         <b-field
             label="Název aktivity"
+            :label-for="fieldId('name')"
             :type="errorsName.type"
             :message="errorsName.message">
           <b-input
+              :id="fieldId('name')"
               class="form__input"
               v-model="activity.name"
               v-focus="focusedName"
@@ -34,8 +38,9 @@
               placeholder="Např. Olympiáda lidských práv"></b-input>
         </b-field>
 
-        <b-field v-if="status !== 'proposal'" label="Status">
+        <b-field v-if="status !== 'proposal'" label="Status" :label-for="fieldId('status')">
           <b-select
+              :id="fieldId('status')"
               v-model="activity.status">
             <option
                 v-for="status in statuses"
@@ -48,9 +53,10 @@
 
         <b-tooltip v-if="status !== 'proposal'" label="Určete jak je aktivita důležitá."
                    multilined
-                   position="is-right">
-          <b-field label="Váha (1=nejvyšší, 3=nejnižší)">
+                   :position="isPlatform ? 'is-top' : 'is-right'">
+          <b-field label="Váha (1=nejvyšší, 3=nejnižší)" :label-for="fieldId('weight')">
             <b-select
+                :id="fieldId('weight')"
                 v-model="activity.weight">
               <option
                   v-for="weight in weights"
@@ -64,9 +70,11 @@
 
         <b-field
             label="Krátký popis"
+            :label-for="fieldId('description')"
             :type="errorsDescription.type"
             :message="errorsDescription.message">
           <b-input
+              :id="fieldId('description')"
               type="textarea"
               :maxlength="descriptionMaxLength"
               class="form__input"
@@ -79,9 +87,11 @@
 
         <b-field
             label="Webová stránka"
+            :label-for="fieldId('link')"
             :type="errorsLink.type"
             :message="errorsLink.message">
           <b-input
+              :id="fieldId('link')"
               class="form__input"
               v-model="activity.link"
               v-focus="focusedLink"
@@ -91,9 +101,11 @@
         </b-field>
         <b-field
             label="Kontakt"
+            :label-for="fieldId('contact')"
             :type="errorsContact.type"
             :message="errorsContact.message">
           <b-input
+              :id="fieldId('contact')"
               class="form__input"
               v-model="activity.contact"
               v-focus="focusedContact"
@@ -104,7 +116,7 @@
 
         <h2>Pro který vzdělávací stupeň je aktivita určena?</h2>
         <div class="block">
-          <span v-for="age in ageGroups">
+          <span v-for="age in ageGroups" :key="age.short">
             <b-checkbox style="margin-right: 5px"
                         v-model="activity.ageGroup"
                         :native-value="age.short">
@@ -115,16 +127,16 @@
 
         <b-tooltip label="Obsahuje aktivita například další mezinárodní kola či možnost vyjet do zahraničí?"
                    multilined
-                   position="is-right">
+                   :position="isPlatform ? 'is-top' : 'is-right'">
           <h2 class="one-liner" style="margin-right: 5px">Jedná se o zahraniční aktivitu?</h2>
           <div class="block">
-            <b-checkbox v-model="activity.isForeign"/>
+            <b-checkbox v-model="activity.isForeign"><span v-if="isPlatform" class="home-sr-only">Zahraniční aktivita</span></b-checkbox>
           </div>
         </b-tooltip>
 
         <h2>Je aktivita individualní či týmová?</h2>
         <div class="block">
-          <span v-for="group in groups">
+          <span v-for="group in groups" :key="group">
             <b-checkbox style="margin-right: 5px"
                         v-model="activity.group"
                         :native-value="group">
@@ -133,8 +145,9 @@
           </span>
         </div>
 
-        <b-field label="Deadline pro přihlášení">
+        <b-field label="Deadline pro přihlášení" :label-for="fieldId('deadline')">
           <b-select
+              :id="fieldId('deadline')"
               v-model="activity.deadline">
             <option
                 v-for="period in periods"
@@ -145,8 +158,9 @@
           </b-select>
         </b-field>
 
-        <b-field label="Je aktivita placená?">
+        <b-field label="Je aktivita placená?" :label-for="fieldId('price')">
           <b-select
+              :id="fieldId('price')"
               v-model="activity.price">
             <option
                 v-for="price in prices"
@@ -158,9 +172,11 @@
         </b-field>
 
         <b-field label="Obor"
+                 :label-for="fieldId('categories')"
                  :type="errorsCategories.type"
                  :message="errorsCategories.message">
           <b-taginput
+              :id="fieldId('categories')"
               v-model="activity.categories"
               :data="getInterests"
               autocomplete
@@ -172,9 +188,11 @@
         </b-field>
 
         <b-field label="Typ"
+                 :label-for="fieldId('types')"
                  :type="errorsTypes.type"
                  :message="errorsTypes.message">
           <b-taginput
+              :id="fieldId('types')"
               v-model="activity.types"
               :data="getTypes"
               autocomplete
@@ -198,8 +216,9 @@
         </b-field>
 
         <b-field
-            label="Poznámka na závěr">
+            label="Poznámka na závěr" :label-for="fieldId('note')">
           <b-input
+              :id="fieldId('note')"
               type="textarea"
               :maxlength="descriptionMaxLength"
               class="form__input"
@@ -215,7 +234,8 @@
         <button class="button is-primary" @click="submit">
           {{status === 'publish' ? 'Publikovat a zavřít' : 'Uložit a zavřít'}}
         </button>
-        <error-message :message="error"/>
+        <div v-if="isPlatform && error" class="platform-dialog-error" role="alert"><error-message :message="error"/></div>
+        <error-message v-else-if="!isPlatform" :message="error"/>
       </footer>
     </div>
   </section>
@@ -228,10 +248,11 @@ import transformerUtils from '../../utils/transformerUtils'
 import client from '../../client/client'
 import ErrorMessage from '../common/ErrorMessage'
 import ValidationUtils from '../../utils/validationUtils'
+import { platformDialogMixin } from '../platform/presentation'
 
 export default {
   name: 'activity-form',
-  mixins: [focusMixin],
+  mixins: [focusMixin, platformDialogMixin],
   components: { ErrorMessage },
   props: {
     id: {

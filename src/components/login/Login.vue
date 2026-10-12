@@ -1,62 +1,31 @@
 <template>
-  <div class="wrapper">
-  <div class="signup-wrapper">
-    <h2 class="title">Přihlášení</h2>
-    <b-field
-      label="Email"
-      :type="errorsEmail.type"
-      :message="errorsEmail.message">
-      <b-input
-        class="form__input"
-        type="email"
-        v-model="email"
-        v-focus="focusedEmail"
-        @focus="focusedEmail = true"
-        @blur="focusedEmail = false"></b-input>
-    </b-field>
-    <b-field
-      label="Heslo"
-      :type="errorsPassword.type"
-      :message="errorsPassword.message">
-      <b-input
-        type="password"
-        class="form__input"
-        v-focus="focusedPassword"
-        @focus="focusedPassword = true"
-        @blur="focusedPassword = false"
-        v-model="password"></b-input>
-    </b-field>
-    <message type="error" :message="message"/>
-    <button class="button is-primary" @click="login">Přihlásit se</button>
-    <div class="forgotten-password">
-      <a @click="goToForgottenPassword">Obnovit zapomenuté heslo</a>
-    </div>
-  </div>
-  <div class="signup-wrapper second">
-    <h3>Registrujte se na našem webu a získejte řadu výhod!</h3>
-    <ul>
-      <li>Přístup do databáze mimoškolních aktivit s více než 400 vzdělávacími akcemi, soutěžemi a dobrovolnictvím.</li>
-      <li>Pravidelnou dávku aktivit do svého e-mailu.</li>
-      <li>Možnost účastnit se našich akcí Středoškolák roku, Amigo a Free Spirit.</li>
-    </ul>
-  </div>
-  </div>
+  <form id="auth-login-form" class="auth-form" novalidate :aria-busy="pending ? 'true' : 'false'" @submit.prevent="login">
+    <auth-field label="Email" input-id="auth-login-email" :error="errorsEmail">
+      <b-input id="auth-login-email" name="email" type="email" autocomplete="username" v-model="email" :disabled="pending" :use-html5-validation="false" :aria-invalid="errorsEmail.type ? 'true' : 'false'" :aria-describedby="errorsEmail.message ? 'auth-login-email-error' : null" @focus="focusedEmail = true" @blur="focusedEmail = false" />
+    </auth-field>
+    <auth-field label="Heslo" input-id="auth-login-password" :error="errorsPassword">
+      <auth-password input-id="auth-login-password" autocomplete="current-password" v-model="password" :disabled="pending" :invalid="Boolean(errorsPassword.message)" @focus="focusedPassword = true" @blur="focusedPassword = false" />
+    </auth-field>
+    <auth-feedback :message="message" />
+    <button type="submit" class="home-button home-button-orange auth-submit" :disabled="pending" @mousedown.prevent>{{ pending ? 'Přihlašuji…' : 'Přihlásit se' }}</button>
+    <router-link class="home-text-link auth-back-link" to="/renew-password">Obnovit zapomenuté heslo</router-link>
+  </form>
 </template>
 
 <script>
 import fb from '../../firebase'
 import router from '../../router'
-import ValidationUtils from '../../utils/validationUtils'
 import { required } from 'vuelidate/lib/validators'
-import { mixin as focusMixin } from 'vue-focus'
-import Message from '../common/Message'
+import AuthField from './AuthField'
+import AuthPassword from './AuthPassword'
+import AuthFeedback from './AuthFeedback'
+import { focusField, fieldError, invalidFormMessage, requestErrorMessage } from './authPresentation'
 import { IS_LOGGED_IN } from '../../types'
 import { mapGetters } from 'vuex'
 
 export default {
   name: 'login',
-  components: { Message },
-  mixins: [focusMixin],
+  components: { AuthField, AuthPassword, AuthFeedback },
   data () {
     return {
       email: '',
@@ -64,22 +33,17 @@ export default {
       focusedEmail: '',
       focusedPassword: '',
       submitStatus: '',
-      message: ''
+      message: '',
+      pending: false
     }
   },
   computed: {
     ...mapGetters([IS_LOGGED_IN]),
     errorsEmail: function () {
-      this.focusedEmail
-      this.$v.email.$invalid
-      this.submitStatus
-      return ValidationUtils.validateBasic(this, 'email', 'focusedEmail')
+      return fieldError(this, this.$v.email, 'focusedEmail')
     },
     errorsPassword: function () {
-      this.focusedPassword
-      this.$v.password.$invalid
-      this.submitStatus
-      return ValidationUtils.validateBasic(this, 'password', 'focusedPassword')
+      return fieldError(this, this.$v.password, 'focusedPassword')
     },
     isUserLogged: function () {
       return this.isLoggedIn
@@ -94,20 +58,29 @@ export default {
   },
   methods: {
     async login () {
+      if (this.pending) return
       this.message = ''
       if (this.$v.$invalid) {
         this.submitStatus = 'ERROR'
-      } else {
-        this.submitStatus = ''
+        this.message = invalidFormMessage
+        focusField(this, this.$v.email.$invalid ? 'auth-login-email' : 'auth-login-password')
+        return
+      }
+      this.submitStatus = ''
+      this.pending = true
+      this.$emit('busy-change', true)
+      try {
         const status = await fb.loginUser(this.email, this.password)
-        if (status !== 'OK') {
-          this.message = status
-        } else {
+        if (status !== 'OK') this.message = status
+        else {
           this.cleanForm()
-          if (!this.$route.query.redirect) {
-            return router.push('/')
-          }
+          if (!this.$route.query.redirect) return router.push('/')
         }
+      } catch (error) {
+        this.message = requestErrorMessage
+      } finally {
+        this.pending = false
+        this.$emit('busy-change', false)
       }
     },
     cleanForm () {
@@ -115,9 +88,6 @@ export default {
       this.password = ''
       this.focusedEmail = ''
       this.focusedPassword = ''
-    },
-    goToForgottenPassword () {
-      router.push('/renew-password')
     }
   },
   validations: {
@@ -130,58 +100,3 @@ export default {
   }
 }
 </script>
-
-<style scoped lang="scss">
-
-.title {
-  font-size: 30px;
-}
-
-.button {
-  margin-bottom: 15px;
-}
-.wrapper {
-  max-width: 43%;
-  height: 667px;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  margin-right: 20px;
-
-  @media (max-width: 800px) {
-    max-width: 100%;
-    margin-right: 0;
-  }
-}
-.signup-wrapper {
-  padding: 30px 30px;
-  background: white;
-  border-radius: 10px;
-  margin-bottom: 20px;
-
-  &.second {
-    ul {
-        margin-top: 0;
-        list-style: none;
-    }
-    li::before {
-      content: "\2022";
-      color: #f06027;
-      width: 20px;
-      margin-left: -20px;
-      display: inline-block;
-    }
-  }
-
-  @media (max-width: 800px) {
-    padding: 30px 20px;
-  }
-
-  @media (max-width: 650px) {
-    max-width: 100%;
-  }
-}
-.forgotten-password {
-  margin-top: 10px
-}
-</style>

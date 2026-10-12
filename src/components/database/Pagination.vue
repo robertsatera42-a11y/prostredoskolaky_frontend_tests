@@ -1,19 +1,21 @@
 <template>
-  <div class="pagination">
-    <button :disabled="isDisabledLeft" class="button" @click="goToPage(actualPage - 1)"> &lt; </button>
+  <component :is="isPlatform ? 'nav' : 'div'" :aria-label="isPlatform ? 'Stránky výsledků' : null" class="pagination">
+    <button type="button" :aria-label="isPlatform ? 'Předchozí stránka' : null" :disabled="isDisabledLeft" class="button" @click="goToPage(actualPage - 1)"> &lt; </button>
     <span v-for="(item, index) in actualField" :key="index">
-      <button :class="activePage(item)" @click="goToPage(item)">{{item}}</button>
+      <button type="button" :aria-current="isPlatform && actualPage === item ? 'page' : null" :class="activePage(item)" @click="goToPage(item)">{{item}}</button>
     </span>
-    <button :disabled="isDisabledRight" class="button" @click="goToPage(actualPage + 1)"> &gt; </button>
-  </div>
+    <button type="button" :aria-label="isPlatform ? 'Následující stránka' : null" :disabled="isDisabledRight" class="button" @click="goToPage(actualPage + 1)"> &gt; </button>
+  </component>
 </template>
 
 <script>
 import { FETCH_EVENTS, TOTAL_PAGES, ACTUAL_PAGE } from '../../types'
 import { mapGetters, mapActions } from 'vuex'
+import { platformAppearanceMixin } from '../platform/presentation'
 
 export default {
   name: 'Pagination',
+  mixins: [platformAppearanceMixin],
   props: {
     total: {
       type: Number,
@@ -63,6 +65,16 @@ export default {
       return this.actualPage === item ? 'button active' : 'button'
     },
     scroll (elementId) {
+      if (this.isPlatform) {
+        const target = document.getElementById(elementId)
+        if (!target) return
+        const header = document.querySelector('.home-header')
+        const headerHeight = header ? header.getBoundingClientRect().height : 0
+        const top = Math.max(0, target.getBoundingClientRect().top + window.scrollY - headerHeight - 16)
+        const reducedMotion = window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches
+        window.scrollTo({ top, behavior: reducedMotion ? 'auto' : 'smooth' })
+        return
+      }
       let offset = 0
       let y = 0
       let dy

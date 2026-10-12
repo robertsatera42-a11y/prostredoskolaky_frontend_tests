@@ -1,14 +1,18 @@
 <template>
-  <a
-    @click="openDetailModal"
+  <component
+    :is="isPlatform ? 'article' : 'a'"
+    @click="!isPlatform && openDetailModal()"
     :class="eventKey % 3 === 2
       ? `type-${event.types[0] && event.types[0].short} event event-last-row`
       : `type-${event.types[0] && event.types[0].short} event`"
   >
-    <article>
-      <img loading="lazy" :src="event.logoUrl + event.logo" alt="logo">
+    <component :is="isPlatform ? 'div' : 'article'">
+      <img loading="lazy" :src="event.logoUrl + event.logo" :alt="isPlatform ? 'Úvodní fotografie aktivity ' + event.name : 'logo'" :width="isPlatform ? 640 : null" :height="isPlatform ? 360 : null">
       <div class="content">
-        <h5>{{event.name}}</h5>
+        <component :is="isPlatform ? 'h3' : 'h5'">
+          <button v-if="isPlatform" type="button" class="database-event-open" @click="openDetailModal">{{event.name}}</button>
+          <template v-else>{{event.name}}</template>
+        </component>
         <p class="description">
           {{event.description}}
           <span class="overlay"></span>
@@ -26,15 +30,17 @@
           <span v-else>neuvedeno</span>
         </div>
       </div>
-    </article>
-  </a>
+    </component>
+  </component>
 </template>
 
 <script>
 import Detail from './Detail'
 import transformerUtils from '../../utils/transformerUtils'
+import { platformAppearanceMixin, modalAppearanceOptions } from '../platform/presentation'
 export default {
   name: 'event',
+  mixins: [platformAppearanceMixin],
   components: { Detail },
   props: {
     event: {
@@ -53,11 +59,13 @@ export default {
   methods: {
     openDetailModal () {
       this.$modal.open({
+        ...modalAppearanceOptions(this.appearance),
         parent: this,
         component: Detail,
         props: {
           events: this.events,
-          eventKey: this.eventKey
+          eventKey: this.eventKey,
+          appearance: this.appearance
         },
         events: {
           // 'goToPrevious': (ev) => {

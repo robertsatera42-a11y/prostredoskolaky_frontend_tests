@@ -1,6 +1,7 @@
 <template>
-  <div id="app">
-    <header class="app-header" v-bind:class="{
+  <div id="app" :class="{ 'homepage-shell': $route.path === '/', 'public-shell': isPublicPage && $route.path !== '/', 'platform-shell': isPlatformPage }">
+    <home-header v-if="isPublicPage || isPlatformPage" :is-logged-in="Boolean(isLoggedIn)" :user="user || {}" @logout="logout" />
+    <header v-else class="app-header" v-bind:class="{
       sticky: this.stickyHeader,
       'open-menu': this.mobileOpen,
       white: this.$route.path !== '/',
@@ -87,6 +88,8 @@ import { USER, IS_LOGGED_IN } from './types'
 import { mapGetters } from 'vuex'
 import fb from './firebase.js'
 import Cookies from './components/common/Cookies'
+import HomeHeader from './components/home/HomeHeader'
+import { publicPagePaths, publicPagePath, platformPagePaths, styledPagePath } from './components/home/publicNavigation'
 
 export default {
   name: 'App',
@@ -149,6 +152,8 @@ export default {
     }
   },
   computed: {
+    isPublicPage () { return publicPagePaths.includes(publicPagePath(this.$route)) },
+    isPlatformPage () { return platformPagePaths.includes(styledPagePath(this.$route)) },
     ...mapGetters([USER, IS_LOGGED_IN])
   },
   created () {
@@ -157,7 +162,7 @@ export default {
   destroyed () {
     window.removeEventListener('scroll', this.handleScroll)
   },
-  components: { Cookies }
+  components: { Cookies, HomeHeader }
 }
 </script>
 
@@ -424,4 +429,8 @@ export default {
   .animation-content {
     width: 100%;
   }
+
+  @import './components/home/home';
+  @import './components/public/public';
+  @import './components/platform/platform';
   </style>

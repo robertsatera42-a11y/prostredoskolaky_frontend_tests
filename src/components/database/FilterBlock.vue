@@ -3,32 +3,30 @@
     <div class="content">
       <h2>Zvol si předmět</h2>
       <div class="buttons-container interests-container">
-        <div :data-badge="showInterests.nature.checked" :class="showInterests.nature.style" @click="selectInterests('nature')">Přírodní vědy</div>
-        <div :data-badge="showInterests.sport.checked" :class="showInterests.sport.style" @click="selectInterests('sport')">Sport</div>
-        <div :data-badge="showInterests.business.checked" :class="showInterests.business.style" @click="selectInterests('business')">Podnikání</div>
-        <div :data-badge="showInterests.art.checked" :class="showInterests.art.style" @click="selectInterests('art')">Umění</div>
-        <div :data-badge="showInterests.humanity.checked" :class="showInterests.humanity.style" @click="selectInterests('humanity')">Humanitní vědy</div>
-        <div :data-badge="showInterests.language.checked" :class="showInterests.language.style" @click="selectInterests('language')">Jazyky</div>
-        <div :data-badge="showInterests.it.checked" :class="showInterests.it.style" @click="selectInterests('it')">IT a robotika</div>
-        <div :data-badge="showInterests.other.checked" :class="showInterests.other.style" @click="selectInterests('other')">Ostatní</div>
+        <component :is="isPlatform ? 'button' : 'div'" :type="isPlatform ? 'button' : null" :aria-expanded="isPlatform ? String(showInterests.nature.isOpen) : null" :aria-pressed="isPlatform ? String(showInterests.nature.checked > 0) : null" :data-badge="showInterests.nature.checked" :class="showInterests.nature.style" @click="selectInterests('nature')">Přírodní vědy</component>
+        <component :is="isPlatform ? 'button' : 'div'" :type="isPlatform ? 'button' : null" :aria-expanded="isPlatform ? String(showInterests.sport.isOpen) : null" :aria-pressed="isPlatform ? String(showInterests.sport.checked > 0) : null" :data-badge="showInterests.sport.checked" :class="showInterests.sport.style" @click="selectInterests('sport')">Sport</component>
+        <component :is="isPlatform ? 'button' : 'div'" :type="isPlatform ? 'button' : null" :aria-expanded="isPlatform ? String(showInterests.business.isOpen) : null" :aria-pressed="isPlatform ? String(showInterests.business.checked > 0) : null" :data-badge="showInterests.business.checked" :class="showInterests.business.style" @click="selectInterests('business')">Podnikání</component>
+        <component :is="isPlatform ? 'button' : 'div'" :type="isPlatform ? 'button' : null" :aria-expanded="isPlatform ? String(showInterests.art.isOpen) : null" :aria-pressed="isPlatform ? String(showInterests.art.checked > 0) : null" :data-badge="showInterests.art.checked" :class="showInterests.art.style" @click="selectInterests('art')">Umění</component>
+        <component :is="isPlatform ? 'button' : 'div'" :type="isPlatform ? 'button' : null" :aria-expanded="isPlatform ? String(showInterests.humanity.isOpen) : null" :aria-pressed="isPlatform ? String(showInterests.humanity.checked > 0) : null" :data-badge="showInterests.humanity.checked" :class="showInterests.humanity.style" @click="selectInterests('humanity')">Humanitní vědy</component>
+        <component :is="isPlatform ? 'button' : 'div'" :type="isPlatform ? 'button' : null" :aria-expanded="isPlatform ? String(showInterests.language.isOpen) : null" :aria-pressed="isPlatform ? String(showInterests.language.checked > 0) : null" :data-badge="showInterests.language.checked" :class="showInterests.language.style" @click="selectInterests('language')">Jazyky</component>
+        <component :is="isPlatform ? 'button' : 'div'" :type="isPlatform ? 'button' : null" :aria-expanded="isPlatform ? String(showInterests.it.isOpen) : null" :aria-pressed="isPlatform ? String(showInterests.it.checked > 0) : null" :data-badge="showInterests.it.checked" :class="showInterests.it.style" @click="selectInterests('it')">IT a robotika</component>
+        <component :is="isPlatform ? 'button' : 'div'" :type="isPlatform ? 'button' : null" :aria-expanded="isPlatform ? String(showInterests.other.isOpen) : null" :aria-pressed="isPlatform ? String(showInterests.other.checked > 0) : null" :data-badge="showInterests.other.checked" :class="showInterests.other.style" @click="selectInterests('other')">Ostatní</component>
 
         <div class="interest-selection" v-if="showInterests[this.activeInterest] && showInterests[this.activeInterest].isOpen">
           <slot v-for="(interest) in interests[this.activeInterest]">
-            <b-checkbox v-model="checkedCategories" :native-value="interest.short">{{interest.name}}</b-checkbox>
+            <b-checkbox :key="interest.short" v-model="checkedCategories" :native-value="interest.short">{{interest.name}}</b-checkbox>
           </slot>
         </div>
       </div>
 
       <h2>a typ aktivity...</h2>
         <div class="buttons-container types-container">
-          <slot v-for="type in types">
-            <div :class="showTypes[type.name].style" @click="selectTypes(type)">{{type.full}}</div>
-          </slot>
-          <div class="button remove-filters" @click="clearAll">Odstranit filtry</div>
-          <div class="button is-primary" style="background: #F06027" @click="addEvent">Přidat aktivitu</div>
+          <component :is="isPlatform ? 'button' : 'div'" v-for="type in types" :key="type.name" :type="isPlatform ? 'button' : null" :aria-pressed="isPlatform ? String(checkedTypes.includes(type.short)) : null" :class="showTypes[type.name].style" @click="selectTypes(type)">{{type.full}}</component>
+          <component :is="isPlatform ? 'button' : 'div'" :type="isPlatform ? 'button' : null" class="button remove-filters" @click="clearAll">Odstranit filtry</component>
+          <component :is="isPlatform ? 'button' : 'div'" :type="isPlatform ? 'button' : null" class="button is-primary" :style="isPlatform ? null : { background: '#F06027' }" @click="addEvent">Přidat aktivitu</component>
         </div>
 
-      <search-block/>
+      <search-block :appearance="appearance"/>
     </div>
   </section>
 </template>
@@ -41,9 +39,11 @@ import { mapFields } from 'vuex-map-fields'
 import SearchBlock from './SearchBlock'
 import tracking from '../../utils/tracking'
 import ActivityForm from '../database/ActivityForm'
+import { platformAppearanceMixin, modalAppearanceOptions } from '../platform/presentation'
 
 export default {
   name: 'filter-block',
+  mixins: [platformAppearanceMixin],
   components: { SearchBlock, ActivityForm },
   data () {
     return {
@@ -147,12 +147,14 @@ export default {
     ...mapActions({ fetchEvents: FETCH_EVENTS }),
     addEvent () {
       this.$modal.open({
+        ...modalAppearanceOptions(this.appearance),
         parent: this,
         component: ActivityForm,
         hasModalCard: true,
         canCancel: ['escape', 'x'],
         props: {
-          status: 'proposal'
+          status: 'proposal',
+          appearance: this.appearance
         }
       })
     },
@@ -163,17 +165,19 @@ export default {
       this.activeInterest = ''
       this.isClearing = true
       this.search = ''
-      Object.keys(this.showInterests).forEach(type =>
+      Object.keys(this.showInterests).forEach(type => {
         this.showInterests[type] = {
           style: 'button',
           checked: 0,
           isOpen: false
-        })
-      Object.keys(this.showTypes).forEach(type =>
+        }
+      })
+      Object.keys(this.showTypes).forEach(type => {
         this.showTypes[type] = {
           style: 'button',
           isOpen: false
-        })
+        }
+      })
       tracking.track('database', 'filter', 'delete')
     },
     selectInterests (type) {

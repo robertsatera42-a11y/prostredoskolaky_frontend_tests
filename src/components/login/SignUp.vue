@@ -1,107 +1,56 @@
 <template>
-  <div class="wrapper">
-    <div v-if="showSuccess" class="login-wrapper">
-      <div class="success-message">
-        <div class="tick"></div>
-        <div class="text">Děkujeme, byli jste úspěšně zaregistrováni.</div>
-        <p>Zaslali jsme do Vašeho e-mailu potvrzovací link.</p>
-        <button class="button" @click="goBack">Zpět</button>
+  <div>
+    <section v-if="showSuccess" class="auth-success" aria-labelledby="auth-signup-success">
+      <img src="~@/assets/tick.png" alt="" width="64" height="64">
+      <h2 id="auth-signup-success" tabindex="-1">Děkujeme, byli jste úspěšně zaregistrováni.</h2>
+      <p>Zaslali jsme do Vašeho e-mailu potvrzovací link.</p>
+      <button type="button" class="home-button home-button-orange auth-submit" @click="showLogin">Přejít na přihlášení</button>
+    </section>
+    <form v-else id="auth-signup-form" class="auth-form" novalidate :aria-busy="pending ? 'true' : 'false'" @submit.prevent="signUp">
+      <auth-field label="Vyberte své povolání" input-id="auth-signup-occupation">
+        <b-select id="auth-signup-occupation" name="occupation" v-model="user.occupation" expanded :disabled="pending"><option v-for="option in jobs" :value="option" :key="option">{{ option }}</option></b-select>
+      </auth-field>
+      <div class="auth-name-grid">
+        <auth-field label="Jméno" input-id="auth-signup-first-name" :error="errorsFirstName">
+          <b-input id="auth-signup-first-name" name="firstName" autocomplete="given-name" placeholder="Jan" v-model="user.firstName" :disabled="pending" :use-html5-validation="false" :aria-invalid="errorsFirstName.type ? 'true' : 'false'" :aria-describedby="errorsFirstName.message ? 'auth-signup-first-name-error' : null" @focus="focusedFirstName = true" @blur="focusedFirstName = false" />
+        </auth-field>
+        <auth-field label="Příjmení" input-id="auth-signup-last-name" :error="errorsLastName">
+          <b-input id="auth-signup-last-name" name="lastName" autocomplete="family-name" placeholder="Novak" v-model="user.lastName" :disabled="pending" :use-html5-validation="false" :aria-invalid="errorsLastName.type ? 'true' : 'false'" :aria-describedby="errorsLastName.message ? 'auth-signup-last-name-error' : null" @focus="focusedLastName = true" @blur="focusedLastName = false" />
+        </auth-field>
       </div>
-    </div>
-    <div v-else class="login-wrapper">
-      <h2 class="title">Registrace</h2>
-      <b-field
-        label="Vyberte své povolání"
-      >
-        <b-select
-          v-model="user.occupation"
-          expanded
-        >
-          <option v-for="option in jobs" :value="option" :key="option">{{ option }}</option>
-        </b-select>
-      </b-field>
-      <b-field
-          label="Jméno"
-          :type="errorsFirstName.type"
-          :message="errorsFirstName.message">
-        <b-input
-            class="form__input"
-            v-model="user.firstName"
-            v-focus="focusedFirstName"
-            @focus="focusedFirstName = true"
-            @blur="focusedFirstName = false"
-            placeholder="Jan"></b-input>
-      </b-field>
-      <b-field
-          label="Příjmení"
-          :type="errorsLastName.type"
-          :message="errorsLastName.message">
-        <b-input
-            class="form__input"
-            v-model="user.lastName"
-            v-focus="focusedLastName"
-            @focus="focusedLastName = true"
-            @blur="focusedLastName = false"
-            placeholder="Novak"></b-input>
-      </b-field>
-      <b-field
-          label="Email"
-          :type="errorsEmail.type"
-          :message="errorsEmail.message">
-        <b-input
-            class="form__input"
-            v-model="user.email"
-            v-focus="focusedEmail"
-            @focus="focusedEmail = true"
-            @blur="focusedEmail = false"
-            placeholder="novak@email.cz"></b-input>
-      </b-field>
-      <b-field
-          label="Heslo"
-          :type="errorsPasswd.type"
-          :message="errorsPasswd.message">
-        <b-input
-            type="password"
-            class="form__input"
-            v-model="passwd"
-            v-focus="focusedPasswd"
-            @focus="focusedPasswd = true"
-            @blur="focusedPasswd = false"></b-input>
-      </b-field>
-      <b-field
-          label="Heslo znovu"
-          :type="errorsPasswdRetype.type"
-          :message="errorsPasswdRetype.message">
-        <b-input
-            type="password"
-            class="form__input"
-            v-model="passwdRetype"
-            v-focus="focusedPasswdRetype"
-            @focus="focusedPasswdRetype = true"
-            @blur="focusedPasswdRetype = false"></b-input>
-      </b-field>
-      <b-checkbox v-model="sendNewsletter" class="newsletter">Chci si nechat zasílat pravidelnou dávku mimoškolních aktivit do svého e-mailu.</b-checkbox>
-      <b-checkbox v-model="giveConsent" style="margin-left:0" class="newsletter">Souhlasím se zpracováním svých <a href="https://drive.google.com/file/d/1-MDM8wdW7xctBT3kmrq6FSI_48nl-2BB/view?usp=sharing" target="_blank">osobních údajů</a>.</b-checkbox>
-      <message type="error" :message="message"/>
-      <button class="button is-primary" @click="signUp">Zaregistrovat se</button>
-    </div>
+      <auth-field label="Email" input-id="auth-signup-email" :error="errorsEmail">
+        <b-input id="auth-signup-email" name="email" type="email" autocomplete="email" placeholder="novak@email.cz" v-model="user.email" :disabled="pending" :use-html5-validation="false" :aria-invalid="errorsEmail.type ? 'true' : 'false'" :aria-describedby="errorsEmail.message ? 'auth-signup-email-error' : null" @focus="focusedEmail = true" @blur="focusedEmail = false" />
+      </auth-field>
+      <auth-field label="Heslo" input-id="auth-signup-password" :error="errorsPasswd">
+        <auth-password input-id="auth-signup-password" autocomplete="new-password" v-model="passwd" :disabled="pending" :invalid="Boolean(errorsPasswd.message)" @focus="focusedPasswd = true" @blur="focusedPasswd = false" />
+      </auth-field>
+      <auth-field label="Heslo znovu" input-id="auth-signup-password-repeat" :error="errorsPasswdRetype">
+        <auth-password input-id="auth-signup-password-repeat" label="zopakované heslo" autocomplete="new-password" v-model="passwdRetype" :disabled="pending" :invalid="Boolean(errorsPasswdRetype.message)" @focus="focusedPasswdRetype = true" @blur="focusedPasswdRetype = false" />
+      </auth-field>
+      <div class="auth-consents">
+        <label class="auth-check" for="auth-signup-newsletter"><input id="auth-signup-newsletter" name="newsletter" type="checkbox" v-model="sendNewsletter" :disabled="pending"><span>Chci si nechat zasílat pravidelnou dávku mimoškolních aktivit do svého e-mailu.</span></label>
+        <label class="auth-check" for="auth-signup-consent"><input id="auth-signup-consent" name="consent" type="checkbox" v-model="giveConsent" :disabled="pending" :aria-invalid="!giveConsent && message === 'Musíte souhlasit se zpracováním údajů.' ? 'true' : 'false'" :aria-describedby="!giveConsent && message ? 'auth-signup-feedback' : null"><span>Souhlasím se zpracováním svých <a href="https://drive.google.com/file/d/1-MDM8wdW7xctBT3kmrq6FSI_48nl-2BB/view?usp=sharing" target="_blank" rel="noopener noreferrer">osobních údajů<span class="home-sr-only"> (otevře se v nové kartě)</span></a>.</span></label>
+      </div>
+      <auth-feedback id="auth-signup-feedback" :message="message" />
+      <button type="submit" class="home-button home-button-orange auth-submit" :disabled="pending" @mousedown.prevent>{{ pending ? 'Registruji…' : 'Zaregistrovat se' }}</button>
+    </form>
   </div>
 </template>
 
 <script>
 import fb from '../../firebase.js'
-import ValidationUtils from '../../utils/validationUtils'
 import { required, email, sameAs } from 'vuelidate/lib/validators'
 import { UPDATE_USER } from '../../types'
 import { mapMutations } from 'vuex'
-import { mixin as focusMixin } from 'vue-focus'
-import Message from '../common/Message'
+import AuthField from './AuthField'
+import AuthPassword from './AuthPassword'
+import AuthFeedback from './AuthFeedback'
+import { focusField, fieldError, invalidFormMessage, requestErrorMessage } from './authPresentation'
 import config from '../../config/default'
 
 export default {
   name: 'sign-up',
-  components: { Message },
-  mixins: [focusMixin],
+  components: { AuthField, AuthPassword, AuthFeedback },
   data () {
     return {
       user: {
@@ -122,51 +71,54 @@ export default {
       submitStatus: '',
       message: '',
       showSuccess: false,
+      pending: false,
       jobs: config.consts.jobs
     }
   },
   computed: {
     errorsFirstName: function () {
-      this.focusedFirstName
-      this.$v.user.firstName.$invalid
-      this.submitStatus
-      return ValidationUtils.validate(this, 'firstName', 'focusedFirstName')
+      return fieldError(this, this.$v.user.firstName, 'focusedFirstName')
     },
     errorsLastName: function () {
-      this.focusedLastName
-      this.$v.user.lastName.$invalid
-      this.submitStatus
-      return ValidationUtils.validate(this, 'lastName', 'focusedLastName')
+      return fieldError(this, this.$v.user.lastName, 'focusedLastName')
     },
     errorsEmail: function () {
-      this.focusedEmail
-      this.$v.user.email.$invalid
-      this.submitStatus
-      return ValidationUtils.validate(this, 'email', 'focusedEmail')
+      return fieldError(this, this.$v.user.email, 'focusedEmail')
     },
     errorsPasswd: function () {
-      this.focusedPasswd
-      this.$v.passwd.$invalid
-      this.submitStatus
-      return ValidationUtils.validateBasic(this, 'passwd', 'focusedPasswd')
+      return fieldError(this, this.$v.passwd, 'focusedPasswd')
     },
     errorsPasswdRetype: function () {
-      this.focusedPasswdRetype
-      this.$v.passwdRetype.$invalid
-      this.submitStatus
-      return ValidationUtils.validateBasic(this, 'passwdRetype', 'focusedPasswdRetype')
+      return fieldError(this, this.$v.passwdRetype, 'focusedPasswdRetype')
     }
   },
   methods: {
     ...mapMutations([UPDATE_USER]),
     async signUp () {
+      if (this.pending) return
       this.message = ''
       if (this.$v.$invalid) {
         this.submitStatus = 'ERROR'
-      } else if (!this.giveConsent) {
+        this.message = invalidFormMessage
+        const fields = [
+          [this.$v.user.firstName, 'auth-signup-first-name'],
+          [this.$v.user.lastName, 'auth-signup-last-name'],
+          [this.$v.user.email, 'auth-signup-email'],
+          [this.$v.passwd, 'auth-signup-password'],
+          [this.$v.passwdRetype, 'auth-signup-password-repeat']
+        ]
+        focusField(this, fields.find(([validation]) => validation.$invalid)[1])
+        return
+      }
+      if (!this.giveConsent) {
         this.message = 'Musíte souhlasit se zpracováním údajů.'
-      } else {
-        this.submitStatus = ''
+        focusField(this, 'auth-signup-consent')
+        return
+      }
+      this.submitStatus = ''
+      this.pending = true
+      this.$emit('busy-change', true)
+      try {
         const status = await fb.createUser({
           occupation: this.user.occupation,
           firstName: this.user.firstName,
@@ -174,18 +126,23 @@ export default {
           email: this.user.email,
           sendNewsletter: this.sendNewsletter
         }, this.passwd)
-        if (status !== 'OK') {
-          this.message = status
-        } else {
-          this.updateUser({
-            firstName: this.user.firstName,
-            lastName: this.user.lastName,
-            email: this.user.email
-          })
+        if (status !== 'OK') this.message = status
+        else {
+          this.updateUser({ firstName: this.user.firstName, lastName: this.user.lastName, email: this.user.email })
           this.cleanForm()
           this.showSuccess = true
+          focusField(this, 'auth-signup-success')
         }
+      } catch (error) {
+        this.message = requestErrorMessage
+      } finally {
+        this.pending = false
+        this.$emit('busy-change', false)
       }
+    },
+    showLogin () {
+      this.goBack()
+      this.$emit('show-login')
     },
     goBack () {
       this.showSuccess = false
@@ -228,57 +185,3 @@ export default {
   }
 }
 </script>
-
-<style scoped lang="scss">
-.title {
-  font-size: 30px;
-}
-
-.button {
-  margin: 20px 0;
-}
-
-.wrapper {
-  max-width: 43%;
-  height: 779px;
-  background: white;
-  border-radius: 10px;
-
-  @media (max-width: 650px) {
-    max-width: 100%;
-    margin-top: 180px;
-  }
-
-  .login-wrapper {
-    padding: 30px 30px;
-
-    .success-message {
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
-      align-items: center;
-      padding-top: 160px;
-
-      .tick {
-        background-image: url(~@/assets/tick.png);
-        background-size: cover;
-        background-position: center;
-        width: 100px;
-        height: 100px;
-      }
-      .text {
-        padding-top: 20px;
-        font-size: 20px;
-      }
-    }
-
-    @media (max-width: 800px) {
-      padding: 30px 20px;
-    }
-  }
-  .newsletter {
-    margin-bottom: 10px
-  }
-
-}
-</style>

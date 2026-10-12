@@ -1,12 +1,13 @@
 <template>
   <section class="event-section" id="event-section">
     <div class="content">
+      <h2 v-if="isPlatform">Výsledky vyhledávání</h2>
       <slot v-if="isLoading">
-        <h3>Načítání...</h3>
+        <h3 :role="isPlatform ? 'status' : null">Načítání...</h3>
       </slot>
       <slot v-else-if="events.length === 0">
         <h3>Aktivitu, kterou hledáš, jsme bohužel <span class="orange">nenalezli</span>, dej nám o ní vědět.</h3>
-        <button class="button" @click="addEvent">Přidat aktivitu</button>
+        <button type="button" class="button" @click="addEvent">Přidat aktivitu</button>
       </slot>
       <slot v-else-if="totalEvents === 1">
         <h3>nalezena <span class="orange">1</span> aktivita</h3>
@@ -20,11 +21,11 @@
 
       <div :class="eventsClass">
         <slot v-for="(event, index) in events">
-          <event :event="event" :eventKey="index" :events="events"/>
+          <event :key="event.id || index" :event="event" :eventKey="index" :events="events" :appearance="appearance"/>
         </slot>
       </div>
 
-      <pagination v-if="this.totalPages" :total="this.totalPages"/>
+      <pagination v-if="this.totalPages" :total="this.totalPages" :appearance="appearance"/>
 
     </div>
   </section>
@@ -36,9 +37,11 @@ import Pagination from './Pagination'
 import { EVENTS, FETCH_EVENTS, TOTAL_PAGES, TOTAL_EVENTS } from '../../types'
 import { mapGetters, mapActions } from 'vuex'
 import ActivityForm from '../database/ActivityForm'
+import { platformAppearanceMixin, modalAppearanceOptions } from '../platform/presentation'
 
 export default {
   name: 'events-list',
+  mixins: [platformAppearanceMixin],
   components: { Event, ActivityForm, Pagination },
   data () {
     return {
@@ -50,12 +53,14 @@ export default {
     ...mapActions({ fetchEvents: FETCH_EVENTS }),
     addEvent () {
       this.$modal.open({
+        ...modalAppearanceOptions(this.appearance),
         parent: this,
         component: ActivityForm,
         hasModalCard: true,
         canCancel: ['escape', 'x'],
         props: {
-          status: 'proposal'
+          status: 'proposal',
+          appearance: this.appearance
         }
       })
     }

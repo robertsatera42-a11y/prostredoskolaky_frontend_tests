@@ -1,132 +1,73 @@
 <template>
-  <div class="login-page">
-    <div class="overlay"></div>
-
-    <section class="main-container">
-      <div v-if="redirectMessage" class="redirect-message">{{redirectMessage}}</div>
-      <div class="db" v-if="this.$route.query.redirect === 'databaze'">
+  <div class="platform-page auth-page login-page">
+    <main id="home-main" class="home-container auth-main" tabindex="-1">
+      <p v-if="redirectMessage" class="auth-redirect" role="status">{{ redirectMessage }}</p>
+      <div class="auth-card">
+        <h1>{{ activePanel === 'login' ? 'Přihlášení' : 'Registrace' }}</h1>
+        <div class="auth-tabs" role="tablist" aria-label="Vstup do účtu">
+          <button v-for="tab in tabs" :key="tab.id" :id="'auth-tab-' + tab.id" :ref="'tab-' + tab.id" role="tab" type="button" :aria-selected="activePanel === tab.id ? 'true' : 'false'" :aria-controls="'auth-panel-' + tab.id" :tabindex="activePanel === tab.id ? 0 : -1" :disabled="busy" @click="selectPanel(tab.id)" @keydown="onTabKeydown($event, tab.id)">{{ tab.label }}</button>
+        </div>
+        <section id="auth-panel-login" role="tabpanel" aria-labelledby="auth-tab-login" v-show="activePanel === 'login'">
+          <login @busy-change="busy = $event" />
+        </section>
+        <section id="auth-panel-signup" role="tabpanel" aria-labelledby="auth-tab-signup" v-show="activePanel === 'signup'">
+          <sign-up @busy-change="busy = $event" @show-login="selectPanel('login', true)" />
+        </section>
+      </div>
+      <section class="auth-benefits" aria-labelledby="auth-benefits-title">
+        <h2 id="auth-benefits-title">Registrujte se na našem webu a získejte řadu výhod!</h2>
         <ul>
+          <li>Přístup do databáze mimoškolních aktivit s více než 400 vzdělávacími akcemi, soutěžemi a dobrovolnictvím.</li>
+          <li>Pravidelnou dávku aktivit do svého e-mailu.</li>
+          <li>Možnost účastnit se našich akcí Středoškolák roku, Amigo a Free Spirit.</li>
+        </ul>
+        <ul v-if="$route.query.redirect === 'databaze'" class="auth-database-benefits">
           <li>Přístup k více než 300 aktivitám a akcím</li>
           <li>Podrobné informace o vzdělávacích programech, soutěžích či dobrovolnictví</li>
           <li>Přehledné filtrování podle předmětu a typu aktivity</li>
         </ul>
-      </div>
-      <div class="content">
-        <Login />
-        <SignUp />
-      </div>
-    </section>
-
-    <footer-block/>
-
+      </section>
+    </main>
+    <home-footer />
   </div>
 </template>
 
 <script>
-import FooterBlock from '../../components/common/Footer'
+import HomeFooter from '../../components/home/HomeFooter'
 import SignUp from '../../components/login/SignUp'
 import Login from '../../components/login/Login'
 
 export default {
   name: 'login-page',
-  components: { FooterBlock, SignUp, Login },
+  components: { HomeFooter, SignUp, Login },
+  metaInfo: { title: 'Přihlášení a registrace' },
   data () {
-    return {
-      redirectMessage: ''
+    return { activePanel: 'login', busy: false, tabs: [{ id: 'login', label: 'Přihlášení' }, { id: 'signup', label: 'Registrace' }] }
+  },
+  computed: {
+    redirectMessage () {
+      const redirect = this.$route.query.redirect
+      if (redirect === 'databaze') return 'Pro přístup do databáze mimoškolních aktivit se nejdříve přihlaste.'
+      if (redirect === 'soutez') return 'Pro registraci do soutěže se nejdříve přihlaste.'
+      return ''
     }
   },
-  mounted () {
-    this.showMessage()
-  },
-  updated () {
-    this.showMessage()
-  },
   methods: {
-    showMessage () {
-      const redirect = this.$route && this.$route.query && this.$route.query.redirect
-      if (redirect === 'databaze') {
-        this.redirectMessage = 'Pro přístup do databáze mimoškolních aktivit se nejdříve přihlaste.'
-      } else if (redirect === 'soutez') {
-        this.redirectMessage = 'Pro registraci do soutěže se nejdříve přihlaste.'
-      }
+    selectPanel (id, focus = false) {
+      if (this.busy) return
+      this.activePanel = id
+      if (focus) this.$nextTick(() => this.$refs['tab-' + id][0].focus())
+    },
+    onTabKeydown (event, id) {
+      if (!['ArrowLeft', 'ArrowRight', 'Home', 'End'].includes(event.key)) return
+      event.preventDefault()
+      const destination = event.key === 'Home' ? 'login' : event.key === 'End' ? 'signup' : id === 'login' ? 'signup' : 'login'
+      this.selectPanel(destination, true)
     }
   }
 }
 </script>
-<style scoped lang="scss">
-.login-page {
-  position: relative;
-}
-.overlay {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  z-index: -1;
-  background: linear-gradient(160deg, rgba(127, 97, 250, 0.8) 25%, rgba(215, 109, 124, 0.8) 75%);
-  opacity: .25;
-}
-.content {
-  width: 80%;
-  max-width: 1200px;
-  margin: 40px auto;
-  padding: 10px 40px 0;
-}
 
-.main-container {
-  padding: 100px 0 20px;
-  margin-bottom: 10px;
-  min-height: 100vh;
-  position: relative;
-
-  .redirect-message {
-    padding-top: 40px;
-    text-align: center;
-    font-size: 20px;
-    color: #F06027;
-  }
-
-  .db {
-    padding-top: 12px;
-    width: 25%;
-    margin: 0 auto;
-
-    @media (max-width: 600px) {
-      width: 80%;
-    }
-
-    ul {
-        margin-top: 0;
-        list-style: none;
-    }
-    li::before {
-      content: "\2022";
-      color: #f06027;
-      width: 20px;
-      margin-left: -20px;
-      display: inline-block;
-    }
-  }
-
-  @media (max-width: 600px) {
-    padding: 100px 0 50px;
-  }
-
-  .content {
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-
-    @media (max-width: 800px) {
-      width: 90%;
-      padding: 20px;
-    }
-
-    @media (max-width: 650px) {
-      flex-direction: column;
-    }
-  }
-}
-
+<style lang="scss">
+@import '../../components/login/auth';
 </style>
