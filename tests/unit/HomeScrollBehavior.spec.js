@@ -46,7 +46,7 @@ describe('Posouvání skutečného routeru na veřejných stránkách', () => {
   test('kotva z jiné veřejné stránky ani z produktové stránky nemění původní scroll', () => {
     document.body.innerHTML += '<section id="zadost"></section>'
     expect(router.options.scrollBehavior({ path: '/amigo', hash: '#zadost' })).toEqual({ x: 0, y: 0 })
-    expect(router.options.scrollBehavior({ path: '/change-password', hash: '#home-main' })).toEqual({ x: 0, y: 0 })
+    expect(router.options.scrollBehavior({ path: '/delete-account', hash: '#home-main' })).toEqual({ x: 0, y: 0 })
   })
 
   test.each([

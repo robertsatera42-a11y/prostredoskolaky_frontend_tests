@@ -18,7 +18,7 @@ export const publicPageHashes = {
 
 export const publicPagePaths = Object.keys(publicPageHashes)
 
-export const platformPagePaths = ['/databaze', '/profil', '/login', '/renew-password']
+export const platformPagePaths = ['/databaze', '/profil', '/login', '/renew-password', '/change-password']
 
 export function styledPagePath (route) {
   const paths = [...publicPagePaths, ...platformPagePaths]

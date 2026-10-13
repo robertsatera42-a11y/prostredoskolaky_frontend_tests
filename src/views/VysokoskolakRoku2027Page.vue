@@ -109,15 +109,15 @@ export default {
   --award-purple: #752061;
   --award-purple-hover: #5f194f;
   .content { width: calc(100% - var(--home-gutter) * 2); max-width: 1200px; margin: 0 auto; padding: 0; }
-  .hero { padding: 72px 0 96px; border-bottom: 1px solid var(--home-line); background: linear-gradient(160deg, #fff 55%, #efeeff); }
-  .hero-content { display: grid; grid-template-columns: minmax(0, 1fr) minmax(280px, 412px); align-items: center; gap: 72px; max-width: 1372px; width: calc(100% - 68px); }
+  .hero { padding: 48px 0; border-bottom: 1px solid var(--home-line); background: linear-gradient(160deg, #fff 55%, #efeeff); }
+  .hero-content { display: grid; grid-template-columns: minmax(0, 1fr) minmax(240px, 320px); align-items: center; gap: 48px; }
   .intro { min-width: 0; }
-  h1 { max-width: 900px; font-size: clamp(36px, 4.9vw, 70px); line-height: 1.15; letter-spacing: -.04em; }
-  .intro p { max-width: 880px; margin-top: 40px; font-size: 24px; line-height: 1.7; color: var(--home-muted); }
-  .hero-actions { display: flex; flex-wrap: wrap; gap: 48px; margin-top: 48px; }
-  .hero-actions .home-button { min-height: 72px; padding: 20px 32px; font-size: 22px; border-radius: 4px; }
+  h1 { max-width: 680px; font-size: clamp(32px, 3.8vw, 52px); line-height: 1.15; letter-spacing: -.035em; text-wrap: balance; }
+  .intro p { max-width: 680px; margin-top: 24px; font-size: 18px; line-height: 1.6; color: var(--home-muted); }
+  .hero-actions { display: flex; flex-wrap: wrap; gap: 16px; margin-top: 24px; }
+  .hero-actions .home-button { min-height: 48px; padding: 12px 20px; font-size: 16px; border-radius: var(--home-control-radius); }
   .home-button-award { background: var(--award-purple); color: #fff; &:hover { background: var(--award-purple-hover); } }
-  .award-logo { display: block; width: min(100%, 412px); height: auto; aspect-ratio: 1; object-fit: cover; object-position: center; border-radius: var(--home-radius); margin: 0 auto; }
+  .award-logo { display: block; width: min(100%, 320px); height: auto; aspect-ratio: 1; object-fit: cover; object-position: center; border-radius: var(--home-radius); margin: 0 auto; }
   .story { padding: 96px 0; }
   .story-content { display: grid; grid-template-columns: 1.05fr 1fr; align-items: center; gap: 64px; }
   .story-image { display: block; width: 100%; height: auto; aspect-ratio: 3 / 2; object-fit: cover; object-position: center; border-radius: var(--home-radius); }
@@ -128,8 +128,8 @@ export default {
   .contact { padding: 72px 0 96px; border-top: 1px solid var(--home-line); background: #f7f5fb; }
   .contact h2 { font-size: 40px; line-height: 1.15; letter-spacing: -.035em; margin-bottom: 32px; }
   .contact-grid { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 24px; }
-  .contact-card { display: grid; grid-template-columns: 120px minmax(0, 1fr); align-items: start; gap: 24px; padding: 28px; border: 1px solid var(--home-line); border-radius: var(--home-radius); background: rgba(255, 255, 255, .45); }
-  .contact-card img { width: 120px; height: auto; aspect-ratio: 4 / 5; object-fit: cover; object-position: center top; border-radius: 12px; }
+  .contact-card { display: grid; grid-template-columns: 144px minmax(0, 1fr); align-items: start; gap: 24px; padding: 28px; border: 1px solid var(--home-line); border-radius: var(--home-radius); background: rgba(255, 255, 255, .45); }
+  .contact-card img { width: 144px; height: auto; aspect-ratio: 4 / 5; object-fit: cover; object-position: center top; border-radius: 12px; }
   .contact-details { min-width: 0; }
   .contact-details h3 { font-size: 24px; line-height: 1.3; letter-spacing: -.025em; }
   .contact-details .role { margin: 10px 0 12px; font-size: 13px; line-height: 1.7; color: var(--home-muted); }
@@ -142,10 +142,10 @@ export default {
     .contact-grid { grid-template-columns: 1fr; }
   }
   @media (max-width: 800px) {
-    .hero { padding: 48px 0 64px; }
-    .hero-content { grid-template-columns: 1fr; gap: 32px; }
-    .award-logo { order: -1; width: min(100%, 280px); }
-    .hero-actions { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 12px; margin-top: 32px; }
+    .hero { padding: 32px 0 40px; }
+    .hero-content { grid-template-columns: 1fr; gap: 24px; }
+    .award-logo { order: -1; width: min(100%, 220px); }
+    .hero-actions { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 12px; margin-top: 24px; }
     .hero-actions .home-button { min-height: 48px; padding: 12px 10px; font-size: 14px; border-radius: var(--home-control-radius); }
     .story { padding: 64px 0; }
     .story-content { grid-template-columns: 1fr; gap: 32px; }
@@ -153,11 +153,11 @@ export default {
     .contact { padding: 56px 0 64px; }
   }
   @media (max-width: 600px) {
-    h1 { font-size: 36px; }
-    .intro p { font-size: 17px; margin-top: 32px; }
+    h1 { font-size: 30px; }
+    .intro p { font-size: 16px; margin-top: 16px; }
     .contact h2 { font-size: 32px; }
     .contact-card { grid-template-columns: minmax(0, 1fr); gap: 20px; padding: 24px; text-align: center; }
-    .contact-card img { width: 112px; margin: 0 auto; }
+    .contact-card img { margin: 0 auto; }
     .contact-links { align-items: center; }
     .contact-details h3 { font-size: 20px; }
     .contact-links { font-size: 13px; }

@@ -29,8 +29,8 @@ describe('Společný vzhled produktových stránek bez změny autentizace', () =
     expect(wrapper.find('.home-footer-social a').attributes('target')).toBe('_blank')
   })
 
-  test.each(['/profil', '/profil/', '/databaze', '/databaze/', '/login', '/login/', '/renew-password', '/renew-password/'])('vybere společnou hlavičku a styly pouze pro %s', async path => {
-    const navigation = new VueRouter({ mode: 'abstract', routes: ['/profil', '/databaze', '/login', '/renew-password'].map(path => ({ path, component: { render: h => h('main') } })) })
+  test.each(['/profil', '/profil/', '/databaze', '/databaze/', '/login', '/login/', '/renew-password', '/renew-password/', '/change-password', '/change-password/'])('vybere společnou hlavičku a styly pouze pro %s', async path => {
+    const navigation = new VueRouter({ mode: 'abstract', routes: ['/profil', '/databaze', '/login', '/renew-password', '/change-password'].map(path => ({ path, component: { render: h => h('main') } })) })
     navigation.push(path)
     const store = new Vuex.Store({ getters: { user: () => ({ firstName: 'Anna', role: 'user' }), isLoggedIn: () => true } })
     wrapper = mount(App, { localVue, router: navigation, store, stubs: ['cookies'] })
@@ -39,7 +39,7 @@ describe('Společný vzhled produktových stránek bez změny autentizace', () =
     if (path.startsWith('/databaze')) expect(wrapper.find('a[href="/databaze"]').attributes('aria-current')).toBe('page')
   })
 
-  test.each(['/events', '/abffd7', '/change-password', '/delete-account'])('nepřenese nové styly do %s', path => {
+  test.each(['/events', '/abffd7', '/delete-account'])('nepřenese nové styly do %s', path => {
     const navigation = new VueRouter({ mode: 'abstract', routes: [{ path, component: { render: h => h('main') } }] })
     navigation.push(path)
     const store = new Vuex.Store({ getters: { user: () => ({}), isLoggedIn: () => false } })
@@ -54,10 +54,11 @@ describe('Společný vzhled produktových stránek bez změny autentizace', () =
     await router.beforeHooks[0](route, {}, next)
     expect(next).toHaveBeenCalledWith('/login?redirect=databaze')
     expect(router.resolve('/profil').route.meta.requiresAuth).toBe(true)
+    expect(router.resolve('/change-password').route.meta.requiresAuth).toBe(true)
     expect(router.resolve('/abffd7').route.meta.requiresAuth).toBeUndefined()
   })
 
-  test.each(['/profil/', '/databaze/', '/login/', '/renew-password/'])('skip link a návrat nahoru fungují i na %s', path => {
+  test.each(['/profil/', '/databaze/', '/login/', '/renew-password/', '/change-password', '/change-password/'])('skip link a návrat nahoru fungují i na %s', path => {
     document.body.innerHTML = '<header class="home-header"></header><main id="home-main"></main>'
     document.querySelector('.home-header').getBoundingClientRect = () => ({ height: 96 })
     expect(router.options.scrollBehavior(router.resolve(`${path}#home-main`).route)).toEqual({ selector: '#home-main', offset: { x: 0, y: 112 } })
