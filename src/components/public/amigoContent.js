@@ -1,6 +1,18 @@
 // Mentor text, hashtags and photo identities preserved from components/amigo/InfoBlock.vue.
 export const mentors = [
   {
+    id: 'anna-cerna',
+    name: 'Anna Černá',
+    hashtags: '#molekulárníbiologie #věda #SOČ #studiumvzahraničí',
+    image: require('@/assets/amigo/anna-cerna.jpg'),
+    width: 480,
+    height: 480,
+    paragraphs: [
+      'Ahoj! Jsem Anička a studuji Přírodní vědy na Maastricht University v Nizozemsku. Od konce prváku na gymplu jsem dělala výzkum v oblasti molekulární biologie na Masarykově univerzitě a mám zkušenosti z vědeckých soutěží v Česku i v zahraničí.',
+      'Jako mentorka pomohu s výběrem a oslovením laboratoře, přípravou SOČ, posteru a obhajoby, i s přihláškami na české i zahraniční VŠ a se stipendii nebo prostě s čímkoliv, co zrovna bude potřeba;).'
+    ]
+  },
+  {
     id: 'anna-prusova',
     name: 'Anna Průšová',
     hashtags: '#fyzika #lékařskáfyzika #studiumvzahraničí #stáže',
@@ -181,6 +193,18 @@ export const mentors = [
       'Od 17 let s povolením soudu rozvíjím svůj podnikatelský projekt Doučebnice, kde aktuálně přes 20 lektorů pomáhá dětem a studentům zlepšit si vztah k učení. Mimo oblast vzdělávání podnikám i v IT konzultacích, školení a salesu.',
       'Nyní studuju Kybernetiku a robotiku na ČVUT FEL. Miluju sport, hudbu, jazyky a cestování. Snažím se využívat čas naplno a řídím se mottem: "Don\'t be afraid to ask, the worst they say is no."',
       'Ať už chceš začít podnikat (i třeba před osmnáctinami), hledat soutěže, lépe si pamatovat věci a pracovat s časem nebo zlepšit veřejné vystupování, rád nasdílím své zkušenosti. Realizace je pak už ale na tobě!'
+    ]
+  },
+  {
+    id: 'simon-spilar',
+    name: 'Šimon Špilar',
+    hashtags: '#investice #ekonomie #politika #němčina',
+    image: require('@/assets/amigo/simon-spilar.jpg'),
+    width: 480,
+    height: 480,
+    paragraphs: [
+      'Šimon Špilar je studentem Financial Economics na University of St Andrews, který působí v oblasti ekonomie a investic. Má za sebou vítězství v Celostátní přehlídce SOČ, účast na Regeneron ISEF a pracovní angažmá ve financích.',
+      'Během střední školy se kromě ekonomických soutěží věnoval také participaci v European Youth Parliament a Česko-německém fóru mládeže, kde působil jako mluvčí. Rád Ti tedy poradí s dotazy v oblastech ekonomie, financí, politických akcí, němčiny, ale i time managementu a přihlášek na zahraniční univerzity.'
     ]
   },
   {

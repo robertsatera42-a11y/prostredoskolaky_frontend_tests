@@ -69,7 +69,7 @@ export default {
     return {
       team,
       history,
-      heroPhoto: { src: require('@/assets/about-us.png'), alt: 'Společná fotografie účastníků a organizátorů Středoškoláka roku', width: 2000, height: 692, position: '80% center' }
+      heroPhoto: { src: require('@/assets/Akademie2026_Pátek_SŠR_AntoninSvoboda-084.jpg'), alt: 'Společná fotografie účastníků a organizátorů Středoškoláka roku', width: 2000, height: 692, position: '80% center' }
     }
   }
 }

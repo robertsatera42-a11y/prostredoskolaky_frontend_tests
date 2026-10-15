@@ -78,7 +78,7 @@
           </ul>
           <div class="home-patronage">
             <p>Pod záštitou</p>
-            <img src="~@/assets/partners/msmt.jpg" alt="Ministerstvo školství, mládeže a tělovýchovy" width="827" height="413" loading="lazy" decoding="async">
+            <img src="~@/assets/partners/msmt.svg" alt="Ministerstvo školství, mládeže a tělovýchovy" width="827" height="413" loading="lazy" decoding="async">
           </div>
         </div>
       </section>

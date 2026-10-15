@@ -47,7 +47,7 @@
   }
   // Ink text passes WCAG AA on Orange (5.12:1) and Teal (6.90:1).
   .home-button-orange {
-    background: var(--home-orange); color: var(--home-ink);
+    background: var(--home-orange); color: var(--home-paper);
   }
 .home-button-teal {
     background: var(--home-teal); color: var(--home-ink);
@@ -90,7 +90,7 @@
   }
 
   .home-hero { padding: 72px 0 96px; }
-  .home-hero-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 64px; align-items: center; }
+  .home-hero-grid { display: grid; grid-template-columns: 0.8fr 1fr; gap: 64px; align-items: center; }
   .home-hero-copy { min-width: 0; .home-eyebrow { display: flex; align-items: center; gap: 10px; margin-bottom: 24px; } }
   .home-hero h1 { font-size: clamp(32px, 4.3vw, 62px); line-height: 1.05; letter-spacing: -.055em; }
   .home-hero-lead { margin-top: 24px; font-size: 28px; line-height: 1.25; letter-spacing: -.025em; }
@@ -98,7 +98,7 @@
   .home-hero-actions { display: flex; align-items: center; flex-wrap: wrap; gap: 24px; margin-top: 32px; }
   .home-hero-photo {
     min-width: 0;
-    img { width: 100%; height: auto; aspect-ratio: 4 / 3; object-fit: cover; object-position: 52% 50%; border-radius: var(--home-radius); }
+    img { width: 100%; height: auto; aspect-ratio: 16 / 9; object-fit: cover; object-position: 52% 50%; border-radius: var(--home-radius); }
     figcaption { display: flex; align-items: center; gap: 8px; margin-top: 14px; font-size: 12px; color: var(--home-muted); }
   }
 
