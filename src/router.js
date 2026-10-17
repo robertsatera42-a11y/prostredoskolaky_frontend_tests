@@ -153,44 +153,25 @@ const router = new Router({
 })
 
 router.beforeEach(async (to, from, next) => {
+  const requiresAuth = to.matched.some((x) => x.meta.requiresAuth)
+  if (!requiresAuth) return next()
+
+  const loginRedirect = '/login?redirect=' + encodeURIComponent(to.fullPath.slice(1))
   try {
-    const requiresAuth = to.matched.some((x) => x.meta.requiresAuth)
     const arr = to.matched.find((x) => x.meta.requiredRoles)
     const requiredRoles = arr && arr.meta && arr.meta.requiredRoles
     const auth = getAuth()
     const currentUser = auth.currentUser
-    // TODO predelat
-    if (requiresAuth && !currentUser) {
-      if (to.name === 'database-page') {
-        next('/login?redirect=databaze')
-        // } else if (to.name === 'form') {
-        //   next('/login?redirect=soutez')
-      } else if (to.name === 'users-page') {
-        next('/login?redirect=users')
-      }
-    } else if (requiresAuth && currentUser) {
-      const { claims } = await currentUser.getIdTokenResult()
+    if (!currentUser) return next(loginRedirect)
 
-      if (
-        to.name === 'users-page' &&
-        requiredRoles &&
-        !requiredRoles.includes(claims.role)
-      ) {
-        next('/login?redirect=users')
-      } else if (
-        to.name === 'events-page' &&
-        requiredRoles &&
-        !requiredRoles.includes(claims.role)
-      ) {
-        next('/login?redirect=users')
-      } else {
-        next()
-      }
-    } else if (!requiresAuth) {
-      next()
+    if (requiredRoles) {
+      const { claims } = await currentUser.getIdTokenResult()
+      if (!requiredRoles.includes(claims.role)) return next(loginRedirect)
     }
+    return next()
   } catch (err) {
     console.log(err)
+    return next(loginRedirect)
   }
 })
 

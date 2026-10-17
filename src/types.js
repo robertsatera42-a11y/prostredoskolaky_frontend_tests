@@ -13,6 +13,7 @@ export const SET_ACTUAL_PAGE = 'setActualPage'
 export const SET_TOTAL_EVENTS = 'setTotalEvents'
 export const SET_USER = 'setUser'
 export const SET_USER_PROFILE = 'setUserProfile'
+export const SET_REGISTRATION_STATUS = 'setRegistrationStatus'
 export const EMPTY_USER = 'emptyUser'
 export const UPDATE_USER = 'updateUser'
 

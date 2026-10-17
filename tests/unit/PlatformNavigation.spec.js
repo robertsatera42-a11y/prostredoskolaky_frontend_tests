@@ -58,6 +58,17 @@ describe('Společný vzhled produktových stránek bez změny autentizace', () =
     expect(router.resolve('/abffd7').route.meta.requiresAuth).toBeUndefined()
   })
 
+  test('výpadek ověření přihlášky zobrazí bez tvrzení, že je uživatel odhlášený', () => {
+    const navigation = new VueRouter({ mode: 'abstract', routes: [{ path: '/profil', component: { render: h => h('main') } }] })
+    navigation.push('/profil')
+    const store = new Vuex.Store({ state: { registrationStatus: 'error' }, getters: { user: () => ({ email: 'anna@example.test', hasRegistration: null }), isLoggedIn: () => true } })
+    wrapper = mount(App, { localVue, router: navigation, store, stubs: ['cookies'] })
+    const notice = wrapper.find('.auth-session-status[role="status"]')
+    expect(notice.exists()).toBe(true)
+    expect(notice.text()).toContain('Nepodařilo se ověřit stav přihlášky')
+    expect(notice.text()).toContain('Jste stále přihlášeni')
+  })
+
   test.each(['/profil/', '/databaze/', '/login/', '/renew-password/', '/change-password', '/change-password/'])('skip link a návrat nahoru fungují i na %s', path => {
     document.body.innerHTML = '<header class="home-header"></header><main id="home-main"></main>'
     document.querySelector('.home-header').getBoundingClientRect = () => ({ height: 96 })

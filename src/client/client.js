@@ -20,7 +20,7 @@ const getSchools = async (value) => {
 
 const sendEvent = async (event) => {
   const token = await firebase.getIdToken()
-  const data = await client.post('/event', { event }, { headers: getHeaders(token) })
+  const data = await client.post('/event', { event }, { headers: token ? getHeaders(token) : {} })
   return data
 }
 
@@ -143,10 +143,11 @@ const updateUser = async (email, user) => {
 
 const deleteUser = async () => {
   const token = await firebase.getIdToken()
-  const { status } = await client.delete(
+  const { status, data } = await client.delete(
     '/user',
     { headers: getHeaders(token) }
   )
+  if (!data || data.message !== 'success') throw new Error('Account deletion was not acknowledged')
   return status
 }
 

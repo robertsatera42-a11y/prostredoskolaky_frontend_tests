@@ -38,6 +38,7 @@ import { USER, DELETE_USER } from '../../types'
 import { mapGetters, mapActions } from 'vuex'
 import FooterBlock from '../../components/common/Footer'
 import Message from '../../components/common/Message'
+import { requestErrorMessage } from '../../components/login/authPresentation'
 
 export default {
   name: 'delete-account-page',
@@ -75,16 +76,21 @@ export default {
         this.submitStatus = 'ERROR'
       } else {
         this.submitStatus = ''
-        const status = await fb.reauthenticate(this.user.email, this.password)
-        if (status !== 'OK') {
+        try {
+          const status = await fb.reauthenticate(this.user.email, this.password)
+          if (status !== 'OK') {
+            this.messageType = 'error'
+            this.message = status
+            return
+          }
+          await this.deleteUser()
+          this.messageType = 'success'
+          this.message = 'Účet byl vymazán'
+          router.push('/')
+        } catch (error) {
           this.messageType = 'error'
-          this.message = status
-          return
+          this.message = requestErrorMessage
         }
-        this.messageType = 'success'
-        this.message = 'Účet byl vymazán'
-        await this.deleteUser()
-        router.push('/')
       }
     }
   },

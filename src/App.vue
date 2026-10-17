@@ -76,6 +76,7 @@
       </div>
     </header>
 
+    <p v-if="isLoggedIn && registrationStatus === 'error'" class="auth-session-status" role="status">Nepodařilo se ověřit stav přihlášky do soutěže. Jste stále přihlášeni. Zkuste stránku načíst znovu.</p>
     <router-view/>
     <cookies/>
   </div>
@@ -152,6 +153,7 @@ export default {
     }
   },
   computed: {
+    registrationStatus () { return this.$store.state.registrationStatus },
     isPublicPage () { return publicPagePaths.includes(publicPagePath(this.$route)) },
     isPlatformPage () { return platformPagePaths.includes(styledPagePath(this.$route)) },
     ...mapGetters([USER, IS_LOGGED_IN])
@@ -168,6 +170,21 @@ export default {
 
 <style lang="scss">
   @import '~bulma/sass/utilities/all';
+
+  .auth-session-status {
+    margin: 16px auto;
+    max-width: calc(100vw - 32px);
+    width: 720px;
+    padding: 16px;
+    border: 1px solid #d7ad72;
+    border-radius: 8px;
+    background: #fff8eb;
+    color: #4a3b27;
+    font-size: 14px;
+    line-height: 1.5;
+  }
+
+  .app-header + .auth-session-status { margin-top: 112px; }
 
   $primary: #F06027;
   $dark: #4A4A4A;

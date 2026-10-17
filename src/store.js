@@ -18,6 +18,7 @@ import {
   FETCH_USER,
   SET_USER,
   SET_USER_PROFILE,
+  SET_REGISTRATION_STATUS,
   DELETE_USER,
   USER,
 } from "./types";
@@ -27,15 +28,26 @@ import fb from "./firebase.js";
 
 Vue.use(Vuex);
 
+let authStateVersion = 0
 fb.auth.onAuthStateChanged(async (user) => {
-  if (user) {
-    const role = await fb.getRole();
-    const hasRegistration = await client.hasRegistration();
-    user.role = role;
-    user.hasRegistration = hasRegistration;
-    store.commit(SET_USER, user);
-  } else {
-    store.commit(EMPTY_USER);
+  const version = ++authStateVersion
+  if (!user) {
+    store.commit(EMPTY_USER)
+    return
+  }
+
+  const role = await fb.getRole()
+  if (version !== authStateVersion) return
+  store.commit(SET_USER, { ...user, role, hasRegistration: null, registrationStatus: 'loading' })
+
+  try {
+    const hasRegistration = await client.hasRegistration()
+    if (typeof hasRegistration !== 'boolean') throw new Error('Invalid registration status response')
+    if (version !== authStateVersion) return
+    store.commit(SET_REGISTRATION_STATUS, { hasRegistration, status: 'ready' })
+  } catch (err) {
+    if (version !== authStateVersion) return
+    store.commit(SET_REGISTRATION_STATUS, { hasRegistration: null, status: 'error' })
   }
 });
 
@@ -62,6 +74,7 @@ const store = new Vuex.Store({
       schoolContact: "",
       hasRegistration: false,
     },
+    registrationStatus: 'unknown',
     events: [
       {
         eventName: "",
@@ -119,6 +132,7 @@ const store = new Vuex.Store({
       state.user.sendNewsletter = user.sendNewsletter;
     },
     [SET_USER](state, user) {
+      state.registrationStatus = user.registrationStatus || 'unknown'
       state.user = {
         occupation: user.occupation || null,
         firstName:
@@ -141,7 +155,7 @@ const store = new Vuex.Store({
         lastSaved: user.updatedAt ? new Date(user.updatedAt) : undefined,
         role: user.role || "",
         schoolContact: user.schoolContact || "",
-        hasRegistration: user.hasRegistration || false,
+        hasRegistration: typeof user.hasRegistration === 'boolean' ? user.hasRegistration : null,
       };
       if (user.sendNewsletter) {
         state.user = {
@@ -155,7 +169,12 @@ const store = new Vuex.Store({
         ...user,
       };
     },
+    [SET_REGISTRATION_STATUS](state, { hasRegistration, status }) {
+      Vue.set(state.user, 'hasRegistration', hasRegistration)
+      state.registrationStatus = status
+    },
     [EMPTY_USER](state) {
+      state.registrationStatus = 'unknown'
       state.user = {
         firstName: "",
         lastName: "",
@@ -202,13 +221,11 @@ const store = new Vuex.Store({
       }
     },
 
-    [DELETE_USER]: async ({ commit, state }) => {
-      try {
-        await client.deleteUser();
-        commit(EMPTY_USER);
-      } catch (err) {
-        console.log(err);
-      }
+    [DELETE_USER]: async ({ commit }) => {
+      const status = await client.deleteUser()
+      await fb.logoutUser()
+      commit(EMPTY_USER)
+      return status
     },
   },
 });

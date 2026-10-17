@@ -6,6 +6,7 @@ import {
   signOut, 
   sendPasswordResetEmail, 
   updateProfile, 
+  updatePassword,
   EmailAuthProvider, 
   reauthenticateWithCredential, 
   getIdToken as getIdTokenFirebase, 
@@ -101,7 +102,7 @@ const changePassword = async (email, password, newPassword) => {
     )
     if (auth.currentUser) {
       await reauthenticateWithCredential(auth.currentUser, credential);
-      await auth.currentUser.updatePassword(newPassword);
+      await updatePassword(auth.currentUser, newPassword);
       return 'OK';
     }
   } catch (err) {
