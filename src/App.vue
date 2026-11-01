@@ -216,6 +216,19 @@ export default {
   @import '~bulma';
   @import '~buefy/src/scss/buefy';
 
+  // Preserve the authored palette and native controls under browser auto-darkening.
+  :root {
+    color-scheme: only light;
+  }
+
+  @media (forced-colors: active) {
+    // The fixed-color wordmark needs its paper surface in contrast themes.
+    .home-logo img, .app-header .logo img {
+      background-color: var(--home-paper, #F7F6F2);
+      forced-color-adjust: none;
+    }
+  }
+
   @font-face {
     font-family: 'EuclidCircularB';
     src: local('EuclidCircularB'),
