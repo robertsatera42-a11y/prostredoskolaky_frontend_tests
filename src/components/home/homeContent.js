@@ -3,7 +3,7 @@
 export const activities = [
   {
     id: 'stredoskolak-roku',
-    title: 'Středoškolák roku',
+    title: 'Cena Středoškolák roku',
     description: 'Soutěž pro středoškoláky, kteří rozvíjejí své zájmy i mimo školu. Oceňujeme jejich aktivity a propojujeme je mezi sebou.',
     image: require('@/assets/mainheader.jpg'),
     imageAlt: 'Společná fotografie účastníků Středoškoláka roku',
@@ -12,11 +12,11 @@ export const activities = [
     href: 'https://stredoskolakroku.cz/',
     external: true,
     trackingLabel: 'competition',
-    category: 'Soutěž'
+    category: 'Cena'
   },
   {
     id: 'amigo',
-    title: 'AMIGO',
+    title: 'Mentoringový program AMIGO',
     description: 'Mentoring, který tě posune dál. Vyber si mentora z řad úspěšných lidí několik let po střední škole a rozvíjej s ním to, co tě baví.',
     image: require('@/assets/Víkend26_PS_Neděle_AntoninSvoboda-67.jpg'),
     imageAlt: 'Mladí lidé při společném setkání venku',
@@ -42,7 +42,7 @@ export const activities = [
   },
   {
     id: 'vikend-top25',
-    title: 'Víkend TOP25',
+    title: 'Víkendové setkání TOP25',
     description: 'Seznamovací víkend pro 25 finalistů Středoškoláka roku. Společné aktivity a výpravy do přírody dávají prostor přátelství i spolupráci.',
     image: require('@/assets/Víkend26_PS_Neděle_AntoninSvoboda-16.jpg'),
     imageAlt: 'Finalisté s koly před chatou na víkendovém setkání',
@@ -55,7 +55,7 @@ export const activities = [
   },
   {
     id: 'akademie-top100',
-    title: 'Akademie TOP100',
+    title: 'Vzdělávací Akademie',
     description: 'Vzdělávací program pro 100 finalistů soutěže. Workshopy, přednášky a debaty pomáhají rozvíjet dovednosti využitelné ve škole i mimo ni.',
     image: require('@/assets/Akademie2026_Pátek_SŠR_AntoninSvoboda-042.jpg'),
     imageAlt: 'Lektor a studenti na vzdělávací akademii',
@@ -77,7 +77,7 @@ export const activities = [
     href: 'https://stredoskolakroku.cz/',
     external: true,
     trackingLabel: 'galavecer',
-    category: 'Vyhlášení soutěže'
+    category: 'Vyhlášení ceny'
   },
   {
     id: 'vysokoskolak-roku',

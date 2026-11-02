@@ -5,7 +5,7 @@
         <div>
           <p class="home-eyebrow">Zkušenosti, které si odneseš</p>
           <h2 id="activities-title">Naše aktivity</h2>
-          <p>Soutěže, mentoring i setkání. Vyber si, co tě posune dál.</p>
+          <p>Cena, mentoring, databáze i setkání. Vyber si, co tě posune dál.</p>
         </div>
       </div>
       <p id="activity-instructions" class="home-sr-only">Seznam aktivit lze posouvat přejetím, tlačítky nebo šipkami na klávesnici. Klávesy Home a End přejdou na začátek a konec seznamu.</p>
