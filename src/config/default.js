@@ -27,7 +27,7 @@ export default {
       ],
     },
     jobs: ['student', 'učitel', 'organizátor mimoškolních aktivit', 'prostě návštěvník'],
-    regions: [ 'Praha', 'Středočeský', 'Jihočeský', 'Plzeňský', 'Karlovarský', 'Ústecký', 'Liberecký', 'Královéhradecký', 'Pardubický', 'Vysočina', 'Jihomoravský', 'Olomoucký', 'Moravskoslezský', 'Zlínský' ],
+    regions: [ 'Karlovarský', 'Jihočeský', 'Jihomoravský', 'Královéhradecký', 'Liberecký', 'Olomoucký', 'Pardubický', 'Plzeňský', 'Praha', 'Středočeský', 'Ústecký', 'Vysočina', 'Zlínský', 'Moravskoslezský', 'Mimo ČR' ],
     knowledge: ['ze školy', 'od kamaráda', 'z plakátu', 'z Instagramu', 'z Facebooku', 'z médií', 'jinak'],
     // database
     interestsMapping: {
