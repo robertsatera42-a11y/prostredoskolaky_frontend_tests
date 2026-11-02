@@ -138,6 +138,18 @@ export const mentors = [
     ]
   },
   {
+    id: 'klara-koubova',
+    name: 'Klára Koubová',
+    hashtags: '#studiumvzahraničí #mezinárodnívztahy #fyzioterapie #vrcholovýsport #cestování #jazyky #osobnírozvoj #prácepřiškole',
+    image: require('@/assets/amigo/klara_k.png'),
+    width: 1086,
+    height: 1448,
+    paragraphs: [
+      'Ahoj, jsem Klára a studuji mezinárodní obchod na Univerzitě v Innsbrucku v Rakousku. Před dvěma lety jsem se sama zúčastnila mentoringového programu AMIGO, který pro mě byl velmi přínosnou zkušeností, a dnes bych ráda předávala dál to, co jsem díky němu získala.',
+      'Ráda bych podpořila středoškoláky při hledání jejich vlastní cesty, ať už jde o výběr vysoké školy, studium v zahraničí nebo hledání toho, co je skutečně baví. Mám zkušenosti s vrcholovým sportem, vedením tréninků i skloubením školy s dalšími aktivitami. Věřím, že někdy stačí mít vedle sebe někoho, kdo naslouchá, sdílí vlastní zkušenosti a pomůže člověku objevit nové možnosti. Těším se na vzájemné poznávání, sdílení a nové perspektivy!'
+    ]
+  },
+  {
     id: 'ludmila-kozlova',
     name: 'Ludmila Kozlová',
     hashtags: '#enviro #politika #vzdelavani #sport #kontaktmaxxing #vlastnicesta #studiumvzahranici',
@@ -196,6 +208,17 @@ export const mentors = [
     ]
   },
   {
+    id: 'sona-kleiner',
+    name: 'Soňa Kleiner',
+    hashtags: '#lifebalance #dikyzemuzem #biochemie',
+    image: require('@/assets/amigo/Sona-kleiner.png'),
+    width: 1143,
+    height: 1143,
+    paragraphs: [
+      'hello! ja jsem soňa a verim, ze clovek nemusi byt genius ani mit same jednicky, aby se mohl dostat k zajimavym vecem. nekdy staci vedet, kde hledat prilezitosti, nebat se napsat prvni e-mail a mit nekoho, kdo ti poradi, kdyz zrovna nevis, kudy dal. a presne s tim bych ti jako mentorka chtela pomoct. 🙂 k vede a vyzkumu jsem se dostala uz na gymplu, coz me postupne zavedlo az do laborek v helsinkach a heidelbergu. letos jsem absolvovala take letni skolu neuroscience v mnichove a ted studuju biochemii na masarykove univerzite. rada hledam zpusoby, jak vedu priblizovat ostatnim, a aktualne se jako konzultantka pro popularizaci vedy podilim na projektech muzea vychodnich cech. vedle toho jsem nekolik let vedla skolni casopis, organizovala akce pro studenty, moderovala a venovala se ruznym obcanskym iniciativam. spoluiniciovala jsem treba otevreny dopis prezidentovi, ktery podepsalo pres 1 400 lidi, a osobne ho dorucila na prazsky hrad. diky vsem temhle zkusenostem jsem zjistila, ze spousta veci, ktere se na zacatku zdaji nedosazitelne, je ve skutecnosti mnohem bliz, nez si myslime. rada ti proto pomuzu s hledanim stazi a vyzkumnych prilezitosti, oslovenim laboratori, vedeckymi soutezemi nebo prihlaskami na vysoke skoly v cesku i ve skandinavii. muzeme probrat i to, jak rozjet vlastni projekt, dostat svuj napad mezi lidi nebo ale hlavne skloubit skolu se vsemi aktivitami, ktere te bavi, aniz by ses z toho uplne zblaznil/a. a hlavne: nemusis mit vsechno vymyslene. sama jsem si prosla rozhodovanim, kam dal, co vlastne chci delat a jak si vybrat z tolika moznosti. nemam univerzalni navod na zivot, ale muzu s tebou sdilet to, co mi fungovalo, pomoct ti vyhnout se nekterym zbytecnym slepym ulickam a byt clovekem, se kterym muzes svoje napady probrat bez pocitu, ze musis mit na vsechno spravnou odpoved. takze jestli te bavi veda, chces se pustit do neceho vlastniho, hledas nove prilezitosti nebo jen potrebujes trochu nakopnout a ujasnit si, co dal, budu moc rada, kdyz se pozname! 🫶'
+    ]
+  },
+  {
     id: 'simon-spilar',
     name: 'Šimon Špilar',
     hashtags: '#investice #ekonomie #politika #němčina',
@@ -233,6 +256,21 @@ export const mentors = [
       'Druhou velkou částí mého života je věda, především výzkum v oblasti onkologie. Během střední školy jsem absolvovala stáže na Ústavu živočišné fyziologie a genetiky a následně na Ústavu molekulární genetiky AV ČR, kde jsem se věnovala senescentním buňkám vznikajícím po protinádorové léčbě. Zkušenosti jsem později rozšířila také v laboratoři hematoonkologie a během kurzu Laboratory Skills v Liverpoolu. K tomu jsem se během středních škol samostatně připravovala na americké AP zkoušky a úspěšně složila AP Biology a AP Chemistry.',
       'Ráda si s Tebou popovídám vlastně o čemkoliv, co Tě napadne. Můžu Ti třeba přiblížit, jak funguje studium na konzervatoři (protože to není úplně typická škola) a jak je vůbec možné studovat dvě střední, podělit se o zkušenosti ze soutěží a zahraničních kurzů, poradit, jak podobné příležitosti hledat a financovat, nebo probrat, jak skloubit hudbu na co nejvyšší úrovni se školou a dalšími aktivitami.',
       'Ráda předám i zkušenosti s tím, jak se už na střední dostat k vědě, hledat stáže nebo se připravit na AP zkoušky (a k čemu to vůbec je).'
+    ]
+  },
+  {
+    id: 'terezie-ruzickova',
+    name: 'Terezie Růžičková',
+    hashtags: '#medicína #výzkum #jazyky #všechnocotěbaví',
+    image: require('@/assets/amigo/terezie_ruzickova.jpg'),
+    width: 3609,
+    height: 5413,
+    paragraphs: [
+      'Ahoj, jsem Terka a studuji v prváku na Masarykově univerzitě obor Všeobecné lékařství v kruhu se speciální vědeckou přípravou. Medicína byl můj jasný plán už dlouho a proto jsem se rozhodla pro SOČku v Dětské nemocnici Brno, kde jsem se věnovala vlivu věku na stabilizaci sluchového prahu u dětí s kochleárním implantátem. Zúčastnila jsem se mnoha celostátních vědeckých soutěží a konferencí.',
+      'Na střední škole jsem úspěšně složila nejvyšší úrovně jazykových zkoušek z Cambridge English a Deutsches Sprachdiplom Stufe II. Zároveň jsem byla oceněna Cenou Učené společnosti ČR pro středoškolské studenty.',
+      'Mimo školu a vědu se věnuji hře na klavír, sportu, nebo trénování menších kategorií ve florbale.',
+      'S letošním rokem jsem také převzala projekt AMIGO. Což byla celkem velká novinka pro oblast mých zájmů. Ale zkusit se má všechno!',
+      'Ať už bys potřeboval/a přiblížit (tvoje budoucí) studium medicíny, poradit se soutěžemi a stipendii, vedením projektu v organizaci (ProStředoškoláky) nebo si popovídat o čemkoliv, jsem zde!'
     ]
   },
   {
