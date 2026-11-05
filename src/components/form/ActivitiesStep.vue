@@ -68,7 +68,7 @@
       <div class="submit-actions content">
         <a class="button a-orange" @click="goToFirstStep">Zpět na 1. krok</a>
         <a class="button a-orange" @click="goToFinalise">Přejít ke kontrole a uložení</a>
-        <small v-if="user.lastSaved">Naposledy uloženo: {{ transformDate(user.lastSaved) }}</small>
+        <small v-if="user.lastSaved">Poslední odeslání přihlášky: {{ transformDate(user.lastSaved) }}</small>
       </div>
     </div>
 
@@ -147,7 +147,7 @@ export default {
       })
     },
     transformDate (dateString) {
-      return transformerUtils.transformDate(dateString)
+      return transformerUtils.formatRegistrationTimestamp(dateString)
     }
   }
 }

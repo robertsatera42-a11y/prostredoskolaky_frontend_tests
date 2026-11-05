@@ -8,7 +8,7 @@
             <span class="orange">2021</span>
           </h1>
           <h2>
-            Děkujeme za tvou přihlášku, dotazník byl uložen a na {{user.email}} zaslán potvrzovací email. Přihlášku můžeš až do deadlinu kdykoliv otevřít a upravit ji.
+            Děkujeme za tvou přihlášku, dotazník byl uložen. Přihlášku můžeš až do deadlinu kdykoliv otevřít a upravit ji.
           </h2>
         </div>
       </slot>
@@ -110,7 +110,7 @@
         <a v-if="!showSuccess" class="button a-orange" @click="goToEditActivities">Zpět na 2. krok</a>
         <router-link v-if="showSuccess" class="button a-gray" to="/soutez">Zavřít</router-link>
         <a v-if="!showSuccess" class="button a-orange-full" @click="submit">Uložit přihlášku</a>
-        <small v-if="user.lastSaved && !showSuccess">Naposledy uloženo: {{ transformDate(user.lastSaved) }}</small>
+        <small v-if="user.lastSaved && !showSuccess">Poslední odeslání přihlášky: {{ transformDate(user.lastSaved) }}</small>
       </div>
     </div>
 
@@ -123,6 +123,7 @@ import ErrorMessage from '../common/ErrorMessage'
 import ValidationUtils from '../../utils/validationUtils'
 import config from '../../config/default'
 import client from '../../client/client'
+import { registrationMetadata } from '../../utils/registrationTimestamps'
 import { mapFields } from 'vuex-map-fields'
 import transformerUtils from '../../utils/transformerUtils'
 import tracking from '../../utils/tracking'
@@ -163,23 +164,41 @@ export default {
   },
   methods: {
     async submit () {
+      if (this.isLoading || this.showSuccess) return
       try {
         if (this.isAgree) {
           this.isLoading = true
-          this.transform()
-          const result = await client.createRegistration(this.user)
-          this.isLoading = false
+          const preparedUser = {
+            ...this.user,
+            isAgree: true,
+            interests: this.user.interests.map(interest => transformerUtils.transformCategories(interest))
+          }
+          const result = await client.createRegistration(preparedUser)
+          if (!result || !((typeof result.registrationId === 'number' && Number.isFinite(result.registrationId)) ||
+              (typeof result.registrationId === 'string' && result.registrationId.trim()))) {
+            throw new Error('Missing registration confirmation')
+          }
           this.showSuccess = true
           this.registrationId = result.registrationId
-          await fb.updateProfileForCurrentUser(this.user)
-          this.user.hasRegistration = true
-          tracking.track('competition', 'entrance_page', 'form_finished')
+          this.user = { ...this.user, ...registrationMetadata(result, this.user), hasRegistration: true }
+          try {
+            await fb.updateProfileForCurrentUser(preparedUser)
+          } catch (error) {
+            // eslint-disable-next-line no-console
+            console.error('Profile update after confirmed registration failed:', error)
+          }
+          try {
+            tracking.track('competition', 'entrance_page', 'form_finished')
+          } catch (error) {
+            // eslint-disable-next-line no-console
+            console.error('Analytics after confirmed registration failed:', error)
+          }
         } else this.error = config.errors.requiredTerms
       } catch (err) {
-        this.isLoading = false
-        this.transformBack()
         this.error = ValidationUtils.getError(err.response)
         console.log(err)
+      } finally {
+        this.isLoading = false
       }
     },
     goToEditActivities () {
@@ -199,7 +218,7 @@ export default {
       })
     },
     transformDate (dateString) {
-      return transformerUtils.transformDate(dateString)
+      return transformerUtils.formatRegistrationTimestamp(dateString)
     }
   }
 }

@@ -6,8 +6,8 @@
         <div class="u-table-head">id</div>
         <div class="u-table-head">Jméno a příjmení</div>
         <div class="u-table-head">E-mail</div>
-        <div class="u-table-head">Vytvořeno</div>
-        <div class="u-table-head">Updatováno</div>
+        <div class="u-table-head">Vytvoření přihlášky</div>
+        <div class="u-table-head">Poslední odeslání přihlášky</div>
         <div class="u-table-head">Počet aktivit</div>
         <div class="u-table-head">Akce</div>
       </div>
@@ -15,8 +15,8 @@
         <div class="u-table-cell">{{index}}</div>
         <div class="u-table-cell">{{registration.firstName}} {{registration.lastName}}</div>
         <div class="u-table-cell">{{registration.email}}</div>
-        <div class="u-table-cell">{{transformDate(registration.createdAt)}}</div>
-        <div class="u-table-cell">{{transformDate(registration.updatedAt)}}</div>
+        <div class="u-table-cell">{{formatRegistrationTimestamp(registration.createdAt)}}</div>
+        <div class="u-table-cell">{{formatRegistrationTimestamp(registration.updatedAt)}}</div>
         <div class="u-table-cell">{{registration.totalActivities}}</div>
         <div class="u-table-cell">
           <button
@@ -47,6 +47,9 @@ export default {
     this.registrations = registrations
   },
   methods: {
+    formatRegistrationTimestamp (value) {
+      return transformerUtils.formatRegistrationTimestamp(value)
+    },
     transformDate (stringDate) {
       return transformerUtils.transformDate(stringDate)
     },

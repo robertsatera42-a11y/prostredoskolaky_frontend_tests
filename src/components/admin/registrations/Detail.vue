@@ -36,12 +36,12 @@
         <div class="u-table-cell">{{registration.knowledge}}</div>
       </div>
       <div class="u-table-row">
-        <div class="u-table-cell right">Updatováno:</div>
-        <div class="u-table-cell">{{transformDate(registration.updatedAt)}}</div>
+        <div class="u-table-cell right">Poslední odeslání přihlášky:</div>
+        <div class="u-table-cell">{{formatRegistrationTimestamp(registration.updatedAt)}}</div>
       </div>
       <div class="u-table-row">
-        <div class="u-table-cell right">Vytvořeno:</div>
-        <div class="u-table-cell">{{transformDate(registration.createdAt)}}</div>
+        <div class="u-table-cell right">Vytvoření přihlášky:</div>
+        <div class="u-table-cell">{{formatRegistrationTimestamp(registration.createdAt)}}</div>
       </div>
     </div>
     <div v-for="(activity, index) in registration.activities" :key="activity.name" class="u-table">
@@ -95,6 +95,9 @@ export default {
     await this.fetchRegistration()
   },
   methods: {
+    formatRegistrationTimestamp (value) {
+      return transformerUtils.formatRegistrationTimestamp(value)
+    },
     async fetchRegistration () {
       const registration = await client.getRegistration(this.id)
       this.registration = registration

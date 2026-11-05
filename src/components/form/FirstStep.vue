@@ -229,7 +229,7 @@
       <div class="submit-actions content">
         <router-link class="button a-gray" to="/soutez">Zavřít</router-link>
         <a class="button a-orange" @click="goToActivities">Přejít na 2. krok</a>
-        <small v-if="user.lastSaved">Naposledy uloženo: {{ transformDate(user.lastSaved)}}</small>
+        <small v-if="user.lastSaved">Poslední odeslání přihlášky: {{ transformDate(user.lastSaved)}}</small>
       </div>
     </div>
   </section>
@@ -369,7 +369,7 @@ export default {
       })
     },
     transformDate (dateString) {
-      return transformerUtils.transformDate(dateString)
+      return transformerUtils.formatRegistrationTimestamp(dateString)
     },
     getSchools: debounce(async function () {
       try {
