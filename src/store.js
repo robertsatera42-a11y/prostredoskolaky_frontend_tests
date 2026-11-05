@@ -1,5 +1,6 @@
 import Vue from "vue";
 import Vuex from "vuex";
+import { registrationMetadata } from './utils/registrationTimestamps'
 import client from "./client/client";
 import { getField, updateField } from "vuex-map-fields";
 import {
@@ -69,6 +70,8 @@ const store = new Vuex.Store({
       lastSaved: "",
       role: "",
       createdAt: "",
+      updatedAt: '',
+      registrationId: null,
       lastLogin: "",
       sendNewsletter: false,
       schoolContact: "",
@@ -152,7 +155,7 @@ const store = new Vuex.Store({
         interests: user.interests ? user.interests : [],
         activities: user.activities ? user.activities : [],
         knowledge: user.knowledge || null,
-        lastSaved: user.updatedAt ? new Date(user.updatedAt) : undefined,
+        ...registrationMetadata(user),
         role: user.role || "",
         schoolContact: user.schoolContact || "",
         hasRegistration: typeof user.hasRegistration === 'boolean' ? user.hasRegistration : null,
