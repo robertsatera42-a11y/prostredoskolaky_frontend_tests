@@ -108,7 +108,10 @@ export const partners = [
   { id: 'cteni', title: 'Čtení pomáhá', image: require('@/assets/partners/cteni.png'), width: 500, height: 180, href: 'https://www.ctenipomaha.cz/' },
   { id: 'preciosa', title: 'Nadace Preciosa', image: require('@/assets/partners/preciosa.png'), width: 400, height: 147, href: 'https://www.nadacepreciosa.cz/' },
   { id: 'rozhlas', title: 'Český rozhlas', image: require('@/assets/partners/CRo-Cesky_rozhlas-Z-RGB.png'), width: 758, height: 163, href: 'https://portal.rozhlas.cz/' },
-  { id: 'ilf', title: 'Hotel ILF', image: require('@/assets/partners/logo-ILF-ramecek-barva-500.jpg'), width: 500, height: 495, href: 'https://www.hotel-ilf.cz/' }
+  { id: 'ilf', title: 'Hotel ILF', image: require('@/assets/partners/logo-ILF-ramecek-barva-500.jpg'), width: 500, height: 495, href: 'https://www.hotel-ilf.cz/' },
+  { id: 'ceske_drahy', title: 'České dráhy', image: require('@/assets/partners/CD logo moderne_spolehlive.svg'), width: 758, height: 163, href: 'https://www.cd.cz' },
+  { id: 'portal', title: 'Nakladatelství Portál', image: require('@/assets/partners/PORTAL_zakladni logo_RGB.png'), width: 500, height: 495, href: 'https://nakladatelstvi.portal.cz/nakladatelstvi' },
+  { id: 'moravska_galerie', title: 'Moravská Galerie', image: require('@/assets/partners/mg_znacka_dvojradek_pdf.png'), width: 500, height: 495, href: 'https://moravska-galerie.cz' }
 ]
 
 export const footerGroups = [
